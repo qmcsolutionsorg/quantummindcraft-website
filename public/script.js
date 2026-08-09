@@ -45,10 +45,16 @@
   var GALLERIES = {
     health: {
       slides: [
-        // PLACEHOLDERS — swap these three for real Health screenshots
-        { src: "assets/images/website header page pic.jpg", caption: "Placeholder — replace with the Health dashboard" },
-        { src: "assets/images/header-family.jpg", caption: "Placeholder — replace with a family member's record" },
-        { src: "assets/images/logo-dark.jpeg", caption: "Placeholder — replace with vaccinations & prescriptions" }
+        { src: "assets/images/screens/health/poster.jpg", caption: "Every family member's health, in one place" },
+        { src: "assets/images/screens/health/list.jpg", caption: "A separate medical record for everyone — pets included" },
+        { src: "assets/images/screens/health/details.jpg", caption: "Full history, documents and reports per person" },
+        { src: "assets/images/screens/health/vaccination-list.jpg", caption: "Vaccination schedules at a glance" },
+        { src: "assets/images/screens/health/vaccination-details.jpg", caption: "Every dose, date and certificate stored" },
+        { src: "assets/images/screens/health/treatments-list.jpg", caption: "Track ongoing and past treatments" },
+        { src: "assets/images/screens/health/treatment-details.jpg", caption: "Prescriptions, tests and reports together" },
+        { src: "assets/images/screens/health/tracker-list.jpg", caption: "BP, sugar and vitals tracking" },
+        { src: "assets/images/screens/health/tracker-details.jpg", caption: "See the trend, not just today's number" },
+        { src: "assets/images/screens/health/schedules.jpg", caption: "Appointments and reminders that never slip" }
       ]
     },
     finance: { slides: [] },
@@ -56,7 +62,16 @@
     employees: { slides: [] },
     school: { slides: [] },
     parenting: { slides: [] },
-    "moms-diary": { slides: [] },
+    "moms-diary": {
+      slides: [
+        { src: "assets/images/screens/moms-diary/poster.png", caption: "A personal companion through every stage" },
+        { src: "assets/images/screens/moms-diary/cycle-list.jpg", caption: "Cycle tracking, month by month" },
+        { src: "assets/images/screens/moms-diary/cycle-details.jpg", caption: "Symptoms, notes and patterns" },
+        { src: "assets/images/screens/moms-diary/cycle-overview.jpg", caption: "Predictions and history in one view" },
+        { src: "assets/images/screens/moms-diary/pregnancy-list.jpg", caption: "A separate record for each pregnancy" },
+        { src: "assets/images/screens/moms-diary/pregnancy-details.jpg", caption: "Milestones, appointments and reports" }
+      ]
+    },
     assets: { slides: [] },
     payables: { slides: [] },
     travel: { slides: [] },

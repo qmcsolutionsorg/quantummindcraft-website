@@ -214,7 +214,8 @@ img { max-width: 100%; display: block; }
 .slider { position: relative; overflow: hidden; border-radius: 18px; border: 1px solid var(--border); background: rgba(0,0,0,.35); }
 .slider-track { display: flex; will-change: transform; transition: transform .6s cubic-bezier(.4,0,.2,1); }
 .slider-track.no-anim { transition: none; }
-.slide { flex: 0 0 100%; display: grid; place-items: center; aspect-ratio: 16 / 10; background: rgba(0,0,0,.25); }
+/* 3:2 suits these roughly-square app screens better than a wide 16:10 box */
+.slide { flex: 0 0 100%; display: grid; place-items: center; aspect-ratio: 3 / 2; padding: 10px; background: rgba(0,0,0,.25); }
 .slide img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .slider-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 42px; height: 42px; border-radius: 50%;
   display: grid; place-items: center; cursor: pointer; color: #fff;
