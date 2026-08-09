@@ -45,19 +45,19 @@
   var GALLERIES = {
     health: {
       slides: [
-        { src: "assets/images/screens/health/overview.jpeg", caption: "Your whole family's health at a glance" },
-        { src: "assets/images/screens/health/list.jpeg", caption: "A separate medical record for everyone — pets included" },
-        { src: "assets/images/screens/health/vaccinations.jpeg", caption: "Vaccination schedules, tracked per person" },
-        { src: "assets/images/screens/health/vaccination-countries.jpeg", caption: "Requirements by country, ready before you travel" },
-        { src: "assets/images/screens/health/treatments.jpeg", caption: "Ongoing and past treatments in one list" },
-        { src: "assets/images/screens/health/treatment-details.jpeg", caption: "Prescriptions, tests and reports together" },
-        { src: "assets/images/screens/health/medicines.jpeg", caption: "Every medicine, dose and schedule" },
-        { src: "assets/images/screens/health/medicines-print.jpeg", caption: "Print a clean list for the doctor" },
-        { src: "assets/images/screens/health/tracker.jpeg", caption: "BP, sugar and vitals tracking" },
-        { src: "assets/images/screens/health/tracker-details.jpeg", caption: "See the trend, not just today's number" },
-        { src: "assets/images/screens/health/schedules.jpeg", caption: "Appointments and reminders that never slip" },
-        { src: "assets/images/screens/health/insurance.jpeg", caption: "Policies and cover, findable in an emergency" },
-        { src: "assets/images/screens/health/transactions.jpeg", caption: "What your family's healthcare actually costs" }
+        { src: "assets/images/screens/health/overview.jpeg", title: "Family overview", caption: "Your whole family's health at a glance" },
+        { src: "assets/images/screens/health/list.jpeg", title: "Member records", caption: "A separate medical record for everyone — pets included" },
+        { src: "assets/images/screens/health/vaccinations.jpeg", title: "Vaccinations", caption: "Vaccination schedules, tracked per person" },
+        { src: "assets/images/screens/health/vaccination-countries.jpeg", title: "Travel requirements", caption: "Requirements by country, ready before you travel" },
+        { src: "assets/images/screens/health/treatments.jpeg", title: "Treatments", caption: "Ongoing and past treatments in one list" },
+        { src: "assets/images/screens/health/treatment-details.jpeg", title: "Treatment detail", caption: "Prescriptions, tests and reports together" },
+        { src: "assets/images/screens/health/medicines.jpeg", title: "Medicines", caption: "Every medicine, dose and schedule" },
+        { src: "assets/images/screens/health/medicines-print.jpeg", title: "Printable list", caption: "Print a clean list for the doctor" },
+        { src: "assets/images/screens/health/tracker.jpeg", title: "Vitals tracker", caption: "BP, sugar and vitals tracking" },
+        { src: "assets/images/screens/health/tracker-details.jpeg", title: "Trends over time", caption: "See the trend, not just today's number" },
+        { src: "assets/images/screens/health/schedules.jpeg", title: "Appointments", caption: "Appointments and reminders that never slip" },
+        { src: "assets/images/screens/health/insurance.jpeg", title: "Insurance", caption: "Policies and cover, findable in an emergency" },
+        { src: "assets/images/screens/health/transactions.jpeg", title: "Healthcare costs", caption: "What your family's healthcare actually costs" }
       ]
     },
     finance: { slides: [] },
@@ -67,12 +67,12 @@
     parenting: { slides: [] },
     "moms-diary": {
       slides: [
-        { src: "assets/images/screens/moms-diary/overview.jpeg", caption: "A personal companion through every stage" },
-        { src: "assets/images/screens/moms-diary/menstruation.jpeg", caption: "Cycle tracking, month by month" },
-        { src: "assets/images/screens/moms-diary/menstruation-details.jpeg", caption: "Symptoms and notes, logged day by day" },
-        { src: "assets/images/screens/moms-diary/cycles.jpeg", caption: "Every cycle recorded and comparable" },
-        { src: "assets/images/screens/moms-diary/cycle-details.jpeg", caption: "Patterns and predictions in one view" },
-        { src: "assets/images/screens/moms-diary/pregnancy-tracker.jpeg", caption: "A separate record for each pregnancy" }
+        { src: "assets/images/screens/moms-diary/overview.jpeg", title: "Diary overview", caption: "A personal companion through every stage" },
+        { src: "assets/images/screens/moms-diary/menstruation.jpeg", title: "Cycle tracking", caption: "Cycle tracking, month by month" },
+        { src: "assets/images/screens/moms-diary/menstruation-details.jpeg", title: "Daily log", caption: "Symptoms and notes, logged day by day" },
+        { src: "assets/images/screens/moms-diary/cycles.jpeg", title: "Cycle history", caption: "Every cycle recorded and comparable" },
+        { src: "assets/images/screens/moms-diary/cycle-details.jpeg", title: "Patterns & predictions", caption: "Patterns and predictions in one view" },
+        { src: "assets/images/screens/moms-diary/pregnancy-tracker.jpeg", title: "Pregnancy tracker", caption: "A separate record for each pregnancy" }
       ]
     },
     assets: { slides: [] },
@@ -91,17 +91,19 @@
     if (!grid || !exp) return;
 
     var inner = exp.querySelector(".expander-inner");
-    var track = document.getElementById("galleryTrack");
+    var track = document.getElementById("galleryTrack");   // stacked phone screens
+    var textWrap = document.getElementById("galleryText"); // stacked title + copy
     var dotsWrap = document.getElementById("galleryDots");
-    var captionEl = document.getElementById("galleryCaption");
     var titleEl = document.getElementById("galleryTitle");
     var iconEl = document.getElementById("galleryIcon");
     var counterEl = document.getElementById("galleryCounter");
+    var totalEl = document.getElementById("galleryTotal");
     var bar = document.getElementById("galleryBar");
     var sliderEl = document.getElementById("gallerySlider");
     var prevBtn = document.getElementById("galleryPrev");
     var nextBtn = document.getElementById("galleryNext");
     var closeBtn = document.getElementById("galleryClose");
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
 
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var OPEN_MS = reduced ? 0 : 450;
@@ -114,17 +116,18 @@
     var NAV_H = 100;      // fixed navbar + a little breathing room
 
     /* ---------- slider ---------- */
-    function goTo(i, instant) {
+    // Crossfade: every screen and text block is stacked in place and we just
+    // toggle which one is active. Nothing translates, so nothing can drift.
+    function goTo(i) {
       if (!slides.length) return;
       index = (i + slides.length) % slides.length;
-      track.classList.toggle("no-anim", !!instant || reduced);
-      // slides are a fixed width; shift the track so the active one sits centred
-      track.style.transform = "translateX(calc(" + -index + " * var(--slide-w)))";
-      captionEl.textContent = slides[index].caption || "";
-      counterEl.textContent = index + 1 + " / " + slides.length;
-      track.querySelectorAll(".slide").forEach(function (s, n) {
+      counterEl.textContent = pad(index + 1);
+      track.querySelectorAll(".gal-slide").forEach(function (s, n) {
         s.classList.toggle("active", n === index);
         s.setAttribute("aria-hidden", n === index ? "false" : "true");
+      });
+      textWrap.querySelectorAll(".gal-el").forEach(function (t, n) {
+        t.classList.toggle("active", n === index);
       });
       dotsWrap.querySelectorAll("button").forEach(function (d, n) {
         d.classList.toggle("active", n === index);
@@ -177,33 +180,43 @@
       exp.style.setProperty("--c", card.style.getPropertyValue("--c").trim() || "#3B82F6");
 
       track.innerHTML = "";
+      textWrap.innerHTML = "";
       dotsWrap.innerHTML = "";
+      totalEl.textContent = pad(slides.length);
+
       slides.forEach(function (s, i) {
         var cell = document.createElement("div");
-        cell.className = "slide";
-        var phone = document.createElement("div");
-        phone.className = "phone";
+        cell.className = "gal-slide";
         var img = document.createElement("img");
         img.src = s.src;
-        img.alt = s.caption || titleEl.textContent + " screen " + (i + 1);
-        if (i > 2) img.loading = "lazy"; // first few are visible immediately
-        phone.appendChild(img);
-        cell.appendChild(phone);
-        cell.addEventListener("click", function () { if (i !== index) goTo(i); });
+        img.alt = s.title || titleEl.textContent + " screen " + (i + 1);
+        if (i > 1) img.loading = "lazy"; // the first couple are needed straight away
+        cell.appendChild(img);
         track.appendChild(cell);
+
+        var el = document.createElement("div");
+        el.className = "gal-el";
+        var h = document.createElement("h4");
+        h.textContent = s.title || "";
+        var p = document.createElement("p");
+        p.textContent = s.caption || "";
+        el.appendChild(h);
+        el.appendChild(p);
+        textWrap.appendChild(el);
 
         var dot = document.createElement("button");
         dot.type = "button";
-        dot.setAttribute("aria-label", "Go to screen " + (i + 1));
+        dot.setAttribute("aria-label", (s.title || "Screen " + (i + 1)));
         dot.addEventListener("click", function () { goTo(i); });
         dotsWrap.appendChild(dot);
       });
 
+      // reserve height for the tallest text block so the panel doesn't jump
+      textWrap.style.minHeight = "";
       var solo = slides.length < 2;
       dotsWrap.hidden = solo;
       prevBtn.hidden = solo;
       nextBtn.hidden = solo;
-      counterEl.hidden = solo;
     }
 
     function open(card) {
@@ -225,12 +238,21 @@
       placePanel(card);
 
       exp.hidden = false;
+
+      // Reserve the tallest text block's height so the panel doesn't jump as
+      // captions of different lengths come and go. Measurable only once shown.
+      var tallest = 0;
+      textWrap.querySelectorAll(".gal-el").forEach(function (el) {
+        tallest = Math.max(tallest, el.offsetHeight);
+      });
+      textWrap.style.minHeight = tallest + "px";
+
       exp.style.height = "0px";
       void exp.offsetHeight; // reflow before animating
       exp.style.height = inner.offsetHeight + "px";
       exp.classList.add("open");
 
-      goTo(0, true);
+      goTo(0);
 
       // let it settle to auto so late-loading images don't get clipped
       window.setTimeout(function () {
