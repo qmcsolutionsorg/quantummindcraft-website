@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- ?v= is a cache buster: bump it whenever styles.css or script.js changes -->
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=7" />
 </head>
 <body>
   <!-- ===== Animated background ===== -->
@@ -223,15 +223,6 @@
           <!-- Slide-down gallery panel — moved into the clicked card's row by script.js -->
           <div class="expander" id="featureExpander" hidden>
             <div class="expander-inner">
-              <div class="expander-head">
-                <span class="expander-ic" id="galleryIcon" aria-hidden="true"></span>
-                <h3 id="galleryTitle"></h3>
-                <span class="expander-counter" id="galleryCounter"></span>
-                <button class="expander-close" id="galleryClose" aria-label="Close screens">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-                </button>
-              </div>
-
               <div class="slider" id="gallerySlider">
                 <div class="slider-track" id="galleryTrack"></div>
                 <button class="slider-arrow prev" id="galleryPrev" aria-label="Previous screen">
@@ -242,8 +233,21 @@
                 </button>
               </div>
 
-              <p class="slider-caption" id="galleryCaption" aria-live="polite"></p>
-              <div class="slider-dots" id="galleryDots"></div>
+              <!-- Chrome floats over the carousel so it costs no vertical space -->
+              <div class="gallery-bar top">
+                <span class="expander-ic" id="galleryIcon" aria-hidden="true"></span>
+                <h3 id="galleryTitle"></h3>
+                <span class="expander-counter" id="galleryCounter"></span>
+                <button class="expander-close" id="galleryClose" aria-label="Close screens">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+                </button>
+              </div>
+
+              <div class="gallery-bar bottom">
+                <p class="slider-caption" id="galleryCaption" aria-live="polite"></p>
+                <div class="slider-dots" id="galleryDots"></div>
+              </div>
+
               <div class="slider-progress"><span id="galleryBar"></span></div>
             </div>
           </div>
@@ -379,6 +383,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>

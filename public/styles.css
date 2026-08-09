@@ -194,7 +194,7 @@ img { max-width: 100%; display: block; }
 .expander { grid-column: 1 / -1; height: 0; overflow: hidden;
   transition: height .45s cubic-bezier(.4,0,.2,1); }
 .expander[hidden] { display: none; }
-.expander-inner { position: relative; margin-top: 10px; padding: 24px; border-radius: var(--radius);
+.expander-inner { position: relative; margin-top: 10px; padding: 8px; overflow: hidden; border-radius: var(--radius);
   border: 1px solid color-mix(in srgb, var(--c) 40%, var(--border));
   background: linear-gradient(160deg, rgba(17,25,58,.92), rgba(8,12,32,.96));
   box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 24px 60px rgba(0,0,0,.45);
@@ -205,12 +205,21 @@ img { max-width: 100%; display: block; }
   transform: rotate(45deg); background: rgba(17,25,58,.95);
   border-left: 1px solid color-mix(in srgb, var(--c) 40%, var(--border));
   border-top: 1px solid color-mix(in srgb, var(--c) 40%, var(--border)); }
-.expander-head { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
-.expander-ic { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; color: #fff;
+/* Floating chrome — overlaid on the carousel rather than stacked around it,
+   so the phone gets the panel's full height. */
+.gallery-bar { position: absolute; left: 0; right: 0; z-index: 4; display: flex; align-items: center; gap: 13px;
+  padding: 14px 18px; pointer-events: none; }
+.gallery-bar > * { pointer-events: auto; }
+.gallery-bar.top { top: 0; border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(180deg, rgba(11,16,40,.94) 20%, rgba(11,16,40,0)); }
+.gallery-bar.bottom { bottom: 0; flex-direction: column; gap: 9px; padding: 26px 18px 16px;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: linear-gradient(0deg, rgba(11,16,40,.94) 30%, rgba(11,16,40,0)); }
+.expander-ic { flex: 0 0 auto; width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center; color: #fff;
   background: linear-gradient(135deg, var(--c), color-mix(in srgb, var(--c) 55%, #000));
   box-shadow: 0 8px 20px color-mix(in srgb, var(--c) 35%, transparent); }
-.expander-ic svg { width: 22px; height: 22px; }
-.expander-head h3 { font-size: 1.15rem; }
+.expander-ic svg { width: 20px; height: 20px; }
+.gallery-bar h3 { font-size: 1.05rem; }
 .expander-counter { margin-left: auto; font-size: .82rem; font-weight: 600; color: var(--text-faint); letter-spacing: .04em; }
 .expander-close { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; cursor: pointer;
   color: var(--text-dim); background: rgba(255,255,255,.06); border: 1px solid var(--border); transition: background .2s, color .2s; }
@@ -219,9 +228,9 @@ img { max-width: 100%; display: block; }
 /* Slider — coverflow of phone screens, active one centred and lifted */
 /* Phone size is driven by the viewport so the focused screen is as large as
    will fit without pushing the caption and dots off-screen. */
-.slider { --phone-w: min(calc(55vh / 2.2315), 56vw, 250px);
+.slider { --phone-w: min(calc(72vh / 2.2315), 56vw, 320px);
   --slide-w: calc(var(--phone-w) * 0.64);
-  position: relative; overflow: hidden; border-radius: 14px; padding: 18px 0;
+  position: relative; overflow: hidden; border-radius: 12px; padding: 10px 0;
   background: radial-gradient(62% 110% at 50% 20%, color-mix(in srgb, var(--c) 13%, transparent), transparent 72%); }
 /* soft fade at both edges — no hard frame, the phones just dissolve out */
 .slider::before, .slider::after { content: ""; position: absolute; top: 0; bottom: 0; width: 15%; z-index: 2; pointer-events: none; }
@@ -252,12 +261,14 @@ img { max-width: 100%; display: block; }
 .slider-arrow:hover { background: var(--c, #3B82F6); }
 .slider-arrow.prev { left: 12px; }
 .slider-arrow.next { right: 12px; }
-.slider-caption { margin-top: 14px; text-align: center; font-size: .92rem; color: var(--text-dim); min-height: 1.4em; }
-.slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 12px; }
+.slider-caption { text-align: center; font-size: .92rem; color: var(--text); min-height: 1.4em;
+  text-shadow: 0 2px 10px rgba(0,0,0,.8); }
+.slider-dots { display: flex; justify-content: center; gap: 8px; }
 .slider-dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; cursor: pointer;
   background: rgba(255,255,255,.22); transition: background .25s, width .25s; }
 .slider-dots button.active { width: 24px; border-radius: 5px; background: var(--c, #3B82F6); }
-.slider-progress { margin-top: 12px; height: 2px; border-radius: 2px; background: rgba(255,255,255,.08); overflow: hidden; }
+.slider-progress { position: absolute; left: 0; right: 0; bottom: 0; z-index: 5;
+  height: 3px; background: rgba(255,255,255,.08); overflow: hidden; }
 .slider-progress span { display: block; height: 100%; width: 0; border-radius: 2px; background: var(--c, #3B82F6); }
 .slider-progress span.run { transition: width linear; }
 
