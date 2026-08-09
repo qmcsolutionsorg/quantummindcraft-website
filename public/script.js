@@ -83,54 +83,76 @@
     growth: { slides: [] }
   };
 
-  var SLIDE_MS = 4500; // time each screen stays on
+  var SLIDE_MS = 5000; // time each screen stays on before auto-advancing
 
-  (function initGalleries() {
-    var grid = document.querySelector(".feature-grid");
-    var exp = document.getElementById("featureExpander");
-    if (!grid || !exp) return;
+  // PROTOTYPE: only this many screens are used per feature. Set to 0 for all of them.
+  var PROTO_SLIDES = 3;
 
-    var inner = exp.querySelector(".expander-inner");
-    var track = document.getElementById("galleryTrack");   // stacked phone screens
-    var textWrap = document.getElementById("galleryText"); // stacked title + copy
-    var dotsWrap = document.getElementById("galleryDots");
-    var titleEl = document.getElementById("galleryTitle");
-    var iconEl = document.getElementById("galleryIcon");
-    var counterEl = document.getElementById("galleryCounter");
-    var totalEl = document.getElementById("galleryTotal");
-    var bar = document.getElementById("galleryBar");
-    var sliderEl = document.getElementById("gallerySlider");
-    var prevBtn = document.getElementById("galleryPrev");
-    var nextBtn = document.getElementById("galleryNext");
-    var closeBtn = document.getElementById("galleryClose");
-    function pad(n) { return (n < 10 ? "0" : "") + n; }
+  (function initStage() {
+    var grid = document.getElementById("featureGrid");
+    var chipWrap = document.getElementById("featureChips");
+    var stage = document.getElementById("featureStage");
+    if (!grid || !chipWrap || !stage) return;
+
+    var bg = document.getElementById("stageBg");
+    var phone = document.getElementById("stagePhone");
+    var textWrap = document.getElementById("stageText");
+    var featureEl = document.getElementById("stageFeature");
+    var iconEl = document.getElementById("stageIcon");
+    var indexEl = document.getElementById("stageIndex");
+    var totalEl = document.getElementById("stageTotal");
+    var bar = document.getElementById("stageBar");
+    var prevBtn = document.getElementById("stagePrev");
+    var nextBtn = document.getElementById("stageNext");
+    var closeBtn = document.getElementById("stageClose");
 
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var OPEN_MS = reduced ? 0 : 450;
-
     var slides = [];
     var index = 0;
     var timer = null;
-    var activeCard = null;
-    var scrollBefore = 0; // where the reader was before we scrolled them to the panel
-    var NAV_H = 100;      // fixed navbar + a little breathing room
+    var isOpen = false;
+    var lastFocused = null;
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
 
-    /* ---------- slider ---------- */
-    // Crossfade: every screen and text block is stacked in place and we just
-    // toggle which one is active. Nothing translates, so nothing can drift.
+    /* ---------- build the chip bar from the cards ---------- */
+    Array.prototype.slice.call(grid.querySelectorAll(".feature-card[data-gallery]")).forEach(function (card) {
+      var key = card.getAttribute("data-gallery");
+      var data = GALLERIES[key];
+      var ready = !!(data && data.slides.length);
+
+      var chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "feature-chip";
+      chip.style.setProperty("--c", card.style.getPropertyValue("--c").trim() || "#3B82F6");
+      chip.innerHTML = '<i aria-hidden="true">' + card.querySelector(".feature-ic").innerHTML + "</i>";
+      chip.appendChild(document.createTextNode(card.querySelector("h3").textContent));
+      if (!ready) {
+        chip.disabled = true;
+        var soon = document.createElement("span");
+        soon.className = "soon";
+        soon.textContent = "soon";
+        chip.appendChild(soon);
+        chip.title = "Screens coming soon";
+      } else {
+        chip.addEventListener("click", function () { open(card, data.slides); });
+      }
+      chipWrap.appendChild(chip);
+    });
+
+    // Chips replace the tiles for anyone with JS. The tiles stay in the HTML so
+    // the copy is still in the page source for search engines and no-JS readers.
+    grid.hidden = true;
+
+    /* ---------- slide switching ---------- */
     function goTo(i) {
       if (!slides.length) return;
       index = (i + slides.length) % slides.length;
-      counterEl.textContent = pad(index + 1);
-      track.querySelectorAll(".gal-slide").forEach(function (s, n) {
-        s.classList.toggle("active", n === index);
-        s.setAttribute("aria-hidden", n === index ? "false" : "true");
-      });
-      textWrap.querySelectorAll(".gal-el").forEach(function (t, n) {
-        t.classList.toggle("active", n === index);
-      });
-      dotsWrap.querySelectorAll("button").forEach(function (d, n) {
-        d.classList.toggle("active", n === index);
+      indexEl.textContent = pad(index + 1);
+      [bg, phone, textWrap].forEach(function (wrap) {
+        var kids = wrap.children;
+        for (var n = 0; n < kids.length; n++) {
+          kids[n].classList.toggle("active", n === index);
+        }
       });
       restartTimer();
     }
@@ -149,231 +171,135 @@
       bar.classList.remove("run");
       bar.style.transitionDuration = "0ms";
       bar.style.width = "0%";
-      if (reduced || slides.length < 2 || !activeCard) return;
-      void bar.offsetWidth; // reflow so the reset actually applies
+      if (reduced || slides.length < 2 || !isOpen) return;
+      void bar.offsetWidth;
       bar.classList.add("run");
       bar.style.transitionDuration = SLIDE_MS + "ms";
       bar.style.width = "100%";
       timer = setTimeout(next, SLIDE_MS);
     }
 
-    /* ---------- placing the panel in the grid ---------- */
-    function columnCount() {
-      var cols = getComputedStyle(grid).gridTemplateColumns.split(" ").filter(Boolean);
-      return Math.max(cols.length, 1);
-    }
-    // Insert the panel after the last card on the clicked card's row, so it
-    // spans full width and pushes the rows below it down.
-    function placePanel(card) {
-      if (exp.parentNode) exp.parentNode.removeChild(exp); // detach first, or row maths is off
-      var cards = Array.prototype.slice.call(grid.querySelectorAll(".feature-card"));
-      var i = cards.indexOf(card);
-      var cols = columnCount();
-      var afterIdx = Math.floor(i / cols) * cols + cols;
-      grid.insertBefore(exp, cards[afterIdx] || null);
-    }
-
     /* ---------- open / close ---------- */
-    function buildContent(card) {
-      titleEl.textContent = card.querySelector("h3").textContent;
-      iconEl.innerHTML = card.querySelector(".feature-ic").innerHTML;
-      exp.style.setProperty("--c", card.style.getPropertyValue("--c").trim() || "#3B82F6");
+    function open(card, all) {
+      slides = PROTO_SLIDES > 0 ? all.slice(0, PROTO_SLIDES) : all;
+      lastFocused = document.activeElement;
 
-      track.innerHTML = "";
-      textWrap.innerHTML = "";
-      dotsWrap.innerHTML = "";
+      stage.style.setProperty("--c", card.style.getPropertyValue("--c").trim() || "#3B82F6");
+      featureEl.textContent = card.querySelector("h3").textContent;
+      iconEl.innerHTML = card.querySelector(".feature-ic").innerHTML;
       totalEl.textContent = pad(slides.length);
 
+      bg.innerHTML = "";
+      phone.innerHTML = "";
+      textWrap.innerHTML = "";
+
       slides.forEach(function (s, i) {
+        var layer = document.createElement("div");
+        layer.className = "stage-bg-layer";
+        layer.style.backgroundImage = 'url("' + s.src + '")';
+        bg.appendChild(layer);
+
         var cell = document.createElement("div");
-        cell.className = "gal-slide";
+        cell.className = "stage-slide";
         var img = document.createElement("img");
         img.src = s.src;
-        img.alt = s.title || titleEl.textContent + " screen " + (i + 1);
-        if (i > 1) img.loading = "lazy"; // the first couple are needed straight away
+        img.alt = s.title || featureEl.textContent + " screen " + (i + 1);
         cell.appendChild(img);
-        track.appendChild(cell);
+        phone.appendChild(cell);
 
         var el = document.createElement("div");
-        el.className = "gal-el";
-        var h = document.createElement("h4");
+        el.className = "stage-el";
+        var h = document.createElement("h2");
         h.textContent = s.title || "";
         var p = document.createElement("p");
         p.textContent = s.caption || "";
         el.appendChild(h);
         el.appendChild(p);
         textWrap.appendChild(el);
-
-        var dot = document.createElement("button");
-        dot.type = "button";
-        dot.setAttribute("aria-label", (s.title || "Screen " + (i + 1)));
-        dot.addEventListener("click", function () { goTo(i); });
-        dotsWrap.appendChild(dot);
       });
 
-      // reserve height for the tallest text block so the panel doesn't jump
-      textWrap.style.minHeight = "";
-      var solo = slides.length < 2;
-      dotsWrap.hidden = solo;
-      prevBtn.hidden = solo;
-      nextBtn.hidden = solo;
-    }
+      stage.hidden = false;
+      document.body.classList.add("stage-open");
+      nav.classList.add("scrolled"); // keep the menu legible over the stage
+      void stage.offsetWidth;
+      stage.classList.add("open");
+      isOpen = true;
 
-    function open(card) {
-      var data = GALLERIES[card.getAttribute("data-gallery")];
-      if (!data || !data.slides.length) return;
-
-      if (activeCard === card) { close(); return; }
-      // remember the reading position only on a fresh open, not when
-      // switching between cards — otherwise closing lands somewhere random
-      if (!activeCard) scrollBefore = window.scrollY;
-      if (activeCard) markClosed(activeCard);
-
-      slides = data.slides;
-      activeCard = card;
-      card.classList.add("open");
-      card.setAttribute("aria-expanded", "true");
-
-      buildContent(card);
-      placePanel(card);
-
-      exp.hidden = false;
-
-      // Reserve the tallest text block's height so the panel doesn't jump as
-      // captions of different lengths come and go. Measurable only once shown.
+      // reserve room for the longest block so the layout doesn't jump
       var tallest = 0;
-      textWrap.querySelectorAll(".gal-el").forEach(function (el) {
+      textWrap.querySelectorAll(".stage-el").forEach(function (el) {
         tallest = Math.max(tallest, el.offsetHeight);
       });
       textWrap.style.minHeight = tallest + "px";
 
-      exp.style.height = "0px";
-      void exp.offsetHeight; // reflow before animating
-      exp.style.height = inner.offsetHeight + "px";
-      exp.classList.add("open");
-
       goTo(0);
-
-      // let it settle to auto so late-loading images don't get clipped
-      window.setTimeout(function () {
-        if (activeCard === card) exp.style.height = "auto";
-      }, OPEN_MS);
-
-      // Scroll so the whole panel is visible, not just its top edge.
-      window.setTimeout(function () {
-        if (activeCard !== card) return;
-        var panelTop = exp.getBoundingClientRect().top + window.scrollY;
-        var panelH = inner.offsetHeight;
-        var avail = window.innerHeight - NAV_H;
-        var y;
-        if (panelH <= avail) {
-          // it fits — pull it fully into view, keeping the card visible above if we can
-          y = panelTop - NAV_H - Math.min(70, avail - panelH);
-        } else {
-          // taller than the screen — align its top just under the navbar
-          y = panelTop - NAV_H;
-        }
-        window.scrollTo({ top: Math.max(0, y), behavior: reduced ? "auto" : "smooth" });
-      }, 90);
+      closeBtn.focus();
     }
 
-    function markClosed(card) {
-      card.classList.remove("open");
-      card.setAttribute("aria-expanded", "false");
-    }
-
-    function close() {
-      if (!activeCard) return;
+    function close(toTop) {
+      if (!isOpen) return;
       stopTimer();
-      markClosed(activeCard);
-      var closedCard = activeCard;
-      activeCard = null;
-
-      // Return the reader to where they were before the panel pushed the page around.
-      // If they've scrolled off since, just bring the card itself back into view.
-      var cardTop = closedCard.getBoundingClientRect().top + window.scrollY;
-      var target = scrollBefore;
-      if (Math.abs(cardTop - scrollBefore) > window.innerHeight * 1.5) {
-        target = cardTop - NAV_H - 20;
-      }
-      window.scrollTo({ top: Math.max(0, target), behavior: reduced ? "auto" : "smooth" });
-
-      exp.style.height = inner.offsetHeight + "px"; // from auto to a real number
-      void exp.offsetHeight;
-      exp.classList.remove("open");
-      exp.style.height = "0px";
-
+      isOpen = false;
+      stage.classList.remove("open");
+      document.body.classList.remove("stage-open");
+      onScroll(); // restore the navbar's normal state
       window.setTimeout(function () {
-        if (activeCard) return; // reopened in the meantime
-        exp.hidden = true;
-        track.innerHTML = "";
-        if (exp.parentNode) exp.parentNode.removeChild(exp);
-      }, OPEN_MS);
+        if (isOpen) return;
+        stage.hidden = true;
+        bg.innerHTML = "";
+        phone.innerHTML = "";
+        textWrap.innerHTML = "";
+      }, reduced ? 0 : 500);
+      if (toTop) window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+      else if (lastFocused) lastFocused.focus();
     }
-
-    /* ---------- wire the cards ---------- */
-    document.querySelectorAll(".feature-card[data-gallery]").forEach(function (card) {
-      var data = GALLERIES[card.getAttribute("data-gallery")];
-      if (!data || !data.slides.length) return; // no screens yet → leave it inert
-
-      card.classList.add("has-gallery");
-      card.setAttribute("role", "button");
-      card.setAttribute("tabindex", "0");
-      card.setAttribute("aria-expanded", "false");
-
-      var more = document.createElement("span");
-      more.className = "feature-more";
-      more.innerHTML =
-        '<span class="feature-more-label">See it in the app</span>' +
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
-      card.appendChild(more);
-
-      card.addEventListener("click", function () { open(card); });
-      card.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(card); }
-      });
-    });
 
     /* ---------- controls ---------- */
     nextBtn.addEventListener("click", next);
     prevBtn.addEventListener("click", prev);
-    closeBtn.addEventListener("click", close);
+    closeBtn.addEventListener("click", function () { close(false); });
+
+    // Any menu link closes the stage and returns to the top of the page
+    document.querySelectorAll(".nav a, .mobile-menu a, .brand").forEach(function (a) {
+      a.addEventListener("click", function () { if (isOpen) close(true); });
+    });
 
     document.addEventListener("keydown", function (e) {
-      if (!activeCard) return;
-      if (e.key === "Escape") { var c = activeCard; close(); c.focus(); }
-      else if (e.key === "ArrowRight") next();
-      else if (e.key === "ArrowLeft") prev();
+      if (!isOpen) return;
+      if (e.key === "Escape") close(false);
+      else if (e.key === "ArrowRight" || e.key === "ArrowDown" || e.key === "PageDown") { e.preventDefault(); next(); }
+      else if (e.key === "ArrowLeft" || e.key === "ArrowUp" || e.key === "PageUp") { e.preventDefault(); prev(); }
     });
 
-    // pause while hovered, or while the tab is in the background
-    sliderEl.addEventListener("mouseenter", stopTimer);
-    sliderEl.addEventListener("mouseleave", function () { if (activeCard) restartTimer(); });
+    // Scrolling moves through the screens instead of the page
+    var wheelLock = 0;
+    stage.addEventListener("wheel", function (e) {
+      if (!isOpen) return;
+      e.preventDefault();
+      var now = Date.now();
+      if (now - wheelLock < 620) return;      // one screen per gesture, not per tick
+      if (Math.abs(e.deltaY) < 12) return;
+      wheelLock = now;
+      e.deltaY > 0 ? next() : prev();
+    }, { passive: false });
+
+    // Swipe on touch
+    var sy = null, sx = null;
+    stage.addEventListener("touchstart", function (e) {
+      sy = e.touches[0].clientY; sx = e.touches[0].clientX; stopTimer();
+    }, { passive: true });
+    stage.addEventListener("touchend", function (e) {
+      if (sy === null) return;
+      var dy = e.changedTouches[0].clientY - sy;
+      var dx = e.changedTouches[0].clientX - sx;
+      var d = Math.abs(dx) > Math.abs(dy) ? dx : dy;
+      if (Math.abs(d) > 45) { d < 0 ? next() : prev(); } else { restartTimer(); }
+      sy = sx = null;
+    });
+
     document.addEventListener("visibilitychange", function () {
-      if (!activeCard) return;
+      if (!isOpen) return;
       if (document.hidden) stopTimer(); else restartTimer();
-    });
-
-    // swipe on touch devices
-    var startX = null;
-    sliderEl.addEventListener("touchstart", function (e) { startX = e.touches[0].clientX; stopTimer(); }, { passive: true });
-    sliderEl.addEventListener("touchend", function (e) {
-      if (startX === null) return;
-      var dx = e.changedTouches[0].clientX - startX;
-      if (Math.abs(dx) > 45) { dx < 0 ? next() : prev(); } else { restartTimer(); }
-      startX = null;
-    });
-
-    // the grid changes column count at breakpoints — re-seat the panel
-    var rzTimer = null;
-    window.addEventListener("resize", function () {
-      if (!activeCard) return;
-      clearTimeout(rzTimer);
-      rzTimer = setTimeout(function () {
-        if (!activeCard) return;
-        placePanel(activeCard);
-        exp.style.height = "auto";
-      }, 150);
     });
   })();
 

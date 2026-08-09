@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- ?v= is a cache buster: bump it whenever styles.css or script.js changes -->
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
   <!-- ===== Animated background ===== -->
@@ -141,7 +141,10 @@
           <p>Twelve powerful worlds, beautifully connected. Each one deep enough to replace a dedicated app — together they replace them all.</p>
         </div>
 
-        <div class="feature-grid">
+        <!-- Compact buttons, generated from the cards below by script.js -->
+        <div class="feature-chips" id="featureChips"></div>
+
+        <div class="feature-grid" id="featureGrid">
           <article class="feature-card reveal" data-gallery="health" style="--c:#EF4444">
             <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.7-4.35-9.33-8.5C.9 9.5 2 6 5 6c1.9 0 3 1 3.7 2 .8-1 1.8-2 3.3-2 3 0 4.1 3.5 2.33 6.5C18.7 16.65 12 21 12 21z"/></svg></div>
             <h3>Health &amp; Wellness</h3>
@@ -220,47 +223,8 @@
             <p>Your own space for projects, goals, dreams and wishlists — with documentation, deadlines, budgets and visible progress that keeps you motivated.</p>
           </article>
 
-          <!-- Slide-down gallery panel — moved into the clicked card's row by script.js -->
-          <div class="expander" id="featureExpander" hidden>
-            <div class="expander-inner" id="gallerySlider">
-              <button class="expander-close" id="galleryClose" aria-label="Close screens">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-              </button>
-
-              <!-- Phone column: screens are stacked and crossfade, so nothing can drift -->
-              <div class="gal-stage">
-                <div class="gal-phone" id="galleryTrack"></div>
-              </div>
-
-              <!-- Information column: label, per-slide title and text, counter -->
-              <div class="gal-info">
-                <span class="gal-label">
-                  <span class="expander-ic" id="galleryIcon" aria-hidden="true"></span>
-                  <span id="galleryTitle"></span>
-                </span>
-
-                <div class="gal-text" id="galleryText"></div>
-
-                <div class="gal-nav">
-                  <span class="gal-index" id="galleryCounter">01</span>
-                  <span class="gal-sep"><i id="galleryBar"></i></span>
-                  <span class="gal-total" id="galleryTotal">01</span>
-                  <div class="gal-arrows">
-                    <button class="gal-arrow" id="galleryPrev" aria-label="Previous screen">
-                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
-                    </button>
-                    <button class="gal-arrow" id="galleryNext" aria-label="Next screen">
-                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
-                    </button>
-                  </div>
-                </div>
-
-                <div class="gal-dots" id="galleryDots"></div>
-              </div>
-            </div>
-          </div>
         </div>
-        <p class="feature-hint reveal">Tap any card to see it inside the app — it opens right here</p>
+        <p class="feature-hint reveal">Pick any module above to walk through it inside the app</p>
       </div>
     </section>
 
@@ -391,6 +355,43 @@
     </div>
   </footer>
 
-  <script src="script.js?v=8"></script>
+  <!-- ===== Fullscreen feature stage (populated by script.js) ===== -->
+  <div class="stage" id="featureStage" role="dialog" aria-modal="true" aria-labelledby="stageFeature" hidden>
+    <div class="stage-bg" id="stageBg" aria-hidden="true"></div>
+
+    <button class="stage-close" id="stageClose">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      Close
+    </button>
+
+    <div class="stage-inner">
+      <div class="stage-copy">
+        <span class="stage-label">
+          <i id="stageIcon" aria-hidden="true"></i>
+          <span id="stageFeature"></span>
+        </span>
+        <div class="stage-text" id="stageText"></div>
+      </div>
+      <div class="stage-phone" id="stagePhone"></div>
+    </div>
+
+    <div class="stage-nav">
+      <span id="stageIndex">01</span>
+      <span class="stage-sep"><i id="stageBar"></i></span>
+      <span class="stage-total" id="stageTotal">01</span>
+      <div class="stage-arrows">
+        <button class="stage-arrow" id="stagePrev" aria-label="Previous screen">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button class="stage-arrow" id="stageNext" aria-label="Next screen">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="stage-hint" aria-hidden="true">Scroll <span></span> to explore</div>
+  </div>
+
+  <script src="script.js?v=9"></script>
 </body>
 </html>
