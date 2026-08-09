@@ -167,6 +167,9 @@ img { max-width: 100%; display: block; }
 
 /* ===== Feature grid ===== */
 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+/* display:grid outranks the browser's [hidden] rule, so state it explicitly.
+   The tiles stay in the HTML for search engines; script.js hides them. */
+.feature-grid[hidden] { display: none; }
 .feature-card { position: relative; padding: 28px 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--border); overflow: hidden; transition: transform .3s, border-color .3s, background .3s; }
 .feature-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(400px 140px at 20% -10%, color-mix(in srgb, var(--c) 22%, transparent), transparent 70%); opacity: 0; transition: opacity .3s; }
 .feature-card:hover { transform: translateY(-6px); border-color: color-mix(in srgb, var(--c) 45%, var(--border)); background: var(--card-hover); }
