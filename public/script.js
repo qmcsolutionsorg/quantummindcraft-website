@@ -45,16 +45,19 @@
   var GALLERIES = {
     health: {
       slides: [
-        { src: "assets/images/screens/health/poster.jpg", caption: "Every family member's health, in one place" },
-        { src: "assets/images/screens/health/list.jpg", caption: "A separate medical record for everyone — pets included" },
-        { src: "assets/images/screens/health/details.jpg", caption: "Full history, documents and reports per person" },
-        { src: "assets/images/screens/health/vaccination-list.jpg", caption: "Vaccination schedules at a glance" },
-        { src: "assets/images/screens/health/vaccination-details.jpg", caption: "Every dose, date and certificate stored" },
-        { src: "assets/images/screens/health/treatments-list.jpg", caption: "Track ongoing and past treatments" },
-        { src: "assets/images/screens/health/treatment-details.jpg", caption: "Prescriptions, tests and reports together" },
-        { src: "assets/images/screens/health/tracker-list.jpg", caption: "BP, sugar and vitals tracking" },
-        { src: "assets/images/screens/health/tracker-details.jpg", caption: "See the trend, not just today's number" },
-        { src: "assets/images/screens/health/schedules.jpg", caption: "Appointments and reminders that never slip" }
+        { src: "assets/images/screens/health/overview.jpeg", caption: "Your whole family's health at a glance" },
+        { src: "assets/images/screens/health/list.jpeg", caption: "A separate medical record for everyone — pets included" },
+        { src: "assets/images/screens/health/vaccinations.jpeg", caption: "Vaccination schedules, tracked per person" },
+        { src: "assets/images/screens/health/vaccination-countries.jpeg", caption: "Requirements by country, ready before you travel" },
+        { src: "assets/images/screens/health/treatments.jpeg", caption: "Ongoing and past treatments in one list" },
+        { src: "assets/images/screens/health/treatment-details.jpeg", caption: "Prescriptions, tests and reports together" },
+        { src: "assets/images/screens/health/medicines.jpeg", caption: "Every medicine, dose and schedule" },
+        { src: "assets/images/screens/health/medicines-print.jpeg", caption: "Print a clean list for the doctor" },
+        { src: "assets/images/screens/health/tracker.jpeg", caption: "BP, sugar and vitals tracking" },
+        { src: "assets/images/screens/health/tracker-details.jpeg", caption: "See the trend, not just today's number" },
+        { src: "assets/images/screens/health/schedules.jpeg", caption: "Appointments and reminders that never slip" },
+        { src: "assets/images/screens/health/insurance.jpeg", caption: "Policies and cover, findable in an emergency" },
+        { src: "assets/images/screens/health/transactions.jpeg", caption: "What your family's healthcare actually costs" }
       ]
     },
     finance: { slides: [] },
@@ -64,12 +67,12 @@
     parenting: { slides: [] },
     "moms-diary": {
       slides: [
-        { src: "assets/images/screens/moms-diary/poster.png", caption: "A personal companion through every stage" },
-        { src: "assets/images/screens/moms-diary/cycle-list.jpg", caption: "Cycle tracking, month by month" },
-        { src: "assets/images/screens/moms-diary/cycle-details.jpg", caption: "Symptoms, notes and patterns" },
-        { src: "assets/images/screens/moms-diary/cycle-overview.jpg", caption: "Predictions and history in one view" },
-        { src: "assets/images/screens/moms-diary/pregnancy-list.jpg", caption: "A separate record for each pregnancy" },
-        { src: "assets/images/screens/moms-diary/pregnancy-details.jpg", caption: "Milestones, appointments and reports" }
+        { src: "assets/images/screens/moms-diary/overview.jpeg", caption: "A personal companion through every stage" },
+        { src: "assets/images/screens/moms-diary/menstruation.jpeg", caption: "Cycle tracking, month by month" },
+        { src: "assets/images/screens/moms-diary/menstruation-details.jpeg", caption: "Symptoms and notes, logged day by day" },
+        { src: "assets/images/screens/moms-diary/cycles.jpeg", caption: "Every cycle recorded and comparable" },
+        { src: "assets/images/screens/moms-diary/cycle-details.jpeg", caption: "Patterns and predictions in one view" },
+        { src: "assets/images/screens/moms-diary/pregnancy-tracker.jpeg", caption: "A separate record for each pregnancy" }
       ]
     },
     assets: { slides: [] },
@@ -113,9 +116,14 @@
       if (!slides.length) return;
       index = (i + slides.length) % slides.length;
       track.classList.toggle("no-anim", !!instant || reduced);
-      track.style.transform = "translateX(" + -index * 100 + "%)";
+      // slides are a fixed width; shift the track so the active one sits centred
+      track.style.transform = "translateX(calc(" + -index + " * var(--slide-w)))";
       captionEl.textContent = slides[index].caption || "";
       counterEl.textContent = index + 1 + " / " + slides.length;
+      track.querySelectorAll(".slide").forEach(function (s, n) {
+        s.classList.toggle("active", n === index);
+        s.setAttribute("aria-hidden", n === index ? "false" : "true");
+      });
       dotsWrap.querySelectorAll("button").forEach(function (d, n) {
         d.classList.toggle("active", n === index);
       });
@@ -171,11 +179,15 @@
       slides.forEach(function (s, i) {
         var cell = document.createElement("div");
         cell.className = "slide";
+        var phone = document.createElement("div");
+        phone.className = "phone";
         var img = document.createElement("img");
         img.src = s.src;
         img.alt = s.caption || titleEl.textContent + " screen " + (i + 1);
-        if (i > 0) img.loading = "lazy";
-        cell.appendChild(img);
+        if (i > 2) img.loading = "lazy"; // first few are visible immediately
+        phone.appendChild(img);
+        cell.appendChild(phone);
+        cell.addEventListener("click", function () { if (i !== index) goTo(i); });
         track.appendChild(cell);
 
         var dot = document.createElement("button");
