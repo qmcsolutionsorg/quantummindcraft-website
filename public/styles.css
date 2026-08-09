@@ -58,8 +58,8 @@ img { max-width: 100%; display: block; }
 .nav.scrolled { background: rgba(8, 14, 36, 0.72); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 20px; }
 .brand { display: flex; align-items: center; flex: 0 0 auto; }
-.nav-links { display: flex; gap: 32px; margin-left: auto; }
-.nav-links a { color: var(--text-dim); font-size: 15px; font-weight: 500; transition: color .2s; }
+.nav-links { display: flex; gap: 22px; margin-left: auto; }
+.nav-links a { color: var(--text-dim); font-size: 14px; white-space: nowrap; font-weight: 500; transition: color .2s; }
 .nav-links a:hover { color: var(--text); }
 .nav-cta { margin-left: 8px; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
@@ -189,9 +189,10 @@ img { max-width: 100%; display: block; }
 .feature-chip:hover { color: #fff; transform: translateY(-2px);
   background: color-mix(in srgb, var(--c) 16%, transparent); border-color: color-mix(in srgb, var(--c) 55%, transparent); }
 .feature-chip:focus-visible { outline: 2px solid var(--c); outline-offset: 3px; }
-.feature-chip i { width: 24px; height: 24px; border-radius: 7px; display: grid; place-items: center; color: #fff;
-  background: linear-gradient(135deg, var(--c), color-mix(in srgb, var(--c) 55%, #000)); }
-.feature-chip i svg { width: 14px; height: 14px; }
+/* modules share their feature's colour, so a dot reads better than an icon */
+.feature-chip i { flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%; background: var(--c);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--c) 70%, transparent); }
+.feature-chip[disabled] i { box-shadow: none; }
 .feature-chip[disabled] { opacity: .4; cursor: not-allowed; }
 .feature-chip[disabled]:hover { transform: none; background: rgba(255,255,255,.04); border-color: var(--border); color: var(--text-dim); }
 .feature-chip .soon { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
@@ -351,7 +352,7 @@ body.stage-open { overflow: hidden; }
 .reveal.visible { opacity: 1; transform: none; }
 
 /* ===== Responsive ===== */
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: flex; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }

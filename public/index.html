@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- ?v= is a cache buster: bump it whenever styles.css or script.js changes -->
-  <link rel="stylesheet" href="styles.css?v=11" />
+  <link rel="stylesheet" href="styles.css?v=12" />
 </head>
 <body>
   <!-- ===== Animated background ===== -->
@@ -56,10 +56,13 @@
         </span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#features">Features</a>
+        <a href="#top">Home</a>
+        <a href="#growth">Personal Growth</a>
         <a href="#family">Family</a>
-        <a href="#finance">Finance</a>
-        <a href="#future">Roadmap</a>
+        <a href="#business">Business</a>
+        <a href="#health">Health</a>
+        <a href="#finance">Finance &amp; Wealth</a>
+        <a href="#contact">Contact us</a>
       </nav>
       <div class="nav-cta">
         <a href="#download" class="btn btn-primary btn-sm">Get the App</a>
@@ -69,10 +72,13 @@
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#features">Features</a>
+      <a href="#top">Home</a>
+      <a href="#growth">Personal Growth</a>
       <a href="#family">Family</a>
-      <a href="#finance">Finance</a>
-      <a href="#future">Roadmap</a>
+      <a href="#business">Business</a>
+      <a href="#health">Health</a>
+      <a href="#finance">Finance &amp; Wealth</a>
+      <a href="#contact">Contact us</a>
       <a href="#download" class="btn btn-primary">Get the App</a>
     </div>
   </header>
@@ -133,103 +139,34 @@
     </section>
 
     <!-- ===== Features ===== -->
-    <section class="section" id="features">
+    <!-- ===== Personal Growth ===== -->
+    <section class="section feature-sec" id="growth" style="--c:#0EA5E9">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Everything in one place</span>
-          <h2>One brain for your whole life</h2>
-          <p>Twelve powerful worlds, beautifully connected. Each one deep enough to replace a dedicated app — together they replace them all.</p>
+          <span class="eyebrow">Personal Growth</span>
+          <h2>Your own space to <span class="gradient-text">build on</span></h2>
+          <p>Projects, goals, dreams and the things you keep meaning to start — with documentation, deadlines, budgets and progress you can actually see.</p>
         </div>
-
-        <!-- Compact buttons, generated from the cards below by script.js -->
-        <div class="feature-chips" id="featureChips"></div>
-
-        <div class="feature-grid" id="featureGrid">
-          <article class="feature-card reveal" data-gallery="health" style="--c:#EF4444">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.7-4.35-9.33-8.5C.9 9.5 2 6 5 6c1.9 0 3 1 3.7 2 .8-1 1.8-2 3.3-2 3 0 4.1 3.5 2.33 6.5C18.7 16.65 12 21 12 21z"/></svg></div>
-            <h3>Health &amp; Wellness</h3>
-            <p>Separate medical records for every family member — even pets. Vaccinations, prescriptions, BP &amp; sugar tracking, reports, tests. A lifesaver in emergencies.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="finance" style="--c:#F59E0B">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 7H3V5h18v2zm0 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9h18zm-4 5h-3v2h3v-2z"/></svg></div>
-            <h3>Finance &amp; Accounting</h3>
-            <p>Bank accounts, cards, loans, wallets, payables &amp; receivables — plus real balance sheets with assets, liabilities and equity for personal <em>and</em> business.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="business" style="--c:#22C55E">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 4h4a2 2 0 0 1 2 2v1h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3V6a2 2 0 0 1 2-2zm0 3h4V6h-4v1z"/></svg></div>
-            <h3>Business &amp; ERP</h3>
-            <p>Run multiple businesses separately. Quotations → invoices → payments, products, partners, P&amp;L statements. A mini-ERP that stays simple.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="employees" style="--c:#14B8A6">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm-8 0a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-2.7 0-8 1.34-8 4v3h8v-3c0-1 .38-1.9 1-2.6A9 9 0 0 0 8 13zm8 0a10 10 0 0 0-1.6.13c1.1.9 1.6 2 1.6 2.87v3h8v-3c0-2.66-5.3-4-8-4z"/></svg></div>
-            <h3>Employees &amp; Workforce</h3>
-            <p>Attendance, login/logout, working hours, salaries, tasks and approvals for staff, workers or household help — a smart operations system inside the app.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="school" style="--c:#3B82F6">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2v3.3l7 3.8 7-3.8v-3.3l-7 3.8-7-3.8z"/></svg></div>
-            <h3>School &amp; Learning</h3>
-            <p>Subjects, assignments, projects, sports, music classes, deadlines and events — so no teacher email or project ever slips through again.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="parenting" style="--c:#8B5CF6">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5h-2v6l5 3 1-1.7-4-2.3V7z"/></svg></div>
-            <h3>Parenting &amp; Family</h3>
-            <p>Shared activities, routines, reminders and built-in approvals. Structured messaging to stay connected — even across distance or complex situations.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="moms-diary" style="--c:#EC4899">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.7-4.35-9.33-8.5C.9 9.5 2 6 5 6c1.9 0 3 1 3.7 2 .8-1 1.8-2 3.3-2 3 0 4.1 3.5 2.33 6.5C18.7 16.65 12 21 12 21z"/></svg></div>
-            <h3>Mom's Diary</h3>
-            <p>Pregnancy &amp; cycle tracking, milestones, appointments and reports — with separate records for each pregnancy and child. A personal life companion.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="assets" style="--c:#06B6D4">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21V7l9-4 9 4v14h-6v-6H9v6H3zm6-9h2v-2H9v2zm4 0h2v-2h-2v2zM9 8h2V6H9v2zm4 0h2V6h-2v2z"/></svg></div>
-            <h3>Asset Management</h3>
-            <p>Houses, vehicles, gold, equipment — with documents, warranties, servicing, insurance, appreciation/depreciation. A digital life-history for everything you own.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="payables" style="--c:#F97316">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v4H4V4zm0 6h16v10H4V10zm3 3v2h6v-2H7z"/></svg></div>
-            <h3>Payables</h3>
-            <p>Subscriptions, bills, rent, salaries, vendor payments — with custom categories and separate visibility per business. Never miss a payment again.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="travel" style="--c:#10B981">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5L21 16z"/></svg></div>
-            <h3>Trips &amp; Travel</h3>
-            <p>Separate trips with schedules, tickets, bookings, documents, checklists and expenses — personal or business. Know exactly what each trip cost.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="documents" style="--c:#6366F1">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm8 1.5V8h4.5L14 3.5zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/></svg></div>
-            <h3>Documents</h3>
-            <p>Reports, invoices, contracts, receipts, IDs — all uploaded and instantly findable. No more digging through chats and galleries.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="collaborations" style="--c:#A855F7">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4 0-9 2-9 5v3h18v-3c0-3-5-5-9-5zm7-9 1.5 1.5L18 9l-1.5-1.5L19 5z"/></svg></div>
-            <h3>Collaborations</h3>
-            <p>Keep every partnership separate — members, goals, documents, budgets and progress — for business, marketing, events or social causes.</p>
-          </article>
-
-          <article class="feature-card reveal" data-gallery="growth" style="--c:#0EA5E9">
-            <div class="feature-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></div>
-            <h3>Personal Growth</h3>
-            <p>Your own space for projects, goals, dreams and wishlists — with documentation, deadlines, budgets and visible progress that keeps you motivated.</p>
-          </article>
-
-        </div>
-        <p class="feature-hint reveal">Pick any module above to walk through it inside the app</p>
+        <div class="feature-chips" data-feature="growth"></div>
+        <p class="feature-hint reveal">Pick a module to walk through it inside the app</p>
       </div>
     </section>
 
-    <!-- ===== Family section ===== -->
-    <section class="section family" id="family">
+    <!-- ===== Family ===== -->
+    <section class="section feature-sec" id="family" style="--c:#8B5CF6">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Family</span>
+          <h2>One connected space for <span class="gradient-text">everyone</span></h2>
+          <p>Kids, parents and grandparents together — school, money, tasks, approvals and the conversations that hold it all together, even across distance.</p>
+        </div>
+        <div class="feature-chips" data-feature="family"></div>
+        <p class="feature-hint reveal">Pick a module to walk through it inside the app</p>
+      </div>
+    </section>
+
+<!-- ===== Family section ===== -->
+    <section class="section family">
       <div class="container split">
         <div class="split-text reveal">
           <span class="eyebrow">Built for the whole family</span>
@@ -251,8 +188,47 @@
       </div>
     </section>
 
-    <!-- ===== Finance highlight ===== -->
-    <section class="section finance" id="finance">
+    <!-- ===== Business ===== -->
+    <section class="section feature-sec" id="business" style="--c:#22C55E">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Business</span>
+          <h2>A mini-ERP that <span class="gradient-text">stays simple</span></h2>
+          <p>Run several businesses side by side — partners, leads, staff, sales, stock and accounts, each kept cleanly separate.</p>
+        </div>
+        <div class="feature-chips" data-feature="business"></div>
+        <p class="feature-hint reveal">Pick a module to walk through it inside the app</p>
+      </div>
+    </section>
+
+    <!-- ===== Health ===== -->
+    <section class="section feature-sec" id="health" style="--c:#EF4444">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Health</span>
+          <h2>Every record, <span class="gradient-text">every member</span></h2>
+          <p>Trackers, treatments, medicines and cover for the whole family — pets included — ready the moment it matters.</p>
+        </div>
+        <div class="feature-chips" data-feature="health"></div>
+        <p class="feature-hint reveal">Pick a module to walk through it inside the app</p>
+      </div>
+    </section>
+
+    <!-- ===== Finance & Wealth ===== -->
+    <section class="section feature-sec" id="finance" style="--c:#F59E0B">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Finance &amp; Wealth</span>
+          <h2>Not just income <span class="gradient-text">and expense</span></h2>
+          <p>Wallets, assets, loans, budgets, tax and investments — a real balance sheet for your personal life and every business you run.</p>
+        </div>
+        <div class="feature-chips" data-feature="finance"></div>
+        <p class="feature-hint reveal">Pick a module to walk through it inside the app</p>
+      </div>
+    </section>
+
+<!-- ===== Finance highlight ===== -->
+    <section class="section finance">
       <div class="container split reverse">
         <div class="split-text reveal">
           <span class="eyebrow">Real financial clarity</span>
@@ -278,6 +254,11 @@
         </div>
       </div>
     </section>
+
+
+    
+
+    
 
     <!-- ===== Future / Roadmap ===== -->
     <section class="section future" id="future">
@@ -313,6 +294,16 @@
             </a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section contact-sec" id="contact">
+      <div class="container section-head reveal">
+        <span class="eyebrow">Contact us</span>
+        <h2>Talk to us</h2>
+        <p>Questions, feedback, or partnership ideas — we read every message.</p>
+        <a class="btn btn-primary" href="mailto:info@quantummindcraft.com">info@quantummindcraft.com</a>
       </div>
     </section>
   </main>
@@ -392,6 +383,6 @@
     <div class="stage-hint" aria-hidden="true">Scroll <span></span> to explore</div>
   </div>
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>
