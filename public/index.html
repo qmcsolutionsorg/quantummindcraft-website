@@ -218,8 +218,36 @@
             <h3>Personal Growth</h3>
             <p>Your own space for projects, goals, dreams and wishlists — with documentation, deadlines, budgets and visible progress that keeps you motivated.</p>
           </article>
+
+          <!-- Slide-down gallery panel — moved into the clicked card's row by script.js -->
+          <div class="expander" id="featureExpander" hidden>
+            <div class="expander-inner">
+              <div class="expander-head">
+                <span class="expander-ic" id="galleryIcon" aria-hidden="true"></span>
+                <h3 id="galleryTitle"></h3>
+                <span class="expander-counter" id="galleryCounter"></span>
+                <button class="expander-close" id="galleryClose" aria-label="Close screens">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+                </button>
+              </div>
+
+              <div class="slider" id="gallerySlider">
+                <div class="slider-track" id="galleryTrack"></div>
+                <button class="slider-arrow prev" id="galleryPrev" aria-label="Previous screen">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+                </button>
+                <button class="slider-arrow next" id="galleryNext" aria-label="Next screen">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+
+              <p class="slider-caption" id="galleryCaption" aria-live="polite"></p>
+              <div class="slider-dots" id="galleryDots"></div>
+              <div class="slider-progress"><span id="galleryBar"></span></div>
+            </div>
+          </div>
         </div>
-        <p class="feature-hint reveal">Tap any card above to see it inside the app</p>
+        <p class="feature-hint reveal">Tap any card to see it inside the app — it opens right here</p>
       </div>
     </section>
 
@@ -349,39 +377,6 @@
       <span>info@quantummindcraft.com</span>
     </div>
   </footer>
-
-  <!-- ===== Feature gallery modal (populated by script.js) ===== -->
-  <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="galleryTitle" hidden>
-    <div class="modal-backdrop" data-close></div>
-    <div class="modal-panel" role="document">
-      <button class="modal-close" id="galleryClose" aria-label="Close">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-
-      <div class="modal-head">
-        <span class="modal-ic" id="galleryIcon" aria-hidden="true"></span>
-        <div>
-          <h3 id="galleryTitle"></h3>
-          <p id="galleryBlurb"></p>
-        </div>
-      </div>
-
-      <div class="slider" id="gallerySlider">
-        <div class="slider-track" id="galleryTrack"></div>
-
-        <button class="slider-arrow prev" id="galleryPrev" aria-label="Previous screen">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
-        </button>
-        <button class="slider-arrow next" id="galleryNext" aria-label="Next screen">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-
-      <p class="slider-caption" id="galleryCaption" aria-live="polite"></p>
-      <div class="slider-dots" id="galleryDots"></div>
-      <div class="slider-progress"><span id="galleryBar"></span></div>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>

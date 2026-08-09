@@ -83,46 +83,49 @@
   var SLIDE_MS = 4500; // time each screen stays on
 
   (function initGalleries() {
-    var modal = document.getElementById("galleryModal");
-    if (!modal) return;
+    var grid = document.querySelector(".feature-grid");
+    var exp = document.getElementById("featureExpander");
+    if (!grid || !exp) return;
 
-    var panel = modal.querySelector(".modal-panel");
+    var inner = exp.querySelector(".expander-inner");
     var track = document.getElementById("galleryTrack");
     var dotsWrap = document.getElementById("galleryDots");
     var captionEl = document.getElementById("galleryCaption");
     var titleEl = document.getElementById("galleryTitle");
-    var blurbEl = document.getElementById("galleryBlurb");
     var iconEl = document.getElementById("galleryIcon");
+    var counterEl = document.getElementById("galleryCounter");
     var bar = document.getElementById("galleryBar");
     var sliderEl = document.getElementById("gallerySlider");
+    var prevBtn = document.getElementById("galleryPrev");
+    var nextBtn = document.getElementById("galleryNext");
     var closeBtn = document.getElementById("galleryClose");
 
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var OPEN_MS = reduced ? 0 : 450;
+
     var slides = [];
     var index = 0;
     var timer = null;
-    var lastFocused = null;
+    var activeCard = null;
 
-    /* ---- slide movement ---- */
+    /* ---------- slider ---------- */
     function goTo(i, instant) {
       if (!slides.length) return;
       index = (i + slides.length) % slides.length;
       track.classList.toggle("no-anim", !!instant || reduced);
       track.style.transform = "translateX(" + -index * 100 + "%)";
       captionEl.textContent = slides[index].caption || "";
+      counterEl.textContent = index + 1 + " / " + slides.length;
       dotsWrap.querySelectorAll("button").forEach(function (d, n) {
         d.classList.toggle("active", n === index);
-        d.setAttribute("aria-current", n === index ? "true" : "false");
       });
       restartTimer();
     }
     function next() { goTo(index + 1); }
     function prev() { goTo(index - 1); }
 
-    /* ---- autoplay + progress bar ---- */
     function stopTimer() {
       if (timer) { clearTimeout(timer); timer = null; }
-      // freeze the bar where it is
       var w = getComputedStyle(bar).width;
       bar.classList.remove("run");
       bar.style.transitionDuration = "0ms";
@@ -133,39 +136,47 @@
       bar.classList.remove("run");
       bar.style.transitionDuration = "0ms";
       bar.style.width = "0%";
-      if (reduced || slides.length < 2) return;
-      void bar.offsetWidth; // reflow so the reset actually takes
+      if (reduced || slides.length < 2 || !activeCard) return;
+      void bar.offsetWidth; // reflow so the reset actually applies
       bar.classList.add("run");
       bar.style.transitionDuration = SLIDE_MS + "ms";
       bar.style.width = "100%";
       timer = setTimeout(next, SLIDE_MS);
     }
 
-    /* ---- open / close ---- */
-    function open(card) {
-      var key = card.getAttribute("data-gallery");
-      var data = GALLERIES[key];
-      if (!data || !data.slides.length) return;
+    /* ---------- placing the panel in the grid ---------- */
+    function columnCount() {
+      var cols = getComputedStyle(grid).gridTemplateColumns.split(" ").filter(Boolean);
+      return Math.max(cols.length, 1);
+    }
+    // Insert the panel after the last card on the clicked card's row, so it
+    // spans full width and pushes the rows below it down.
+    function placePanel(card) {
+      if (exp.parentNode) exp.parentNode.removeChild(exp); // detach first, or row maths is off
+      var cards = Array.prototype.slice.call(grid.querySelectorAll(".feature-card"));
+      var i = cards.indexOf(card);
+      var cols = columnCount();
+      var afterIdx = Math.floor(i / cols) * cols + cols;
+      grid.insertBefore(exp, cards[afterIdx] || null);
+    }
 
-      slides = data.slides;
-      lastFocused = document.activeElement;
-
-      panel.style.setProperty("--c", card.style.getPropertyValue("--c").trim() || "#3B82F6");
+    /* ---------- open / close ---------- */
+    function buildContent(card) {
       titleEl.textContent = card.querySelector("h3").textContent;
-      blurbEl.textContent = card.querySelector("p").textContent;
       iconEl.innerHTML = card.querySelector(".feature-ic").innerHTML;
+      exp.style.setProperty("--c", card.style.getPropertyValue("--c").trim() || "#3B82F6");
 
       track.innerHTML = "";
       dotsWrap.innerHTML = "";
       slides.forEach(function (s, i) {
-        var fig = document.createElement("div");
-        fig.className = "slide";
+        var cell = document.createElement("div");
+        cell.className = "slide";
         var img = document.createElement("img");
         img.src = s.src;
         img.alt = s.caption || titleEl.textContent + " screen " + (i + 1);
         if (i > 0) img.loading = "lazy";
-        fig.appendChild(img);
-        track.appendChild(fig);
+        cell.appendChild(img);
+        track.appendChild(cell);
 
         var dot = document.createElement("button");
         dot.type = "button";
@@ -176,42 +187,85 @@
 
       var solo = slides.length < 2;
       dotsWrap.hidden = solo;
-      document.getElementById("galleryPrev").hidden = solo;
-      document.getElementById("galleryNext").hidden = solo;
+      prevBtn.hidden = solo;
+      nextBtn.hidden = solo;
+      counterEl.hidden = solo;
+    }
 
-      modal.hidden = false;
-      document.body.classList.add("modal-open");
-      void modal.offsetWidth;
-      modal.classList.add("open");
+    function open(card) {
+      var data = GALLERIES[card.getAttribute("data-gallery")];
+      if (!data || !data.slides.length) return;
+
+      if (activeCard === card) { close(); return; }
+      if (activeCard) markClosed(activeCard);
+
+      slides = data.slides;
+      activeCard = card;
+      card.classList.add("open");
+      card.setAttribute("aria-expanded", "true");
+
+      buildContent(card);
+      placePanel(card);
+
+      exp.hidden = false;
+      exp.style.height = "0px";
+      void exp.offsetHeight; // reflow before animating
+      exp.style.height = inner.offsetHeight + "px";
+      exp.classList.add("open");
+
       goTo(0, true);
-      closeBtn.focus();
+
+      // let it settle to auto so late-loading images don't get clipped
+      window.setTimeout(function () {
+        if (activeCard === card) exp.style.height = "auto";
+      }, OPEN_MS);
+
+      // bring the card and panel into view under the fixed navbar
+      window.setTimeout(function () {
+        var y = card.getBoundingClientRect().top + window.scrollY - 96;
+        window.scrollTo({ top: y, behavior: reduced ? "auto" : "smooth" });
+      }, 60);
+    }
+
+    function markClosed(card) {
+      card.classList.remove("open");
+      card.setAttribute("aria-expanded", "false");
     }
 
     function close() {
+      if (!activeCard) return;
       stopTimer();
-      modal.classList.remove("open");
-      document.body.classList.remove("modal-open");
-      setTimeout(function () {
-        modal.hidden = true;
+      markClosed(activeCard);
+      activeCard = null;
+
+      exp.style.height = inner.offsetHeight + "px"; // from auto to a real number
+      void exp.offsetHeight;
+      exp.classList.remove("open");
+      exp.style.height = "0px";
+
+      window.setTimeout(function () {
+        if (activeCard) return; // reopened in the meantime
+        exp.hidden = true;
         track.innerHTML = "";
-      }, reduced ? 0 : 320);
-      if (lastFocused) lastFocused.focus();
+        if (exp.parentNode) exp.parentNode.removeChild(exp);
+      }, OPEN_MS);
     }
 
-    /* ---- wire the cards ---- */
+    /* ---------- wire the cards ---------- */
     document.querySelectorAll(".feature-card[data-gallery]").forEach(function (card) {
-      var key = card.getAttribute("data-gallery");
-      var data = GALLERIES[key];
+      var data = GALLERIES[card.getAttribute("data-gallery")];
       if (!data || !data.slides.length) return; // no screens yet → leave it inert
 
       card.classList.add("has-gallery");
       card.setAttribute("role", "button");
       card.setAttribute("tabindex", "0");
-      card.setAttribute("aria-haspopup", "dialog");
+      card.setAttribute("aria-expanded", "false");
 
       var more = document.createElement("span");
       more.className = "feature-more";
-      more.innerHTML = 'See it in the app <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+      more.innerHTML =
+        '<span class="feature-more-label">See it in the app</span>' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
       card.appendChild(more);
 
       card.addEventListener("click", function () { open(card); });
@@ -220,32 +274,23 @@
       });
     });
 
-    /* ---- controls ---- */
-    document.getElementById("galleryNext").addEventListener("click", next);
-    document.getElementById("galleryPrev").addEventListener("click", prev);
+    /* ---------- controls ---------- */
+    nextBtn.addEventListener("click", next);
+    prevBtn.addEventListener("click", prev);
     closeBtn.addEventListener("click", close);
-    modal.querySelector("[data-close]").addEventListener("click", close);
 
     document.addEventListener("keydown", function (e) {
-      if (modal.hidden) return;
-      if (e.key === "Escape") close();
+      if (!activeCard) return;
+      if (e.key === "Escape") { var c = activeCard; close(); c.focus(); }
       else if (e.key === "ArrowRight") next();
       else if (e.key === "ArrowLeft") prev();
-      else if (e.key === "Tab") {
-        // keep focus inside the dialog
-        var f = panel.querySelectorAll("button, [href], input, [tabindex]:not([tabindex='-1'])");
-        if (!f.length) return;
-        var first = f[0], last = f[f.length - 1];
-        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-      }
     });
 
-    // pause while the pointer is over the slider, or the tab is hidden
+    // pause while hovered, or while the tab is in the background
     sliderEl.addEventListener("mouseenter", stopTimer);
-    sliderEl.addEventListener("mouseleave", function () { if (!modal.hidden) restartTimer(); });
+    sliderEl.addEventListener("mouseleave", function () { if (activeCard) restartTimer(); });
     document.addEventListener("visibilitychange", function () {
-      if (modal.hidden) return;
+      if (!activeCard) return;
       if (document.hidden) stopTimer(); else restartTimer();
     });
 
@@ -257,6 +302,18 @@
       var dx = e.changedTouches[0].clientX - startX;
       if (Math.abs(dx) > 45) { dx < 0 ? next() : prev(); } else { restartTimer(); }
       startX = null;
+    });
+
+    // the grid changes column count at breakpoints — re-seat the panel
+    var rzTimer = null;
+    window.addEventListener("resize", function () {
+      if (!activeCard) return;
+      clearTimeout(rzTimer);
+      rzTimer = setTimeout(function () {
+        if (!activeCard) return;
+        placePanel(activeCard);
+        exp.style.height = "auto";
+      }, 150);
     });
   })();
 
