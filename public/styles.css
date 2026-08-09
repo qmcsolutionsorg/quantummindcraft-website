@@ -225,9 +225,12 @@ body.stage-open { overflow: hidden; }
   background: linear-gradient(135deg, var(--c), color-mix(in srgb, var(--c) 55%, #000)); }
 .stage-label i svg { width: 17px; height: 17px; }
 .stage-text { position: relative; }
+/* The outgoing text clears quickly and the incoming one is delayed, so two
+   large titles never sit on top of each other mid-transition. */
 .stage-el { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; transform: translateY(26px);
-  transition: opacity .55s ease, transform .8s cubic-bezier(.2,.9,.3,1); pointer-events: none; }
-.stage-el.active { position: relative; opacity: 1; transform: none; pointer-events: auto; }
+  transition: opacity .25s ease, transform .25s ease; pointer-events: none; }
+.stage-el.active { position: relative; opacity: 1; transform: none; pointer-events: auto;
+  transition: opacity .5s ease .24s, transform .75s cubic-bezier(.2,.9,.3,1) .24s; }
 .stage-el h2 { font-size: clamp(2.1rem, 5vw, 4.2rem); line-height: 1.02; letter-spacing: -.03em; margin-bottom: 18px;
   background: linear-gradient(115deg, #fff 26%, color-mix(in srgb, var(--c) 75%, #fff));
   -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -257,8 +260,8 @@ body.stage-open { overflow: hidden; }
   transition: background .2s, border-color .2s, transform .2s; }
 .stage-arrow:hover { background: var(--c); border-color: var(--c); color: #fff; transform: translateY(-2px); }
 
-.stage-close { position: absolute; top: 92px; right: max(24px, calc(50vw - var(--maxw) / 2 + 24px)); z-index: 4;
-  display: inline-flex; align-items: center; gap: 9px; padding: 9px 16px 9px 12px; border-radius: 999px; cursor: pointer;
+.stage-close { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 4;
+  display: inline-flex; align-items: center; gap: 9px; padding: 10px 20px 10px 15px; border-radius: 999px; cursor: pointer;
   font-family: var(--font); font-size: .84rem; font-weight: 600; color: var(--text-dim);
   background: rgba(255,255,255,.07); border: 1px solid var(--border); transition: background .2s, color .2s; }
 .stage-close:hover { background: rgba(255,255,255,.16); color: #fff; }
@@ -277,9 +280,10 @@ body.stage-open { overflow: hidden; }
   .stage-phone { width: min(calc(38vh / 2.2315), 46vw, 190px); }
   .stage-copy { flex: 0 0 auto; }
   .stage-el p { margin-inline: auto; }
-  .stage-nav { left: 50%; transform: translateX(-50%); bottom: 26px; }
+  /* stack them: counter above, close below, both centred */
+  .stage-nav { left: 50%; transform: translateX(-50%); bottom: 82px; }
   .stage-hint { display: none; }
-  .stage-close { top: 86px; right: 18px; }
+  .stage-close { bottom: 24px; }
 }
 
 
