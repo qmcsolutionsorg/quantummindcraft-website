@@ -238,7 +238,9 @@ img { max-width: 100%; display: block; }
   border-color: color-mix(in srgb, var(--c) 55%, rgba(150,175,235,.3));
   box-shadow: 0 22px 50px rgba(0,0,0,.6), 0 0 38px color-mix(in srgb, var(--c) 30%, transparent); }
 .slide:not(.active):hover .phone { opacity: .72; transform: scale(.88); }
-.phone img { width: 100%; height: auto; display: block; }
+/* aspect-ratio reserves the height before the image loads, so the panel
+   doesn't grow after we've already scrolled it into view */
+.phone img { width: 100%; height: auto; display: block; aspect-ratio: 717 / 1600; }
 .slider-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 40px; height: 40px; border-radius: 50%;
   display: grid; place-items: center; cursor: pointer; color: #fff;
   background: rgba(10,16,40,.72); border: 1px solid var(--border); backdrop-filter: blur(6px);
@@ -351,6 +353,15 @@ img { max-width: 100%; display: block; }
 /* Touch devices have no hover, so keep the slider arrows visible */
 @media (hover: none) {
   .slider-arrow { opacity: .9; }
+}
+/* On short screens shrink the phones so the whole panel still fits without scrolling */
+@media (max-height: 860px) {
+  .slider { --slide-w: 178px; padding: 18px 0; }
+  .expander-inner { padding: 18px 20px; }
+  .expander-head { margin-bottom: 14px; }
+}
+@media (max-height: 720px) {
+  .slider { --slide-w: 148px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .blob, .pulse-dot, .cube, .cube-glow { animation: none; }

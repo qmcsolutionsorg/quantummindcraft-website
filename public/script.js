@@ -110,6 +110,8 @@
     var index = 0;
     var timer = null;
     var activeCard = null;
+    var scrollBefore = 0; // where the reader was before we scrolled them to the panel
+    var NAV_H = 100;      // fixed navbar + a little breathing room
 
     /* ---------- slider ---------- */
     function goTo(i, instant) {
@@ -209,6 +211,9 @@
       if (!data || !data.slides.length) return;
 
       if (activeCard === card) { close(); return; }
+      // remember the reading position only on a fresh open, not when
+      // switching between cards — otherwise closing lands somewhere random
+      if (!activeCard) scrollBefore = window.scrollY;
       if (activeCard) markClosed(activeCard);
 
       slides = data.slides;
@@ -232,11 +237,22 @@
         if (activeCard === card) exp.style.height = "auto";
       }, OPEN_MS);
 
-      // bring the card and panel into view under the fixed navbar
+      // Scroll so the whole panel is visible, not just its top edge.
       window.setTimeout(function () {
-        var y = card.getBoundingClientRect().top + window.scrollY - 96;
-        window.scrollTo({ top: y, behavior: reduced ? "auto" : "smooth" });
-      }, 60);
+        if (activeCard !== card) return;
+        var panelTop = exp.getBoundingClientRect().top + window.scrollY;
+        var panelH = inner.offsetHeight;
+        var avail = window.innerHeight - NAV_H;
+        var y;
+        if (panelH <= avail) {
+          // it fits — pull it fully into view, keeping the card visible above if we can
+          y = panelTop - NAV_H - Math.min(70, avail - panelH);
+        } else {
+          // taller than the screen — align its top just under the navbar
+          y = panelTop - NAV_H;
+        }
+        window.scrollTo({ top: Math.max(0, y), behavior: reduced ? "auto" : "smooth" });
+      }, 90);
     }
 
     function markClosed(card) {
@@ -248,7 +264,17 @@
       if (!activeCard) return;
       stopTimer();
       markClosed(activeCard);
+      var closedCard = activeCard;
       activeCard = null;
+
+      // Return the reader to where they were before the panel pushed the page around.
+      // If they've scrolled off since, just bring the card itself back into view.
+      var cardTop = closedCard.getBoundingClientRect().top + window.scrollY;
+      var target = scrollBefore;
+      if (Math.abs(cardTop - scrollBefore) > window.innerHeight * 1.5) {
+        target = cardTop - NAV_H - 20;
+      }
+      window.scrollTo({ top: Math.max(0, target), behavior: reduced ? "auto" : "smooth" });
 
       exp.style.height = inner.offsetHeight + "px"; // from auto to a real number
       void exp.offsetHeight;
