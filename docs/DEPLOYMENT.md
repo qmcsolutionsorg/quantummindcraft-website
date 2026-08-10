@@ -31,6 +31,44 @@ There is **no CI/CD** — this was a deliberate choice. A GitHub push does not
 touch the live site, which also means a compromised GitHub account cannot
 deface it.
 
+## Preview before going live
+
+Agreed workflow (2026-08-09): **one branch, `main`.** No `develop`, no CI/CD.
+Risk is managed with Firebase preview channels rather than with branches.
+
+```bash
+firebase hosting:channel:deploy preview --expires 7d
+```
+
+That publishes to a temporary URL — e.g.
+`https://quantummindcraft--preview-v7hqterv.web.app` — while production stays
+exactly as it was. Verified working. Share it, review it, then ship:
+
+```bash
+firebase deploy --only hosting
+```
+
+Channels last 7 days by default, 30 max. List or remove them with
+`firebase hosting:channel:list` / `hosting:channel:delete <name>`.
+
+### When to preview
+
+| Change | Route |
+|---|---|
+| Adding a module folder, screenshots, captions, backgrounds | Straight to live |
+| Anything touching `script.js`, `styles.css`, `index.html` | **Preview first** |
+
+Content changes can't really break the site — a bad folder shows a "soon"
+button at worst. Code changes have broken it before, which is why they get a
+preview.
+
+### Why no `develop` branch
+
+Nothing watches the branches. Deploying is a manual command run against
+whatever is on disk, so a `qa` branch would not create a QA environment — the
+preview channel does that. Revisit this if another person starts committing, or
+if a permanent staging URL is wanted.
+
 ## Firebase
 
 | | |
