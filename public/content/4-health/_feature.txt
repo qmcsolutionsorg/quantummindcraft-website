@@ -1,0 +1,4 @@
+name: Health
+color: #EF4444
+icon: health
+desc: Trackers, treatments, medicines and cover for the whole family — pets included — ready the moment it matters.

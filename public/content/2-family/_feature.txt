@@ -1,0 +1,4 @@
+name: Family
+color: #8B5CF6
+icon: family
+desc: Kids, parents and grandparents together — school, money, tasks, approvals and the conversations that hold it all together, even across distance.

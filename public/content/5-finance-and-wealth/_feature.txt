@@ -1,0 +1,4 @@
+name: Finance & Wealth
+color: #F59E0B
+icon: finance
+desc: Wallets, assets, loans, budgets, tax and investments — a real balance sheet for your personal life and every business you run.

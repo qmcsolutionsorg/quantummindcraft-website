@@ -1,0 +1,373 @@
+{
+  "features": [
+    {
+      "key": "1-personal-growth",
+      "id": "personal-growth",
+      "name": "Personal Growth",
+      "color": "#0EA5E9",
+      "icon": "growth",
+      "desc": "Projects, goals, dreams and the things you keep meaning to start — with documentation, deadlines, budgets and progress you can actually see.",
+      "extra": "",
+      "modules": [
+        {
+          "key": "1-projects",
+          "name": "Projects",
+          "slides": []
+        },
+        {
+          "key": "2-goals",
+          "name": "Goals",
+          "slides": []
+        },
+        {
+          "key": "3-vacations",
+          "name": "Vacations",
+          "slides": []
+        },
+        {
+          "key": "4-notes",
+          "name": "Notes",
+          "slides": []
+        },
+        {
+          "key": "5-contacts",
+          "name": "Contacts",
+          "slides": []
+        },
+        {
+          "key": "6-self-learning",
+          "name": "Self learning",
+          "slides": []
+        }
+      ]
+    },
+    {
+      "key": "2-family",
+      "id": "family",
+      "name": "Family",
+      "color": "#8B5CF6",
+      "icon": "family",
+      "desc": "Kids, parents and grandparents together — school, money, tasks, approvals and the conversations that hold it all together, even across distance.",
+      "extra": "<div class=\"container split\">\n        <div class=\"split-text reveal\">\n          <span class=\"eyebrow\">Built for the whole family</span>\n          <h2>From your kids' childhood<br />to <span class=\"gradient-text\">their kids' childhood.</span></h2>\n          <p>QuantrolPlus isn't just for you. Your whole family shares one connected space — kids manage their own homework, activities and routines, while you stay informed without hovering.</p>\n          <ul class=\"check-list\">\n            <li>Kids learn real finance — assets, liabilities, equity — by living it</li>\n            <li>Coordinate as a family instead of everyone being disconnected</li>\n            <li>Approvals for permissions, purchases and decisions</li>\n            <li>Structured messaging for real-life family situations</li>\n          </ul>\n          <a href=\"#download\" class=\"btn btn-primary\">Bring your family in →</a>\n        </div>\n        <div class=\"split-visual reveal\">\n          <div class=\"glass-card family-card\">\n            <img src=\"assets/images/logo-dark.jpeg\" alt=\"QuantrolPlus family ecosystem\" />\n          </div>\n        </div>\n      </div>\n",
+      "modules": [
+        {
+          "key": "1-school-activity",
+          "name": "School activity",
+          "slides": []
+        },
+        {
+          "key": "2-kids-finances",
+          "name": "Kids finances",
+          "slides": []
+        },
+        {
+          "key": "3-payables",
+          "name": "Payables",
+          "slides": []
+        },
+        {
+          "key": "4-tasks-and-projects",
+          "name": "Tasks and projects",
+          "slides": []
+        },
+        {
+          "key": "5-parenting-and-approvals",
+          "name": "Parenting and approvals",
+          "slides": []
+        },
+        {
+          "key": "6-pick-and-drop",
+          "name": "Pick and drop",
+          "slides": []
+        },
+        {
+          "key": "7-plans",
+          "name": "Plans",
+          "slides": []
+        },
+        {
+          "key": "8-chats",
+          "name": "Chats",
+          "slides": []
+        },
+        {
+          "key": "9-shared-documents",
+          "name": "Shared documents",
+          "slides": []
+        }
+      ]
+    },
+    {
+      "key": "3-business",
+      "id": "business",
+      "name": "Business",
+      "color": "#22C55E",
+      "icon": "business",
+      "desc": "Run several businesses side by side — partners, leads, staff, sales, stock and accounts, each kept cleanly separate.",
+      "extra": "",
+      "modules": [
+        {
+          "key": "1-multiple-businesses",
+          "name": "Multiple businesses",
+          "slides": []
+        },
+        {
+          "key": "2-business-partners",
+          "name": "Business partners",
+          "slides": []
+        },
+        {
+          "key": "3-leads-and-crm",
+          "name": "Leads and CRM",
+          "slides": []
+        },
+        {
+          "key": "4-employee-management",
+          "name": "Employee management",
+          "slides": []
+        },
+        {
+          "key": "5-sales-flow",
+          "name": "Sales flow",
+          "slides": []
+        },
+        {
+          "key": "6-inventory",
+          "name": "Inventory",
+          "slides": []
+        },
+        {
+          "key": "7-assets",
+          "name": "Assets",
+          "slides": []
+        },
+        {
+          "key": "8-payables",
+          "name": "Payables",
+          "slides": []
+        },
+        {
+          "key": "9-chart-of-account",
+          "name": "Chart of Account",
+          "slides": []
+        }
+      ]
+    },
+    {
+      "key": "4-health",
+      "id": "health",
+      "name": "Health",
+      "color": "#EF4444",
+      "icon": "health",
+      "desc": "Trackers, treatments, medicines and cover for the whole family — pets included — ready the moment it matters.",
+      "extra": "",
+      "modules": [
+        {
+          "key": "1-family-records",
+          "name": "Family records",
+          "slides": [
+            {
+              "src": "content/4-health/1-family-records/01-overview.jpeg",
+              "title": "Family overview",
+              "caption": "Your whole family's health at a glance"
+            },
+            {
+              "src": "content/4-health/1-family-records/02-list.jpeg",
+              "title": "Member records",
+              "caption": "A separate medical record for everyone — pets included"
+            },
+            {
+              "src": "content/4-health/1-family-records/03-transactions.jpeg",
+              "title": "What it costs",
+              "caption": "Every healthcare expense, per member"
+            }
+          ]
+        },
+        {
+          "key": "2-tracker",
+          "name": "Tracker",
+          "slides": [
+            {
+              "src": "content/4-health/2-tracker/01-tracker.jpeg",
+              "title": "Vitals tracker",
+              "caption": "Blood pressure, sugar and the numbers that matter"
+            },
+            {
+              "src": "content/4-health/2-tracker/02-tracker-details.jpeg",
+              "title": "Trends over time",
+              "caption": "See the trend, not just today's reading"
+            }
+          ]
+        },
+        {
+          "key": "3-schedules",
+          "name": "Schedules",
+          "slides": [
+            {
+              "src": "content/4-health/3-schedules/01-schedules.jpeg",
+              "title": "Appointments",
+              "caption": "Appointments and reminders that never slip"
+            }
+          ]
+        },
+        {
+          "key": "4-treatments",
+          "name": "Treatments",
+          "slides": [
+            {
+              "src": "content/4-health/4-treatments/01-treatments.jpeg",
+              "title": "Treatments",
+              "caption": "Ongoing and past treatments in one list"
+            },
+            {
+              "src": "content/4-health/4-treatments/02-treatment-details.jpeg",
+              "title": "Treatment detail",
+              "caption": "Diagnosis, linked trackers, reports and next steps"
+            }
+          ]
+        },
+        {
+          "key": "5-vaccinations",
+          "name": "Vaccinations",
+          "slides": [
+            {
+              "src": "content/4-health/5-vaccinations/01-vaccinations.jpeg",
+              "title": "Vaccinations",
+              "caption": "Every dose and date, tracked per person"
+            },
+            {
+              "src": "content/4-health/5-vaccinations/02-vaccination-countries.jpeg",
+              "title": "Travel requirements",
+              "caption": "Country schedules, ready before you travel"
+            }
+          ]
+        },
+        {
+          "key": "6-medicines",
+          "name": "Medicines",
+          "slides": [
+            {
+              "src": "content/4-health/6-medicines/01-medicines.jpeg",
+              "title": "Medicines",
+              "caption": "Every medicine, dose and schedule"
+            },
+            {
+              "src": "content/4-health/6-medicines/02-medicines-print.jpeg",
+              "title": "Printable list",
+              "caption": "Print a clean list to hand the doctor"
+            }
+          ]
+        },
+        {
+          "key": "7-menstruation",
+          "name": "Menstruation",
+          "slides": [
+            {
+              "src": "content/4-health/7-menstruation/01-menstruation.jpeg",
+              "title": "Cycle tracking",
+              "caption": "Month by month, without guesswork"
+            },
+            {
+              "src": "content/4-health/7-menstruation/02-menstruation-details.jpeg",
+              "title": "Daily log",
+              "caption": "Symptoms and notes, logged day by day"
+            },
+            {
+              "src": "content/4-health/7-menstruation/03-cycles.jpeg",
+              "title": "Cycle history",
+              "caption": "Every cycle recorded and comparable"
+            },
+            {
+              "src": "content/4-health/7-menstruation/04-cycle-details.jpeg",
+              "title": "Patterns and predictions",
+              "caption": "What's normal for you, and what's next"
+            }
+          ]
+        },
+        {
+          "key": "8-pregnancy-and-moms-diary",
+          "name": "Pregnancy & Mom's Diary",
+          "slides": [
+            {
+              "src": "content/4-health/8-pregnancy-and-moms-diary/01-overview.jpeg",
+              "title": "Mom's Diary",
+              "caption": "A personal companion through every stage"
+            },
+            {
+              "src": "content/4-health/8-pregnancy-and-moms-diary/02-pregnancy-tracker.jpeg",
+              "title": "Pregnancy tracker",
+              "caption": "A separate record for each pregnancy"
+            }
+          ]
+        },
+        {
+          "key": "9-insurance",
+          "name": "Insurance",
+          "slides": [
+            {
+              "src": "content/4-health/9-insurance/01-insurance.jpeg",
+              "title": "Insurance",
+              "caption": "Policies and cover, findable in an emergency"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "5-finance-and-wealth",
+      "id": "finance-and-wealth",
+      "name": "Finance & Wealth",
+      "color": "#F59E0B",
+      "icon": "finance",
+      "desc": "Wallets, assets, loans, budgets, tax and investments — a real balance sheet for your personal life and every business you run.",
+      "extra": "<div class=\"container split reverse\">\n        <div class=\"split-text reveal\">\n          <span class=\"eyebrow\">Real financial clarity</span>\n          <h2>Not just income &amp; expense.<br />A complete <span class=\"gradient-text\">financial ecosystem.</span></h2>\n          <p>Most apps stop at simple tracking. QuantrolPlus gives you true balance sheets — assets, liabilities and equity — separately for personal life and every business you run.</p>\n          <div class=\"mini-stats\">\n            <div class=\"mini-stat\"><strong>Assets</strong><span>Track true value over time</span></div>\n            <div class=\"mini-stat\"><strong>Liabilities</strong><span>Loans, payables, obligations</span></div>\n            <div class=\"mini-stat\"><strong>Equity</strong><span>Your real net position</span></div>\n            <div class=\"mini-stat\"><strong>P&amp;L</strong><span>Per business, always clear</span></div>\n          </div>\n        </div>\n        <div class=\"split-visual reveal\">\n          <div class=\"glass-card balance-card\">\n            <div class=\"bc-row bc-head\"><span>Net Worth</span><b class=\"pos\">₹ 42,80,000</b></div>\n            <div class=\"bc-bar\"><i style=\"--w:78%;--c:#22C55E\"></i></div>\n            <div class=\"bc-row\"><span>Assets</span><b class=\"pos\">₹ 61,50,000</b></div>\n            <div class=\"bc-bar\"><i style=\"--w:92%;--c:#3B82F6\"></i></div>\n            <div class=\"bc-row\"><span>Liabilities</span><b class=\"neg\">₹ 18,70,000</b></div>\n            <div class=\"bc-bar\"><i style=\"--w:34%;--c:#EF4444\"></i></div>\n            <div class=\"bc-tags\"><span>Personal</span><span>Business A</span><span>Business B</span></div>\n          </div>\n        </div>\n      </div>\n",
+      "modules": [
+        {
+          "key": "1-my-wallet",
+          "name": "My wallet",
+          "slides": []
+        },
+        {
+          "key": "2-assets",
+          "name": "Assets",
+          "slides": []
+        },
+        {
+          "key": "3-payables",
+          "name": "Payables",
+          "slides": []
+        },
+        {
+          "key": "4-receivables",
+          "name": "Receivables",
+          "slides": []
+        },
+        {
+          "key": "5-loans",
+          "name": "Loans",
+          "slides": []
+        },
+        {
+          "key": "6-budgets",
+          "name": "Budgets",
+          "slides": []
+        },
+        {
+          "key": "7-tax",
+          "name": "Tax",
+          "slides": []
+        },
+        {
+          "key": "8-investments",
+          "name": "Investments",
+          "slides": []
+        },
+        {
+          "key": "9-plans",
+          "name": "Plans",
+          "slides": []
+        }
+      ]
+    }
+  ]
+}

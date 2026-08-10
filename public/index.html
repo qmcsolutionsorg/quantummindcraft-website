@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- ?v= is a cache buster: bump it whenever styles.css or script.js changes -->
-  <link rel="stylesheet" href="styles.css?v=12" />
+  <link rel="stylesheet" href="styles.css?v=13" />
 </head>
 <body>
   <!-- ===== Animated background ===== -->
@@ -55,14 +55,9 @@
           <span class="cube-glow"></span>
         </span>
       </a>
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
         <a href="#top">Home</a>
-        <a href="#growth">Personal Growth</a>
-        <a href="#family">Family</a>
-        <a href="#business">Business</a>
-        <a href="#health">Health</a>
-        <a href="#finance">Finance &amp; Wealth</a>
-        <a href="#contact">Contact us</a>
+        <a href="#contact" data-nav-tail>Contact us</a>
       </nav>
       <div class="nav-cta">
         <a href="#download" class="btn btn-primary btn-sm">Get the App</a>
@@ -73,12 +68,7 @@
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="#top">Home</a>
-      <a href="#growth">Personal Growth</a>
-      <a href="#family">Family</a>
-      <a href="#business">Business</a>
-      <a href="#health">Health</a>
-      <a href="#finance">Finance &amp; Wealth</a>
-      <a href="#contact">Contact us</a>
+      <a href="#contact" data-nav-tail>Contact us</a>
       <a href="#download" class="btn btn-primary">Get the App</a>
     </div>
   </header>
@@ -139,121 +129,11 @@
     </section>
 
     <!-- ===== Features ===== -->
-    <!-- ===== Personal Growth ===== -->
-    <section class="section feature-sec" id="growth" style="--c:#0EA5E9">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Personal Growth</span>
-          <h2>Your own space to <span class="gradient-text">build on</span></h2>
-          <p>Projects, goals, dreams and the things you keep meaning to start — with documentation, deadlines, budgets and progress you can actually see.</p>
-        </div>
-        <div class="feature-chips" data-feature="growth"></div>
-        <p class="feature-hint reveal">Pick a module to walk through it inside the app</p>
-      </div>
-    </section>
+    <!-- Feature sections are generated from public/content/ by script.js -->
+    <div id="featureSections"></div>
 
-    <!-- ===== Family ===== -->
-    <section class="section feature-sec" id="family" style="--c:#8B5CF6">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Family</span>
-          <h2>One connected space for <span class="gradient-text">everyone</span></h2>
-          <p>Kids, parents and grandparents together — school, money, tasks, approvals and the conversations that hold it all together, even across distance.</p>
-        </div>
-        <div class="feature-chips" data-feature="family"></div>
-        <p class="feature-hint reveal">Pick a module to walk through it inside the app</p>
-      </div>
-    </section>
 
-<!-- ===== Family section ===== -->
-    <section class="section family">
-      <div class="container split">
-        <div class="split-text reveal">
-          <span class="eyebrow">Built for the whole family</span>
-          <h2>From your kids' childhood<br />to <span class="gradient-text">their kids' childhood.</span></h2>
-          <p>QuantrolPlus isn't just for you. Your whole family shares one connected space — kids manage their own homework, activities and routines, while you stay informed without hovering.</p>
-          <ul class="check-list">
-            <li>Kids learn real finance — assets, liabilities, equity — by living it</li>
-            <li>Coordinate as a family instead of everyone being disconnected</li>
-            <li>Approvals for permissions, purchases and decisions</li>
-            <li>Structured messaging for real-life family situations</li>
-          </ul>
-          <a href="#download" class="btn btn-primary">Bring your family in →</a>
-        </div>
-        <div class="split-visual reveal">
-          <div class="glass-card family-card">
-            <img src="assets/images/logo-dark.jpeg" alt="QuantrolPlus family ecosystem" />
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== Business ===== -->
-    <section class="section feature-sec" id="business" style="--c:#22C55E">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Business</span>
-          <h2>A mini-ERP that <span class="gradient-text">stays simple</span></h2>
-          <p>Run several businesses side by side — partners, leads, staff, sales, stock and accounts, each kept cleanly separate.</p>
-        </div>
-        <div class="feature-chips" data-feature="business"></div>
-        <p class="feature-hint reveal">Pick a module to walk through it inside the app</p>
-      </div>
-    </section>
-
-    <!-- ===== Health ===== -->
-    <section class="section feature-sec" id="health" style="--c:#EF4444">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Health</span>
-          <h2>Every record, <span class="gradient-text">every member</span></h2>
-          <p>Trackers, treatments, medicines and cover for the whole family — pets included — ready the moment it matters.</p>
-        </div>
-        <div class="feature-chips" data-feature="health"></div>
-        <p class="feature-hint reveal">Pick a module to walk through it inside the app</p>
-      </div>
-    </section>
-
-    <!-- ===== Finance & Wealth ===== -->
-    <section class="section feature-sec" id="finance" style="--c:#F59E0B">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Finance &amp; Wealth</span>
-          <h2>Not just income <span class="gradient-text">and expense</span></h2>
-          <p>Wallets, assets, loans, budgets, tax and investments — a real balance sheet for your personal life and every business you run.</p>
-        </div>
-        <div class="feature-chips" data-feature="finance"></div>
-        <p class="feature-hint reveal">Pick a module to walk through it inside the app</p>
-      </div>
-    </section>
-
-<!-- ===== Finance highlight ===== -->
-    <section class="section finance">
-      <div class="container split reverse">
-        <div class="split-text reveal">
-          <span class="eyebrow">Real financial clarity</span>
-          <h2>Not just income &amp; expense.<br />A complete <span class="gradient-text">financial ecosystem.</span></h2>
-          <p>Most apps stop at simple tracking. QuantrolPlus gives you true balance sheets — assets, liabilities and equity — separately for personal life and every business you run.</p>
-          <div class="mini-stats">
-            <div class="mini-stat"><strong>Assets</strong><span>Track true value over time</span></div>
-            <div class="mini-stat"><strong>Liabilities</strong><span>Loans, payables, obligations</span></div>
-            <div class="mini-stat"><strong>Equity</strong><span>Your real net position</span></div>
-            <div class="mini-stat"><strong>P&amp;L</strong><span>Per business, always clear</span></div>
-          </div>
-        </div>
-        <div class="split-visual reveal">
-          <div class="glass-card balance-card">
-            <div class="bc-row bc-head"><span>Net Worth</span><b class="pos">₹ 42,80,000</b></div>
-            <div class="bc-bar"><i style="--w:78%;--c:#22C55E"></i></div>
-            <div class="bc-row"><span>Assets</span><b class="pos">₹ 61,50,000</b></div>
-            <div class="bc-bar"><i style="--w:92%;--c:#3B82F6"></i></div>
-            <div class="bc-row"><span>Liabilities</span><b class="neg">₹ 18,70,000</b></div>
-            <div class="bc-bar"><i style="--w:34%;--c:#EF4444"></i></div>
-            <div class="bc-tags"><span>Personal</span><span>Business A</span><span>Business B</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
     
@@ -383,6 +263,6 @@
     <div class="stage-hint" aria-hidden="true">Scroll <span></span> to explore</div>
   </div>
 
-  <script src="script.js?v=12"></script>
+  <script src="script.js?v=13"></script>
 </body>
 </html>

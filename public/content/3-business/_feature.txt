@@ -1,0 +1,4 @@
+name: Business
+color: #22C55E
+icon: business
+desc: Run several businesses side by side — partners, leads, staff, sales, stock and accounts, each kept cleanly separate.

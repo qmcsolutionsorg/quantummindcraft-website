@@ -1,6 +1,7 @@
 {
   "hosting": {
     "site": "quantummindcraft",
+    "predeploy": "node tools/build-content.js",
     "public": "public",
     "ignore": [
       "firebase.json",
