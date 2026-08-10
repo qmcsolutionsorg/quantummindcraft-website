@@ -180,6 +180,21 @@ img { max-width: 100%; display: block; }
 .feature-card p { color: var(--text-dim); font-size: .95rem; position: relative; }
 .feature-card em { color: var(--text); font-style: normal; font-weight: 600; }
 
+/* ===== Feature sections ===== */
+.feature-sec { position: relative; overflow: hidden; }
+/* Optional backdrop: drop _background.jpg into the feature's content folder.
+   Held well back so the copy over it stays readable. */
+.feature-sec.has-bg { --bg-opacity: .22; }
+.feature-sec.has-bg::before { content: ""; position: absolute; inset: 0; z-index: -2;
+  background-image: var(--bg); background-size: cover; background-position: center;
+  opacity: var(--bg-opacity); }
+/* darken top and bottom so the section still blends into the page */
+.feature-sec.has-bg::after { content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(70% 60% at 50% 45%, color-mix(in srgb, var(--c) 16%, transparent), transparent 75%),
+    linear-gradient(180deg, var(--navy-900) 0%, rgba(6,11,31,.55) 26%, rgba(6,11,31,.6) 74%, var(--navy-900) 100%); }
+.feature-hint { text-align: center; margin-top: 26px; font-size: .9rem; color: var(--text-faint); }
+
 /* ===== Feature chips — compact buttons instead of big tiles ===== */
 .feature-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 8px; }
 .feature-chip { display: inline-flex; align-items: center; gap: 9px; padding: 10px 18px 10px 12px; border-radius: 999px;

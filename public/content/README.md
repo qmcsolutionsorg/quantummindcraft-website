@@ -34,6 +34,30 @@ content/
 The button appears automatically. A module folder with **no images** shows as a
 greyed-out "soon" button, which is how the empty ones behave today.
 
+## To add a background image to a feature section
+
+Drop a file called `_background` into the feature folder — any image extension:
+
+```
+content/1-personal-growth/_background.jpg
+```
+
+That's it. It's shown behind the whole section, faded back so the text stays
+readable, with the page colour blended in at the top and bottom so it doesn't
+look like a hard band.
+
+To make it stronger or fainter, add a line to that feature's `_feature.txt`:
+
+```
+bgopacity: 0.35
+```
+
+Default is `0.22`. Sensible range is about `0.10`–`0.45`; past that the
+heading starts to fight the picture.
+
+Use a wide landscape image (1920x1080 or similar) and keep it under ~400 KB —
+it covers the full section width.
+
 ## To add a whole new feature
 
 Make a numbered folder with a `_feature.txt`:

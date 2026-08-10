@@ -8,6 +8,8 @@
       "icon": "growth",
       "desc": "Projects, goals, dreams and the things you keep meaning to start — with documentation, deadlines, budgets and progress you can actually see.",
       "extra": "",
+      "background": "content/1-personal-growth/_background.jpg",
+      "bgOpacity": "0.20",
       "modules": [
         {
           "key": "1-projects",
@@ -49,6 +51,8 @@
       "icon": "family",
       "desc": "Kids, parents and grandparents together — school, money, tasks, approvals and the conversations that hold it all together, even across distance.",
       "extra": "<div class=\"container split\">\n        <div class=\"split-text reveal\">\n          <span class=\"eyebrow\">Built for the whole family</span>\n          <h2>From your kids' childhood<br />to <span class=\"gradient-text\">their kids' childhood.</span></h2>\n          <p>QuantrolPlus isn't just for you. Your whole family shares one connected space — kids manage their own homework, activities and routines, while you stay informed without hovering.</p>\n          <ul class=\"check-list\">\n            <li>Kids learn real finance — assets, liabilities, equity — by living it</li>\n            <li>Coordinate as a family instead of everyone being disconnected</li>\n            <li>Approvals for permissions, purchases and decisions</li>\n            <li>Structured messaging for real-life family situations</li>\n          </ul>\n          <a href=\"#download\" class=\"btn btn-primary\">Bring your family in →</a>\n        </div>\n        <div class=\"split-visual reveal\">\n          <div class=\"glass-card family-card\">\n            <img src=\"assets/images/logo-dark.jpeg\" alt=\"QuantrolPlus family ecosystem\" />\n          </div>\n        </div>\n      </div>\n",
+      "background": "",
+      "bgOpacity": "",
       "modules": [
         {
           "key": "1-school-activity",
@@ -105,6 +109,8 @@
       "icon": "business",
       "desc": "Run several businesses side by side — partners, leads, staff, sales, stock and accounts, each kept cleanly separate.",
       "extra": "",
+      "background": "",
+      "bgOpacity": "",
       "modules": [
         {
           "key": "1-multiple-businesses",
@@ -161,6 +167,8 @@
       "icon": "health",
       "desc": "Trackers, treatments, medicines and cover for the whole family — pets included — ready the moment it matters.",
       "extra": "",
+      "background": "",
+      "bgOpacity": "",
       "modules": [
         {
           "key": "1-family-records",
@@ -321,6 +329,8 @@
       "icon": "finance",
       "desc": "Wallets, assets, loans, budgets, tax and investments — a real balance sheet for your personal life and every business you run.",
       "extra": "<div class=\"container split reverse\">\n        <div class=\"split-text reveal\">\n          <span class=\"eyebrow\">Real financial clarity</span>\n          <h2>Not just income &amp; expense.<br />A complete <span class=\"gradient-text\">financial ecosystem.</span></h2>\n          <p>Most apps stop at simple tracking. QuantrolPlus gives you true balance sheets — assets, liabilities and equity — separately for personal life and every business you run.</p>\n          <div class=\"mini-stats\">\n            <div class=\"mini-stat\"><strong>Assets</strong><span>Track true value over time</span></div>\n            <div class=\"mini-stat\"><strong>Liabilities</strong><span>Loans, payables, obligations</span></div>\n            <div class=\"mini-stat\"><strong>Equity</strong><span>Your real net position</span></div>\n            <div class=\"mini-stat\"><strong>P&amp;L</strong><span>Per business, always clear</span></div>\n          </div>\n        </div>\n        <div class=\"split-visual reveal\">\n          <div class=\"glass-card balance-card\">\n            <div class=\"bc-row bc-head\"><span>Net Worth</span><b class=\"pos\">₹ 42,80,000</b></div>\n            <div class=\"bc-bar\"><i style=\"--w:78%;--c:#22C55E\"></i></div>\n            <div class=\"bc-row\"><span>Assets</span><b class=\"pos\">₹ 61,50,000</b></div>\n            <div class=\"bc-bar\"><i style=\"--w:92%;--c:#3B82F6\"></i></div>\n            <div class=\"bc-row\"><span>Liabilities</span><b class=\"neg\">₹ 18,70,000</b></div>\n            <div class=\"bc-bar\"><i style=\"--w:34%;--c:#EF4444\"></i></div>\n            <div class=\"bc-tags\"><span>Personal</span><span>Business A</span><span>Business B</span></div>\n          </div>\n        </div>\n      </div>\n",
+      "background": "",
+      "bgOpacity": "",
       "modules": [
         {
           "key": "1-my-wallet",

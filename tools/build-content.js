@@ -75,6 +75,11 @@ var features = dirs(CONTENT).map(function (fdir) {
   var meta = readMeta(path.join(fpath, "_feature.txt"));
   var extraPath = path.join(fpath, "_extra.html");
 
+  // optional section backdrop: any file named _background.<image ext>
+  var bgFile = files(fpath).filter(function (n) {
+    return /^_background\./i.test(n) && IMAGE_RE.test(n);
+  })[0];
+
   var modules = dirs(fpath).map(function (mdir) {
     var mpath = path.join(fpath, mdir);
     var mmeta = readMeta(path.join(mpath, "_module.txt"));
@@ -108,6 +113,9 @@ var features = dirs(CONTENT).map(function (fdir) {
     icon: meta.icon || "growth",
     desc: meta.desc || "",
     extra: fs.existsSync(extraPath) ? fs.readFileSync(extraPath, "utf8") : "",
+    background: bgFile ? "content/" + fdir + "/" + bgFile : "",
+    // how strongly the backdrop shows through, 0–1
+    bgOpacity: meta.bgopacity || "",
     modules: modules
   };
 });

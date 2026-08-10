@@ -2,3 +2,4 @@ name: Personal Growth
 color: #0EA5E9
 icon: growth
 desc: Projects, goals, dreams and the things you keep meaning to start — with documentation, deadlines, budgets and progress you can actually see.
+bgopacity: 0.20

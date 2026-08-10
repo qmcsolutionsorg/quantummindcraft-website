@@ -129,6 +129,13 @@
       sec.id = f.id;
       sec.style.setProperty("--c", f.color);
 
+      // optional backdrop from content/<feature>/_background.<ext>
+      if (f.background) {
+        sec.classList.add("has-bg");
+        sec.style.setProperty("--bg", 'url("' + f.background + '")');
+        if (f.bgOpacity) sec.style.setProperty("--bg-opacity", f.bgOpacity);
+      }
+
       var head = document.createElement("div");
       head.className = "section-head reveal";
       head.innerHTML =
