@@ -8,7 +8,7 @@
       "icon": "growth",
       "desc": "Projects, goals, dreams and the things you keep meaning to start — with documentation, deadlines, budgets and progress you can actually see.",
       "extra": "",
-      "background": "content/1-personal-growth/_background.jpg",
+      "background": "content/1-personal-growth/_background.jpg?v=5c2d4792",
       "bgOpacity": "0.20",
       "modules": [
         {
@@ -175,17 +175,17 @@
           "name": "Family records",
           "slides": [
             {
-              "src": "content/4-health/1-family-records/01-overview.jpeg",
+              "src": "content/4-health/1-family-records/01-overview.jpeg?v=3a031348",
               "title": "Family overview",
               "caption": "Your whole family's health at a glance"
             },
             {
-              "src": "content/4-health/1-family-records/02-list.jpeg",
+              "src": "content/4-health/1-family-records/02-list.jpeg?v=0eef85e4",
               "title": "Member records",
               "caption": "A separate medical record for everyone — pets included"
             },
             {
-              "src": "content/4-health/1-family-records/03-transactions.jpeg",
+              "src": "content/4-health/1-family-records/03-transactions.jpeg?v=5335786a",
               "title": "What it costs",
               "caption": "Every healthcare expense, per member"
             }
@@ -196,12 +196,12 @@
           "name": "Tracker",
           "slides": [
             {
-              "src": "content/4-health/2-tracker/01-tracker.jpeg",
+              "src": "content/4-health/2-tracker/01-tracker.jpeg?v=85905b87",
               "title": "Vitals tracker",
               "caption": "Blood pressure, sugar and the numbers that matter"
             },
             {
-              "src": "content/4-health/2-tracker/02-tracker-details.jpeg",
+              "src": "content/4-health/2-tracker/02-tracker-details.jpeg?v=6bc0e43e",
               "title": "Trends over time",
               "caption": "See the trend, not just today's reading"
             }
@@ -212,7 +212,7 @@
           "name": "Schedules",
           "slides": [
             {
-              "src": "content/4-health/3-schedules/01-schedules.jpeg",
+              "src": "content/4-health/3-schedules/01-schedules.jpeg?v=29d32aa0",
               "title": "Appointments",
               "caption": "Appointments and reminders that never slip"
             }
@@ -223,12 +223,12 @@
           "name": "Treatments",
           "slides": [
             {
-              "src": "content/4-health/4-treatments/01-treatments.jpeg",
+              "src": "content/4-health/4-treatments/01-treatments.jpeg?v=652b59b1",
               "title": "Treatments",
               "caption": "Ongoing and past treatments in one list"
             },
             {
-              "src": "content/4-health/4-treatments/02-treatment-details.jpeg",
+              "src": "content/4-health/4-treatments/02-treatment-details.jpeg?v=6064328c",
               "title": "Treatment detail",
               "caption": "Diagnosis, linked trackers, reports and next steps"
             }
@@ -239,12 +239,12 @@
           "name": "Vaccinations",
           "slides": [
             {
-              "src": "content/4-health/5-vaccinations/01-vaccinations.jpeg",
+              "src": "content/4-health/5-vaccinations/01-vaccinations.jpeg?v=784d7a6d",
               "title": "Vaccinations",
               "caption": "Every dose and date, tracked per person"
             },
             {
-              "src": "content/4-health/5-vaccinations/02-vaccination-countries.jpeg",
+              "src": "content/4-health/5-vaccinations/02-vaccination-countries.jpeg?v=8c1b9fcf",
               "title": "Travel requirements",
               "caption": "Country schedules, ready before you travel"
             }
@@ -255,12 +255,12 @@
           "name": "Medicines",
           "slides": [
             {
-              "src": "content/4-health/6-medicines/01-medicines.jpeg",
+              "src": "content/4-health/6-medicines/01-medicines.jpeg?v=e6f8a860",
               "title": "Medicines",
               "caption": "Every medicine, dose and schedule"
             },
             {
-              "src": "content/4-health/6-medicines/02-medicines-print.jpeg",
+              "src": "content/4-health/6-medicines/02-medicines-print.jpeg?v=6150a9e3",
               "title": "Printable list",
               "caption": "Print a clean list to hand the doctor"
             }
@@ -271,22 +271,22 @@
           "name": "Menstruation",
           "slides": [
             {
-              "src": "content/4-health/7-menstruation/01-menstruation.jpeg",
+              "src": "content/4-health/7-menstruation/01-menstruation.jpeg?v=0d7f679e",
               "title": "Cycle tracking",
               "caption": "Month by month, without guesswork"
             },
             {
-              "src": "content/4-health/7-menstruation/02-menstruation-details.jpeg",
+              "src": "content/4-health/7-menstruation/02-menstruation-details.jpeg?v=4a0015aa",
               "title": "Daily log",
               "caption": "Symptoms and notes, logged day by day"
             },
             {
-              "src": "content/4-health/7-menstruation/03-cycles.jpeg",
+              "src": "content/4-health/7-menstruation/03-cycles.jpeg?v=68ddd241",
               "title": "Cycle history",
               "caption": "Every cycle recorded and comparable"
             },
             {
-              "src": "content/4-health/7-menstruation/04-cycle-details.jpeg",
+              "src": "content/4-health/7-menstruation/04-cycle-details.jpeg?v=5b225c6a",
               "title": "Patterns and predictions",
               "caption": "What's normal for you, and what's next"
             }
@@ -297,12 +297,12 @@
           "name": "Pregnancy & Mom's Diary",
           "slides": [
             {
-              "src": "content/4-health/8-pregnancy-and-moms-diary/01-overview.jpeg",
+              "src": "content/4-health/8-pregnancy-and-moms-diary/01-overview.jpeg?v=bf9d3875",
               "title": "Mom's Diary",
               "caption": "A personal companion through every stage"
             },
             {
-              "src": "content/4-health/8-pregnancy-and-moms-diary/02-pregnancy-tracker.jpeg",
+              "src": "content/4-health/8-pregnancy-and-moms-diary/02-pregnancy-tracker.jpeg?v=efcf26fb",
               "title": "Pregnancy tracker",
               "caption": "A separate record for each pregnancy"
             }
@@ -313,7 +313,7 @@
           "name": "Insurance",
           "slides": [
             {
-              "src": "content/4-health/9-insurance/01-insurance.jpeg",
+              "src": "content/4-health/9-insurance/01-insurance.jpeg?v=0258781c",
               "title": "Insurance",
               "caption": "Policies and cover, findable in an emergency"
             }

@@ -22,6 +22,7 @@
  */
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 const ROOT = path.resolve(__dirname, "..");
 const CONTENT = path.join(ROOT, "public", "content");
@@ -61,6 +62,14 @@ function readMeta(file) {
   });
   return out;
 }
+// Images are cached for a year, so a replaced picture would keep serving the
+// old copy. Stamping the URL with a hash of the file makes a changed image a
+// changed URL, which no cache can reuse.
+function stamp(urlPath, filePath) {
+  var h = crypto.createHash("md5").update(fs.readFileSync(filePath)).digest("hex").slice(0, 8);
+  return urlPath + "?v=" + h;
+}
+
 // sidecar text: first line is the title, the rest is the description
 function readCaption(file) {
   if (!fs.existsSync(file)) return null;
@@ -89,7 +98,7 @@ var features = dirs(CONTENT).map(function (fdir) {
       var base = img.replace(IMAGE_RE, "");
       var text = readCaption(path.join(mpath, base + ".txt"));
       return {
-        src: "content/" + fdir + "/" + mdir + "/" + img,
+        src: stamp("content/" + fdir + "/" + mdir + "/" + img, path.join(mpath, img)),
         title: (text && text.title) || pretty(base),
         caption: (text && text.caption) || ""
       };
@@ -113,7 +122,7 @@ var features = dirs(CONTENT).map(function (fdir) {
     icon: meta.icon || "growth",
     desc: meta.desc || "",
     extra: fs.existsSync(extraPath) ? fs.readFileSync(extraPath, "utf8") : "",
-    background: bgFile ? "content/" + fdir + "/" + bgFile : "",
+    background: bgFile ? stamp("content/" + fdir + "/" + bgFile, path.join(fpath, bgFile)) : "",
     // how strongly the backdrop shows through, 0–1
     bgOpacity: meta.bgopacity || "",
     modules: modules
