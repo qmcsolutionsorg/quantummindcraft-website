@@ -1,0 +1,2 @@
+Asset detail
+Value and depreciation over time.
