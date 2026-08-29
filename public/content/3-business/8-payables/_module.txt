@@ -1,1 +1,2 @@
 name: Payables
+desc: Keep on top of what the business owes and when, so cash flow never surprises you.

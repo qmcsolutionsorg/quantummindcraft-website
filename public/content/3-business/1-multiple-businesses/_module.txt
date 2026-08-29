@@ -1,1 +1,2 @@
 name: Multiple businesses
+desc: Run several businesses from one app, each with its own books, team and dashboard.

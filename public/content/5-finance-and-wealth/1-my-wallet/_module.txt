@@ -1,1 +1,2 @@
 name: My wallet
+desc: All your accounts and balances in one place — a clear picture of where your money actually is.

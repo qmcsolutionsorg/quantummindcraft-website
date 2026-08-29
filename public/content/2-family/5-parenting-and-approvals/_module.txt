@@ -1,1 +1,2 @@
 name: Parenting and approvals
+desc: Approve your kids permissions, purchases and decisions — stay informed without hovering.

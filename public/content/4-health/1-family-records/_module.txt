@@ -1,1 +1,2 @@
 name: Family records
+desc: One health profile per family member — history, conditions and documents, all in one place.

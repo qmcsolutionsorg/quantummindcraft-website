@@ -155,6 +155,9 @@
         chip.className = "feature-chip";
         chip.innerHTML = '<i aria-hidden="true"></i>';
         chip.appendChild(document.createTextNode(mod.name));
+        // Hovering any module shows its brief; once screens are added it
+        // becomes a clickable walkthrough.
+        if (mod.desc) chip.title = mod.desc;
         if (ready) {
           chip.addEventListener("click", function () { openStage(f, mod); });
         } else {
@@ -163,7 +166,7 @@
           soon.className = "soon";
           soon.textContent = "soon";
           chip.appendChild(soon);
-          chip.title = "Screens coming soon";
+          if (!mod.desc) chip.title = "Screens coming soon";
         }
         chips.appendChild(chip);
       });

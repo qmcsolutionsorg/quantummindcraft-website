@@ -1,1 +1,2 @@
 name: Investments
+desc: Track stocks, funds and other investments — cost, current value and returns at a glance.

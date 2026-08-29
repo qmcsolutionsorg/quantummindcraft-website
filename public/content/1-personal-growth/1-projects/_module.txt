@@ -1,1 +1,2 @@
 name: Projects
+desc: Plan and track personal projects end to end — tasks, deadlines, budgets, documents and progress you can actually see.

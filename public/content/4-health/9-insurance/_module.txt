@@ -1,1 +1,2 @@
 name: Insurance
+desc: Store health policies, premiums and claims, and never miss a renewal.

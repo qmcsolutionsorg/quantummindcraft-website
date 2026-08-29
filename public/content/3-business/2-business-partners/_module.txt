@@ -1,1 +1,2 @@
 name: Business partners
+desc: Manage customers, vendors and clients in one place, with every transaction linked back to them.

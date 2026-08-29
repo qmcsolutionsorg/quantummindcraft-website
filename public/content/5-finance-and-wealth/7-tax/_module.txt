@@ -1,1 +1,2 @@
 name: Tax
+desc: Plan and organise your tax across countries, so filing season is not a scramble.

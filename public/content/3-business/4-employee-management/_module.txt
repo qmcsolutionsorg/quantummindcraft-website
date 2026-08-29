@@ -1,1 +1,2 @@
 name: Employee management
+desc: Manage staff, roles, timesheets, leave and payroll — all in one place.

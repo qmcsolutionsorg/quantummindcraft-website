@@ -1,1 +1,2 @@
 name: Assets
+desc: Track what you own — property, vehicles, valuables — and their value over time.

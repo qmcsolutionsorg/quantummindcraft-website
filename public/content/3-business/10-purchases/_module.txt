@@ -1,0 +1,2 @@
+name: Purchases
+desc: Buy from vendors the same way you sell — Purchase Order to Goods Receipt to Bill to Payment, with books and stock updated automatically.

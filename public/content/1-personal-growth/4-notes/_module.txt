@@ -1,1 +1,2 @@
 name: Notes
+desc: Capture ideas, journals and quick notes in rich text — organised and always with you.

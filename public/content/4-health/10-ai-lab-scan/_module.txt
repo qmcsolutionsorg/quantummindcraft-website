@@ -1,0 +1,2 @@
+name: Lab-Report Scan
+desc: Snap a photo of a lab or blood report and AI reads every value — pick which to track and they save to the right family member.

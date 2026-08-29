@@ -1,1 +1,2 @@
 name: Menstruation
+desc: Track cycles simply and privately, with the insights that matter.

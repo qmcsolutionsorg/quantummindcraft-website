@@ -1,1 +1,2 @@
 name: Leads and CRM
+desc: Track leads through your pipeline from first contact to closed deal.

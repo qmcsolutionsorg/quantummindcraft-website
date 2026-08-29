@@ -1,1 +1,2 @@
 name: Budgets
+desc: Set budgets by category and see where your money is really going each month.

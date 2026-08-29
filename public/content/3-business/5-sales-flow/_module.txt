@@ -1,1 +1,2 @@
 name: Sales flow
+desc: Quotation to Sales Order to Delivery to Invoice to Payment, with every step posted to your books.

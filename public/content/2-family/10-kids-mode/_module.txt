@@ -1,0 +1,2 @@
+name: Kids Mode
+desc: A safe, colourful space just for your children — goals, habits, wishlist, reading and their own money. Free for up to two kids on your plan.

@@ -14,31 +14,37 @@
         {
           "key": "1-projects",
           "name": "Projects",
+          "desc": "Plan and track personal projects end to end — tasks, deadlines, budgets, documents and progress you can actually see.",
           "slides": []
         },
         {
           "key": "2-goals",
           "name": "Goals",
+          "desc": "Set goals with target dates and milestones, and watch your progress instead of guessing at it.",
           "slides": []
         },
         {
           "key": "3-vacations",
           "name": "Vacations",
+          "desc": "Plan trips with itineraries, budgets and checklists, then track what you actually spend along the way.",
           "slides": []
         },
         {
           "key": "4-notes",
           "name": "Notes",
+          "desc": "Capture ideas, journals and quick notes in rich text — organised and always with you.",
           "slides": []
         },
         {
           "key": "5-contacts",
           "name": "Contacts",
+          "desc": "Keep the people in your life in one place, with the details and shared history that matter.",
           "slides": []
         },
         {
           "key": "6-self-learning",
           "name": "Self learning",
+          "desc": "Track courses, reading and skills you are building — turn someday learning into steady progress.",
           "slides": []
         }
       ]
@@ -50,53 +56,68 @@
       "color": "#8B5CF6",
       "icon": "family",
       "desc": "Kids, parents and grandparents together — school, money, tasks, approvals and the conversations that hold it all together, even across distance.",
-      "extra": "<div class=\"container split\">\n        <div class=\"split-text reveal\">\n          <span class=\"eyebrow\">Built for the whole family</span>\n          <h2>From your kids' childhood<br />to <span class=\"gradient-text\">their kids' childhood.</span></h2>\n          <p>QuantrolPlus isn't just for you. Your whole family shares one connected space — kids manage their own homework, activities and routines, while you stay informed without hovering.</p>\n          <ul class=\"check-list\">\n            <li>Kids learn real finance — assets, liabilities, equity — by living it</li>\n            <li>Coordinate as a family instead of everyone being disconnected</li>\n            <li>Approvals for permissions, purchases and decisions</li>\n            <li>Structured messaging for real-life family situations</li>\n          </ul>\n          <a href=\"#download\" class=\"btn btn-primary\">Bring your family in →</a>\n        </div>\n        <div class=\"split-visual reveal\">\n          <div class=\"glass-card family-card\">\n            <img src=\"assets/images/logo-dark.jpeg\" alt=\"QuantrolPlus family ecosystem\" />\n          </div>\n        </div>\n      </div>\n",
+      "extra": "<div class=\"container split\">\r\n        <div class=\"split-text reveal\">\r\n          <span class=\"eyebrow\">Built for the whole family</span>\r\n          <h2>From your kids' childhood<br />to <span class=\"gradient-text\">their kids' childhood.</span></h2>\r\n          <p>QuantrolPlus isn't just for you. Your whole family shares one connected space — kids manage their own homework, activities and routines, while you stay informed without hovering.</p>\r\n          <ul class=\"check-list\">\r\n            <li>Kids learn real finance — assets, liabilities, equity — by living it</li>\r\n            <li>Coordinate as a family instead of everyone being disconnected</li>\r\n            <li>Approvals for permissions, purchases and decisions</li>\r\n            <li>Structured messaging for real-life family situations</li>\r\n          </ul>\r\n          <a href=\"#download\" class=\"btn btn-primary\">Bring your family in →</a>\r\n        </div>\r\n        <div class=\"split-visual reveal\">\r\n          <div class=\"glass-card family-card\">\r\n            <img src=\"assets/images/logo-dark.jpeg\" alt=\"QuantrolPlus family ecosystem\" />\r\n          </div>\r\n        </div>\r\n      </div>\r\n",
       "background": "",
       "bgOpacity": "",
       "modules": [
         {
           "key": "1-school-activity",
           "name": "School activity",
+          "desc": "Stay on top of your kids school life — subjects, homework, activities and important dates.",
           "slides": []
         },
         {
           "key": "2-kids-finances",
           "name": "Kids finances",
+          "desc": "Give kids their own money space — allowance, savings and a first, safe taste of real finance.",
           "slides": []
         },
         {
           "key": "3-payables",
           "name": "Payables",
+          "desc": "Track what the family owes and when it is due, so no bill or commitment slips through.",
           "slides": []
         },
         {
           "key": "4-tasks-and-projects",
           "name": "Tasks and projects",
+          "desc": "Shared to-dos and family projects everyone can see and pitch in on.",
           "slides": []
         },
         {
           "key": "5-parenting-and-approvals",
           "name": "Parenting and approvals",
+          "desc": "Approve your kids permissions, purchases and decisions — stay informed without hovering.",
           "slides": []
         },
         {
           "key": "6-pick-and-drop",
           "name": "Pick and drop",
+          "desc": "Coordinate who is picking up whom, so school runs and errands never get missed.",
           "slides": []
         },
         {
           "key": "7-plans",
           "name": "Plans",
+          "desc": "Family plans and events in one shared calendar the whole household stays in sync with.",
           "slides": []
         },
         {
           "key": "8-chats",
           "name": "Chats",
+          "desc": "Structured messaging for real family situations — decisions, approvals and everyday coordination.",
           "slides": []
         },
         {
           "key": "9-shared-documents",
           "name": "Shared documents",
+          "desc": "Keep the family important documents together and reachable the moment you need them.",
+          "slides": []
+        },
+        {
+          "key": "10-kids-mode",
+          "name": "Kids Mode",
+          "desc": "A safe, colourful space just for your children — goals, habits, wishlist, reading and their own money. Free for up to two kids on your plan.",
           "slides": []
         }
       ]
@@ -115,46 +136,61 @@
         {
           "key": "1-multiple-businesses",
           "name": "Multiple businesses",
+          "desc": "Run several businesses from one app, each with its own books, team and dashboard.",
           "slides": []
         },
         {
           "key": "2-business-partners",
           "name": "Business partners",
+          "desc": "Manage customers, vendors and clients in one place, with every transaction linked back to them.",
           "slides": []
         },
         {
           "key": "3-leads-and-crm",
           "name": "Leads and CRM",
+          "desc": "Track leads through your pipeline from first contact to closed deal.",
           "slides": []
         },
         {
           "key": "4-employee-management",
           "name": "Employee management",
+          "desc": "Manage staff, roles, timesheets, leave and payroll — all in one place.",
           "slides": []
         },
         {
           "key": "5-sales-flow",
           "name": "Sales flow",
+          "desc": "Quotation to Sales Order to Delivery to Invoice to Payment, with every step posted to your books.",
           "slides": []
         },
         {
           "key": "6-inventory",
           "name": "Inventory",
+          "desc": "Track raw materials, finished goods and services — stock levels, costs and valuation, always current.",
           "slides": []
         },
         {
           "key": "7-assets",
           "name": "Assets",
+          "desc": "Record and track business assets, their value and depreciation over time.",
           "slides": []
         },
         {
           "key": "8-payables",
           "name": "Payables",
+          "desc": "Keep on top of what the business owes and when, so cash flow never surprises you.",
           "slides": []
         },
         {
           "key": "9-chart-of-account",
           "name": "Chart of Account",
+          "desc": "A full, real double-entry chart of accounts behind every transaction you make.",
+          "slides": []
+        },
+        {
+          "key": "10-purchases",
+          "name": "Purchases",
+          "desc": "Buy from vendors the same way you sell — Purchase Order to Goods Receipt to Bill to Payment, with books and stock updated automatically.",
           "slides": []
         }
       ]
@@ -173,6 +209,7 @@
         {
           "key": "1-family-records",
           "name": "Family records",
+          "desc": "One health profile per family member — history, conditions and documents, all in one place.",
           "slides": [
             {
               "src": "content/4-health/1-family-records/01-overview.jpeg?v=3a031348",
@@ -194,6 +231,7 @@
         {
           "key": "2-tracker",
           "name": "Tracker",
+          "desc": "Log vitals like blood pressure, glucose and weight, and see the trends over time.",
           "slides": [
             {
               "src": "content/4-health/2-tracker/01-tracker.jpeg?v=85905b87",
@@ -210,6 +248,7 @@
         {
           "key": "3-schedules",
           "name": "Schedules",
+          "desc": "Medication and care schedules so nothing — and no one — gets missed.",
           "slides": [
             {
               "src": "content/4-health/3-schedules/01-schedules.jpeg?v=29d32aa0",
@@ -221,6 +260,7 @@
         {
           "key": "4-treatments",
           "name": "Treatments",
+          "desc": "Track ongoing treatments, linked measurements and the medicines that go with them.",
           "slides": [
             {
               "src": "content/4-health/4-treatments/01-treatments.jpeg?v=652b59b1",
@@ -237,6 +277,7 @@
         {
           "key": "5-vaccinations",
           "name": "Vaccinations",
+          "desc": "Keep every family member vaccination record and see what is coming due.",
           "slides": [
             {
               "src": "content/4-health/5-vaccinations/01-vaccinations.jpeg?v=784d7a6d",
@@ -253,6 +294,7 @@
         {
           "key": "6-medicines",
           "name": "Medicines",
+          "desc": "A running record of medicines, doses and refills for the whole family.",
           "slides": [
             {
               "src": "content/4-health/6-medicines/01-medicines.jpeg?v=e6f8a860",
@@ -269,6 +311,7 @@
         {
           "key": "7-menstruation",
           "name": "Menstruation",
+          "desc": "Track cycles simply and privately, with the insights that matter.",
           "slides": [
             {
               "src": "content/4-health/7-menstruation/01-menstruation.jpeg?v=0d7f679e",
@@ -294,7 +337,8 @@
         },
         {
           "key": "8-pregnancy-and-moms-diary",
-          "name": "Pregnancy & Mom's Diary",
+          "name": "Pregnancy and moms diary",
+          "desc": "Follow a pregnancy week by week, with a private diary for the journey.",
           "slides": [
             {
               "src": "content/4-health/8-pregnancy-and-moms-diary/01-overview.jpeg?v=bf9d3875",
@@ -311,6 +355,7 @@
         {
           "key": "9-insurance",
           "name": "Insurance",
+          "desc": "Store health policies, premiums and claims, and never miss a renewal.",
           "slides": [
             {
               "src": "content/4-health/9-insurance/01-insurance.jpeg?v=0258781c",
@@ -318,6 +363,12 @@
               "caption": "Policies and cover, findable in an emergency"
             }
           ]
+        },
+        {
+          "key": "10-ai-lab-scan",
+          "name": "Lab-Report Scan",
+          "desc": "Snap a photo of a lab or blood report and AI reads every value — pick which to track and they save to the right family member.",
+          "slides": []
         }
       ]
     },
@@ -328,53 +379,68 @@
       "color": "#F59E0B",
       "icon": "finance",
       "desc": "Wallets, assets, loans, budgets, tax and investments — a real balance sheet for your personal life and every business you run.",
-      "extra": "<div class=\"container split reverse\">\n        <div class=\"split-text reveal\">\n          <span class=\"eyebrow\">Real financial clarity</span>\n          <h2>Not just income &amp; expense.<br />A complete <span class=\"gradient-text\">financial ecosystem.</span></h2>\n          <p>Most apps stop at simple tracking. QuantrolPlus gives you true balance sheets — assets, liabilities and equity — separately for personal life and every business you run.</p>\n          <div class=\"mini-stats\">\n            <div class=\"mini-stat\"><strong>Assets</strong><span>Track true value over time</span></div>\n            <div class=\"mini-stat\"><strong>Liabilities</strong><span>Loans, payables, obligations</span></div>\n            <div class=\"mini-stat\"><strong>Equity</strong><span>Your real net position</span></div>\n            <div class=\"mini-stat\"><strong>P&amp;L</strong><span>Per business, always clear</span></div>\n          </div>\n        </div>\n        <div class=\"split-visual reveal\">\n          <div class=\"glass-card balance-card\">\n            <div class=\"bc-row bc-head\"><span>Net Worth</span><b class=\"pos\">₹ 42,80,000</b></div>\n            <div class=\"bc-bar\"><i style=\"--w:78%;--c:#22C55E\"></i></div>\n            <div class=\"bc-row\"><span>Assets</span><b class=\"pos\">₹ 61,50,000</b></div>\n            <div class=\"bc-bar\"><i style=\"--w:92%;--c:#3B82F6\"></i></div>\n            <div class=\"bc-row\"><span>Liabilities</span><b class=\"neg\">₹ 18,70,000</b></div>\n            <div class=\"bc-bar\"><i style=\"--w:34%;--c:#EF4444\"></i></div>\n            <div class=\"bc-tags\"><span>Personal</span><span>Business A</span><span>Business B</span></div>\n          </div>\n        </div>\n      </div>\n",
+      "extra": "<div class=\"container split reverse\">\r\n        <div class=\"split-text reveal\">\r\n          <span class=\"eyebrow\">Real financial clarity</span>\r\n          <h2>Not just income &amp; expense.<br />A complete <span class=\"gradient-text\">financial ecosystem.</span></h2>\r\n          <p>Most apps stop at simple tracking. QuantrolPlus gives you true balance sheets — assets, liabilities and equity — separately for personal life and every business you run.</p>\r\n          <div class=\"mini-stats\">\r\n            <div class=\"mini-stat\"><strong>Assets</strong><span>Track true value over time</span></div>\r\n            <div class=\"mini-stat\"><strong>Liabilities</strong><span>Loans, payables, obligations</span></div>\r\n            <div class=\"mini-stat\"><strong>Equity</strong><span>Your real net position</span></div>\r\n            <div class=\"mini-stat\"><strong>P&amp;L</strong><span>Per business, always clear</span></div>\r\n          </div>\r\n        </div>\r\n        <div class=\"split-visual reveal\">\r\n          <div class=\"glass-card balance-card\">\r\n            <div class=\"bc-row bc-head\"><span>Net Worth</span><b class=\"pos\">₹ 42,80,000</b></div>\r\n            <div class=\"bc-bar\"><i style=\"--w:78%;--c:#22C55E\"></i></div>\r\n            <div class=\"bc-row\"><span>Assets</span><b class=\"pos\">₹ 61,50,000</b></div>\r\n            <div class=\"bc-bar\"><i style=\"--w:92%;--c:#3B82F6\"></i></div>\r\n            <div class=\"bc-row\"><span>Liabilities</span><b class=\"neg\">₹ 18,70,000</b></div>\r\n            <div class=\"bc-bar\"><i style=\"--w:34%;--c:#EF4444\"></i></div>\r\n            <div class=\"bc-tags\"><span>Personal</span><span>Business A</span><span>Business B</span></div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n",
       "background": "",
       "bgOpacity": "",
       "modules": [
         {
           "key": "1-my-wallet",
           "name": "My wallet",
+          "desc": "All your accounts and balances in one place — a clear picture of where your money actually is.",
           "slides": []
         },
         {
           "key": "2-assets",
           "name": "Assets",
+          "desc": "Track what you own — property, vehicles, valuables — and their value over time.",
           "slides": []
         },
         {
           "key": "3-payables",
           "name": "Payables",
+          "desc": "Know what you owe and when it is due, so nothing catches you off guard.",
           "slides": []
         },
         {
           "key": "4-receivables",
           "name": "Receivables",
+          "desc": "Track money owed to you and when it is expected to land.",
           "slides": []
         },
         {
           "key": "5-loans",
           "name": "Loans",
+          "desc": "Manage loans, EMIs and repayment schedules, with the interest and balance always clear.",
           "slides": []
         },
         {
           "key": "6-budgets",
           "name": "Budgets",
+          "desc": "Set budgets by category and see where your money is really going each month.",
           "slides": []
         },
         {
           "key": "7-tax",
           "name": "Tax",
+          "desc": "Plan and organise your tax across countries, so filing season is not a scramble.",
           "slides": []
         },
         {
           "key": "8-investments",
           "name": "Investments",
+          "desc": "Track stocks, funds and other investments — cost, current value and returns at a glance.",
           "slides": []
         },
         {
           "key": "9-plans",
           "name": "Plans",
+          "desc": "Model financial what-ifs, then compare scenarios side by side.",
+          "slides": []
+        },
+        {
+          "key": "10-month-ahead",
+          "name": "Month Ahead",
+          "desc": "A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.",
           "slides": []
         }
       ]

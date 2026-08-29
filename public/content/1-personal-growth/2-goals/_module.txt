@@ -1,1 +1,2 @@
 name: Goals
+desc: Set goals with target dates and milestones, and watch your progress instead of guessing at it.

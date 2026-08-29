@@ -1,1 +1,2 @@
 name: Treatments
+desc: Track ongoing treatments, linked measurements and the medicines that go with them.

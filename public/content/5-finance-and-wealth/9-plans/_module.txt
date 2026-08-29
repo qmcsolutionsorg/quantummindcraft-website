@@ -1,1 +1,2 @@
 name: Plans
+desc: Model financial what-ifs, then compare scenarios side by side.

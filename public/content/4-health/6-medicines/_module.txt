@@ -1,1 +1,2 @@
 name: Medicines
+desc: A running record of medicines, doses and refills for the whole family.

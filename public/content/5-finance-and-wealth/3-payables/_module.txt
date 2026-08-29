@@ -1,1 +1,2 @@
 name: Payables
+desc: Know what you owe and when it is due, so nothing catches you off guard.

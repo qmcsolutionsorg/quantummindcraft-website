@@ -1,1 +1,2 @@
 name: Vacations
+desc: Plan trips with itineraries, budgets and checklists, then track what you actually spend along the way.

@@ -1,1 +1,2 @@
 name: Vaccinations
+desc: Keep every family member vaccination record and see what is coming due.

@@ -1,1 +1,2 @@
 name: Receivables
+desc: Track money owed to you and when it is expected to land.

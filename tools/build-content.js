@@ -111,7 +111,7 @@ var features = dirs(CONTENT).map(function (fdir) {
       if (!paired) warnings.push(fdir + "/" + mdir + "/" + t + " has no matching image");
     });
 
-    return { key: mdir, name: mmeta.name || pretty(mdir), slides: slides };
+    return { key: mdir, name: mmeta.name || pretty(mdir), desc: mmeta.desc || "", slides: slides };
   });
 
   return {

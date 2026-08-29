@@ -1,1 +1,2 @@
 name: Chats
+desc: Structured messaging for real family situations — decisions, approvals and everyday coordination.

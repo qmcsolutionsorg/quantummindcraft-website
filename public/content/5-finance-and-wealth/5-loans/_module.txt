@@ -1,1 +1,2 @@
 name: Loans
+desc: Manage loans, EMIs and repayment schedules, with the interest and balance always clear.

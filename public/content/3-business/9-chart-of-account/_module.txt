@@ -1,1 +1,2 @@
 name: Chart of Account
+desc: A full, real double-entry chart of accounts behind every transaction you make.

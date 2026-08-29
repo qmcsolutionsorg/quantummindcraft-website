@@ -1,1 +1,2 @@
 name: Tracker
+desc: Log vitals like blood pressure, glucose and weight, and see the trends over time.

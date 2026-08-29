@@ -1,1 +1,2 @@
-name: Pregnancy & Mom's Diary
+name: Pregnancy and moms diary
+desc: Follow a pregnancy week by week, with a private diary for the journey.

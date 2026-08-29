@@ -1,1 +1,2 @@
 name: Shared documents
+desc: Keep the family important documents together and reachable the moment you need them.

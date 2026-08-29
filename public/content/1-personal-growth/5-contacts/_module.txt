@@ -1,1 +1,2 @@
 name: Contacts
+desc: Keep the people in your life in one place, with the details and shared history that matter.
