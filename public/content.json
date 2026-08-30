@@ -212,19 +212,10 @@
           "desc": "One health profile per family member — history, conditions and documents, all in one place.",
           "slides": [
             {
+              "type": "image",
               "src": "content/4-health/1-family-records/01-overview.jpeg?v=3a031348",
-              "title": "Family overview",
-              "caption": "Your whole family's health at a glance"
-            },
-            {
-              "src": "content/4-health/1-family-records/02-list.jpeg?v=0eef85e4",
-              "title": "Member records",
-              "caption": "A separate medical record for everyone — pets included"
-            },
-            {
-              "src": "content/4-health/1-family-records/03-transactions.jpeg?v=5335786a",
-              "title": "What it costs",
-              "caption": "Every healthcare expense, per member"
+              "title": "❤️ Family Health — Everything in One Place",
+              "caption": "👨‍👩‍👧‍👦 Manage Your Family’s Health — Create individual health profiles and keep important information organized for every family member.\n📊 Track Health & Wellness — Monitor important health information such as weight, blood pressure, blood sugar, sleep and other health trackers.\n📅 Manage Appointments & Treatments — Keep doctor visits, vaccinations, treatments and ongoing healthcare activities together.\n💊 Organize the Complete Health Journey — Maintain medicines, medical documents, reports, treatment processes and important health records.\n💰 Track Healthcare Expenses — Record doctor fees, tests, scans, medicines and other medical expenses under the related treatment.\n\n✨ One family. One place for your health journey, records, treatments and expenses."
             }
           ]
         },
@@ -234,11 +225,13 @@
           "desc": "Log vitals like blood pressure, glucose and weight, and see the trends over time.",
           "slides": [
             {
+              "type": "image",
               "src": "content/4-health/2-tracker/01-tracker.jpeg?v=85905b87",
               "title": "Vitals tracker",
               "caption": "Blood pressure, sugar and the numbers that matter"
             },
             {
+              "type": "image",
               "src": "content/4-health/2-tracker/02-tracker-details.jpeg?v=6bc0e43e",
               "title": "Trends over time",
               "caption": "See the trend, not just today's reading"
@@ -251,6 +244,7 @@
           "desc": "Medication and care schedules so nothing — and no one — gets missed.",
           "slides": [
             {
+              "type": "image",
               "src": "content/4-health/3-schedules/01-schedules.jpeg?v=29d32aa0",
               "title": "Appointments",
               "caption": "Appointments and reminders that never slip"
@@ -263,11 +257,13 @@
           "desc": "Track ongoing treatments, linked measurements and the medicines that go with them.",
           "slides": [
             {
+              "type": "image",
               "src": "content/4-health/4-treatments/01-treatments.jpeg?v=652b59b1",
               "title": "Treatments",
               "caption": "Ongoing and past treatments in one list"
             },
             {
+              "type": "image",
               "src": "content/4-health/4-treatments/02-treatment-details.jpeg?v=6064328c",
               "title": "Treatment detail",
               "caption": "Diagnosis, linked trackers, reports and next steps"
@@ -280,11 +276,13 @@
           "desc": "Keep every family member vaccination record and see what is coming due.",
           "slides": [
             {
+              "type": "image",
               "src": "content/4-health/5-vaccinations/01-vaccinations.jpeg?v=784d7a6d",
               "title": "Vaccinations",
               "caption": "Every dose and date, tracked per person"
             },
             {
+              "type": "image",
               "src": "content/4-health/5-vaccinations/02-vaccination-countries.jpeg?v=8c1b9fcf",
               "title": "Travel requirements",
               "caption": "Country schedules, ready before you travel"
@@ -297,11 +295,13 @@
           "desc": "A running record of medicines, doses and refills for the whole family.",
           "slides": [
             {
+              "type": "image",
               "src": "content/4-health/6-medicines/01-medicines.jpeg?v=e6f8a860",
               "title": "Medicines",
               "caption": "Every medicine, dose and schedule"
             },
             {
+              "type": "image",
               "src": "content/4-health/6-medicines/02-medicines-print.jpeg?v=6150a9e3",
               "title": "Printable list",
               "caption": "Print a clean list to hand the doctor"
@@ -314,24 +314,29 @@
           "desc": "Track cycles simply and privately, with the insights that matter.",
           "slides": [
             {
-              "src": "content/4-health/7-menstruation/01-menstruation.jpeg?v=0d7f679e",
-              "title": "Cycle tracking",
-              "caption": "Month by month, without guesswork"
+              "type": "video",
+              "src": "content/4-health/7-menstruation/01-menstruation.mp4?v=b80e3f1a",
+              "title": "🌸 Menstruation & Cycle Tracking — Why It Matters",
+              "caption": "🩸 Track Your Period — Record start dates, duration, and flow intensity to understand your cycle better.\n📅 Know What’s Coming — Estimate your next period, fertile window, and ovulation days so you can plan ahead.\n😊 Understand Your Body — Track moods, symptoms, energy, and changes throughout different phases of your cycle.\n📊 Discover Your Patterns — Compare cycle length, period duration, flow, and symptoms across months to spot changes over time.\n💕 Keep Your Cycle History Together — Maintain your complete menstrual history in one place, making it easier to understand and discuss with your healthcare provider when needed.\n\n✨ Track. Understand. Prepare. Stay connected with your body.",
+              "poster": "content/4-health/7-menstruation/01-menstruation.jpeg?v=0d7f679e"
             },
             {
+              "type": "image",
               "src": "content/4-health/7-menstruation/02-menstruation-details.jpeg?v=4a0015aa",
-              "title": "Daily log",
-              "caption": "Symptoms and notes, logged day by day"
+              "title": "🩸 Cycle Detail — Day by Day",
+              "caption": "🩸 Track Daily Flow — Record light, medium, heavy, or very heavy flow for each period day.\n😊 Log Daily Symptoms — Capture how you feel and any symptoms experienced throughout your cycle.\n📅 See Your Current Cycle — Quickly know your start date, current cycle day, estimated end date, and days remaining.\n🌸 Know Your Ovulation Window — View estimated ovulation start and end dates to understand your current cycle phase.\n📊 Build a Detailed Cycle Record — Save day-by-day information to create a useful history of your menstrual patterns over time.\n\n✨ Know what’s happening today, understand your cycle better tomorrow."
             },
             {
+              "type": "image",
               "src": "content/4-health/7-menstruation/03-cycles.jpeg?v=68ddd241",
-              "title": "Cycle history",
-              "caption": "Every cycle recorded and comparable"
+              "title": "🔄 All Cycles — Your Complete Cycle History",
+              "caption": "📅 View Every Cycle — Keep all your past and current menstrual cycles organized in one place.\n🩸 Review Period Flow — See the recorded flow level for each cycle and compare changes over time.\n😊 Remember How You Felt — Review moods and feelings recorded during each period.\n📊 Compare Your Cycles — Easily look back at start dates, cycle patterns, and completed cycles.\n🌸 Build Your Personal History — Create a long-term menstrual record that helps you understand how your cycle changes month by month.\n\n✨ Every cycle recorded. Every pattern easier to understand."
             },
             {
+              "type": "image",
               "src": "content/4-health/7-menstruation/04-cycle-details.jpeg?v=5b225c6a",
-              "title": "Patterns and predictions",
-              "caption": "What's normal for you, and what's next"
+              "title": "🌸 Current Cycle — Know What’s Happening Now",
+              "caption": "📅 See Your Current Cycle Day — Know exactly where you are in your cycle and how many days are left.\n🩸 Track Period Flow Daily — Record your flow for each period day as light, medium, heavy, or very heavy.\n🌼 Know Your Ovulation Window — See estimated ovulation start and end dates at a glance.\n😊 Log Symptoms & Changes — Record symptoms and how you’re feeling during the current cycle.\n💕 Follow Your Cycle Day by Day — Keep your current period, symptoms, flow, and important dates together in one place.\n\n✨ Understand today. Track every change. Know what’s coming next."
             }
           ]
         },
@@ -341,14 +346,32 @@
           "desc": "Follow a pregnancy week by week, with a private diary for the journey.",
           "slides": [
             {
-              "src": "content/4-health/8-pregnancy-and-moms-diary/01-overview.jpeg?v=bf9d3875",
-              "title": "Mom's Diary",
-              "caption": "A personal companion through every stage"
+              "type": "video",
+              "src": "content/4-health/8-pregnancy-and-moms-diary/01-overview.mp4?v=707191bd",
+              "title": "🤰💕 Mom’s Diary",
+              "caption": "Create a beautiful **Baby’s Diary for every pregnancy** 👶📖 and keep each journey special and separate. 💕\n\n🤰 Maintain a diary for each pregnancy\n📅 Capture the journey week by week\n💭 Record thoughts, feelings & dreams\n👣 Remember first kicks & special moments\n❤️ Look back on each baby’s unique journey anytime\n\n✨ **Every pregnancy has its own story. Keep every beautiful memory forever.** 👶💕",
+              "poster": "content/4-health/8-pregnancy-and-moms-diary/01-overview.jpeg?v=bf9d3875"
             },
             {
-              "src": "content/4-health/8-pregnancy-and-moms-diary/02-pregnancy-tracker.jpeg?v=efcf26fb",
-              "title": "Pregnancy tracker",
-              "caption": "A separate record for each pregnancy"
+              "type": "video",
+              "src": "content/4-health/8-pregnancy-and-moms-diary/02%20-%20Babys%20Diary.mp4?v=9314e68d",
+              "title": "👶💕 Baby’s Diary",
+              "caption": "Capture and cherish every special moment of your pregnancy 🤰✨ — from **daily feelings 😊, symptoms 🌸, dreams 🌙💭, and experiences 💕 to your baby’s first kick 👣❤️**.\n\n📅 Follow your journey week by week\n🌱 Record your baby’s growing milestones\n💭 Capture feelings, dreams & special moments\n👣 Remember precious firsts\n📸 Save beautiful memories\n💖 Build your pregnancy story from **bump 🤰 to baby 👶**\n\n✨ **Every kick. Every feeling. Every memory. One beautiful journey.** 💕",
+              "poster": "content/4-health/8-pregnancy-and-moms-diary/02%20-%20Babys%20Diary.jpeg?v=efcf26fb"
+            },
+            {
+              "type": "video",
+              "src": "content/4-health/8-pregnancy-and-moms-diary/03%20-%20Pregnency%20track%20process.mp4?v=43e366bb",
+              "title": "🤰 Pregnancy – Track Your Process",
+              "caption": "Define everything you want to follow throughout your pregnancy and organize it **step by step**. Track appointments, tests, scans, medications, preparations, and important milestones—all in one place.\n\n**Plan every step. Track your progress. Never miss what’s next. ❤️**",
+              "poster": "content/4-health/8-pregnancy-and-moms-diary/03%20-%20Pregnency%20track%20process.jpeg?v=efcf26fb"
+            },
+            {
+              "type": "video",
+              "src": "content/4-health/8-pregnancy-and-moms-diary/04%20-%20Track%20all%20documents.mp4?v=12a87876",
+              "title": "📂💕 Everything in One Place",
+              "caption": "Keep all your important pregnancy information organized throughout your journey 🤰✨\n\n💰 Track pregnancy expenses\n🧾 Save medical bills & receipts\n🛡️ Manage insurance & benefits\n💊 Track medicines & supplements\n🩻 Keep ultrasound & sonography reports\n🧪 Save lab tests & results\n⏰ Track reminders & upcoming activities\n📝 Keep important notes & instructions\n\n✨ **From appointments to expenses, medicines to medical reports — keep your complete pregnancy journey organized in one place.** 👶💕",
+              "poster": "content/4-health/8-pregnancy-and-moms-diary/04%20-%20Track%20all%20documents.jpeg?v=baf8da2c"
             }
           ]
         },
@@ -358,6 +381,7 @@
           "desc": "Store health policies, premiums and claims, and never miss a renewal.",
           "slides": [
             {
+              "type": "image",
               "src": "content/4-health/9-insurance/01-insurance.jpeg?v=0258781c",
               "title": "Insurance",
               "caption": "Policies and cover, findable in an emergency"

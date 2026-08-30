@@ -1,2 +1,8 @@
-Account detail
-Transactions and running balance for each account.
+📊 My Accounts — Your Personal Chart of Accounts
+💰 See Your Complete Financial Position — Organize everything into Assets, Liabilities, Equity, Revenue and Expenses in one structured view.
+🏠 Know What You Own — Track bank balances, investments, properties, vehicles and other assets to understand your total wealth.
+💳 Know What You Owe — See loans, interest payable, credit cards, taxes, salaries and other liabilities with their current balances.
+📈 Track Income & Expenses — Understand how much money is coming in, where it is being spent and how it affects your finances.
+⚖️ Understand Your Net Worth — Automatically connect your accounts using Assets − Liabilities = Equity, giving you a clearer picture of your overall financial health.
+
+✨ Not just expense tracking — understand your complete personal finances like a balance sheet.

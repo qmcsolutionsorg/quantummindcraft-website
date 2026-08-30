@@ -1,2 +1,8 @@
-Vaccinations
-Every dose and date, tracked per person
+💉 Vaccination Tracker — Keep Every Vaccine Record Organized
+👨‍👩‍👧‍👦 Track Vaccinations for Every Family Member — Maintain a separate vaccination history for each person.
+💉 Record Every Dose — Save vaccine name, purpose, dose number, and vaccination date.
+📅 Follow the Complete Vaccination Journey — Keep childhood, adult, booster, and other vaccination records together over the years.
+📄 Keep Supporting Records — Store vaccination documents, certificates, notes, and related information.
+🖨️ Print & Share Anytime — Quickly generate a vaccination record to print or share when needed.
+
+✨ From the first vaccine to future boosters — keep your complete vaccination history in one place.

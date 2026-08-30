@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- ?v= is a cache buster: bump it whenever styles.css or script.js changes -->
-  <link rel="stylesheet" href="styles.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=25" />
 </head>
 <body>
   <!-- ===== Animated background ===== -->
@@ -73,48 +73,26 @@
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
   <main id="top">
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-        <div class="hero-badge reveal">
-          <span class="pulse-dot"></span> Quantum · Control · Organize
-        </div>
-        <h1 class="hero-title reveal">
-          One App.<br />
-          <span class="gradient-text">Countless Possibilities.</span>
-        </h1>
-        <p class="hero-sub reveal">
-          Your entire life and business — finance, health, family, assets, trips, employees,
-          projects and more — finally organized in one intelligent place.
-          Stop juggling 10 apps. This is your second brain.
-        </p>
-        <div class="hero-actions reveal">
-          <a href="https://apps.apple.com/in/app/quantrolplus/id6759055918" target="_blank" rel="noopener" class="store-badge">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.42 2.2-1.12 3-.77.9-2.03 1.6-3.07 1.52-.13-1.1.44-2.27 1.1-3.02.75-.86 2.06-1.5 3.09-1.5zM20.9 17.2c-.53 1.2-.78 1.74-1.46 2.8-.95 1.48-2.29 3.32-3.95 3.33-1.47.02-1.85-.96-3.85-.95-2 .01-2.42.97-3.9.96-1.66-.01-2.93-1.67-3.88-3.14-2.66-4.13-2.94-8.98-1.3-11.55C3.72 6.9 5.5 5.85 7.16 5.85c1.7 0 2.77.96 4.18.96 1.36 0 2.19-.96 4.16-.96 1.48 0 3.05.8 4.17 2.19-3.66 2-3.07 7.23.23 9.16z"/></svg>
-            <span><small>Download on the</small><strong>App Store</strong></span>
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.mycompany.routinemashup" target="_blank" rel="noopener" class="store-badge">
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#00E1FF" d="M3.6 2.2 13.1 12 3.6 21.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z"/><path fill="#00F076" d="M13.1 12 3.6 2.2c.2-.1.5-.1.8 0l11 6.2-2.3 3.6z"/><path fill="#FFCF00" d="m17.7 9.7 2.9 1.6c.6.4.6 1.3 0 1.6l-2.9 1.6-2.4-2.5 2.4-2.3z"/><path fill="#FF3A44" d="M13.1 12l2.3 3.6-11 6.2c-.3.1-.6.1-.8 0L13.1 12z"/></svg>
-            <span><small>GET IT ON</small><strong>Google Play</strong></span>
-          </a>
-        </div>
-        <p class="hero-note reveal">Free to start · For all ages · Personal &amp; business in one</p>
-        </div>
-
-        <!-- Animated 3D logo cube: each face = logo + module -->
-        <div class="scene reveal" aria-hidden="true">
-          <div class="cube">
-            <div class="face" style="--c:#3B82F6"><img src="assets/images/logo-dark.jpeg" alt="" class="face-logo" /><span>QuantrolPlus</span></div>
-            <div class="face" style="--c:#F59E0B"><img src="assets/images/logo-dark.jpeg" alt="" class="face-logo" /><span>Finance</span></div>
-            <div class="face" style="--c:#8B5CF6"><img src="assets/images/logo-dark.jpeg" alt="" class="face-logo" /><span>Parenting</span></div>
-            <div class="face" style="--c:#EF4444"><img src="assets/images/logo-dark.jpeg" alt="" class="face-logo" /><span>Health</span></div>
-            <div class="face" style="--c:#22C55E"><img src="assets/images/logo-dark.jpeg" alt="" class="face-logo" /><span>Business</span></div>
-            <div class="face" style="--c:#06B6D4"><img src="assets/images/logo-dark.jpeg" alt="" class="face-logo" /><span>Assets</span></div>
+    <!-- ===== Topic bubbles ===== -->
+    <!-- The bubbles, the legend and the detail card are all generated from
+         public/content/ by script.js — one bubble per module folder. -->
+    <section class="section topics" id="topics">
+      <div class="container">
+        <div class="topic-legend reveal" id="topicLegend" role="group" aria-label="Show or hide an area"></div>
+        <div class="topic-wrap reveal">
+          <div class="topic-sizer">
+            <div class="topic-field" id="topicField">
+              <div class="topic-3d" id="topic3d"></div>
+            </div>
           </div>
-          <div class="cube-glow"></div>
         </div>
+        <p class="topic-swipe">Swipe sideways to see them all</p>
+        <div class="section-head topic-head reveal">
+          <span class="eyebrow">Everything it covers</span>
+          <h1>Every topic, in one place</h1>
+        </div>
+        <div class="topic-detail reveal" id="topicDetail" aria-live="polite"></div>
       </div>
     </section>
 
@@ -230,6 +208,13 @@
   <div class="stage" id="featureStage" role="dialog" aria-modal="true" aria-labelledby="stageFeature" hidden>
     <div class="stage-bg" id="stageBg" aria-hidden="true"></div>
 
+    <!-- Top-left escape hatch. The Close button at the bottom does the same
+         thing, but people arriving here from a bubble look for a back arrow. -->
+    <button class="stage-back" id="stageBack">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+      Back
+    </button>
+
     <button class="stage-close" id="stageClose">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
       Close
@@ -263,6 +248,6 @@
     <div class="stage-hint" aria-hidden="true">Scroll <span></span> to explore</div>
   </div>
 
-  <script src="script.js?v=14"></script>
+  <script src="script.js?v=25"></script>
 </body>
 </html>
