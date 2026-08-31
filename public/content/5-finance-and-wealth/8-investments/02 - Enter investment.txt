@@ -1,0 +1,8 @@
+📊 Add & Track Investments — Multiple Brokers, One Portfolio
+🔗 Bring Multiple Brokers Together — Add investments from different brokers, banks and investment platforms and view everything in one place.
+✍️ Enter Investments Manually — Prefer not to connect an account? Add your holdings manually with quantity, purchase price, account and investment type.
+🔎 Select the Ticker — Choose the correct stock, ETF, fund or crypto ticker and link it to your holding.
+📈 Get Current Market Value — Use live market prices to automatically calculate the latest value of each investment and your overall portfolio.
+💰 Always Know How Your Portfolio Looks — See invested amount, current value, profit/loss and performance across all brokers from one consolidated view.
+
+✨ Connect or enter manually → Select ticker → Get current value → See your complete portfolio stay up to date.

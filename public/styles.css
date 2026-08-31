@@ -347,13 +347,14 @@ body.stage-open { overflow: hidden; }
     linear-gradient(100deg, rgba(5,8,22,.94) 34%, rgba(5,8,22,.6) 62%, rgba(5,8,22,.9)); }
 
 .stage-inner { position: relative; z-index: 2; height: 100%; max-width: var(--maxw); margin: 0 auto;
-  padding: 145px 24px 100px; display: flex; align-items: center; gap: clamp(28px, 5vw, 80px); }
+  padding: 100px 24px 100px; display: flex; align-items: stretch; gap: clamp(28px, 5vw, 80px); }
 
 /* left: the words */
 /* Never taller than the band between the Back button and the counter, so a
    long caption cannot push the label up under Back. The text takes whatever
    is left after the label and title and scrolls inside it. */
-.stage-copy { flex: 1 1 50%; min-width: 0; max-height: calc(100vh - 245px);
+.stage-copy { flex: 1 1 50%; min-width: 0; align-self: center; max-height: calc(100vh - 290px);
+  justify-content: center;
   display: flex; flex-direction: column; }
 .stage-label { display: inline-flex; align-items: center; gap: 11px; margin-bottom: clamp(16px, 3vh, 30px);
   font-family: var(--font); font-size: .74rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--text-dim); }
@@ -383,8 +384,11 @@ body.stage-open { overflow: hidden; }
 .stage-el strong { color: var(--text); font-weight: 700; }
 
 /* right: the phone */
-.stage-phone { flex: 0 0 auto; position: relative;
-  width: min(calc(56vh / 2.2315), 34vw, 300px); aspect-ratio: 717 / 1600;
+/* Right-hand panel. The frame inside grows to the panel's full height, so the
+   screen is as big as the window allows rather than capped at 300px. */
+.stage-media { flex: 1 1 50%; min-width: 0; display: grid; place-items: center; }
+.stage-phone { position: relative; height: 100%; width: auto; max-width: 100%;
+  aspect-ratio: 717 / 1600;
   border-radius: 26px; overflow: hidden; background: #05070f; border: 1px solid rgba(150,175,235,.18);
   box-shadow: 0 40px 90px rgba(0,0,0,.75), 0 0 90px color-mix(in srgb, var(--c) 26%, transparent); }
 .stage-slide { position: absolute; inset: 0; opacity: 0; transform: scale(1.06);
@@ -392,7 +396,7 @@ body.stage-open { overflow: hidden; }
 .stage-slide.active { opacity: 1; transform: none; }
 /* a screen is a still or a short clip — both fill the phone the same way */
 .stage-slide img,
-.stage-slide video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
+.stage-slide video { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }
 
 /* bottom-left counter with the line that fills as autoplay runs */
 .stage-nav { position: absolute; left: max(24px, calc(50vw - var(--maxw) / 2 + 24px)); bottom: 34px; z-index: 3;
@@ -444,8 +448,9 @@ body.stage-open { overflow: hidden; }
        scrolls under them rather than letting the two collide */
     -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 178px), rgba(0,0,0,0) calc(100% - 122px));
     mask-image: linear-gradient(180deg, #000 calc(100% - 178px), rgba(0,0,0,0) calc(100% - 122px)); }
-  .stage-phone { order: 1; width: min(calc(34vh / 2.2315), 46vw, 190px); }
-  .stage-copy { order: 2; flex: 0 0 auto; width: 100%; max-height: none; display: block; }
+  .stage-media { order: 1; flex: 0 0 auto; width: 100%; }
+  .stage-phone { height: auto; width: min(calc(34vh / 2.2315), 46vw, 190px); }
+  .stage-copy { order: 2; flex: 0 0 auto; width: 100%; max-height: none; display: block; align-self: auto; }
   .stage-el p { margin-inline: auto; }
   /* the whole column scrolls now, so the text block does not need its own */
   .stage-text { max-height: none; overflow: visible; }

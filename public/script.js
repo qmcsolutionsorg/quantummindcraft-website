@@ -284,6 +284,33 @@
       }
     }
 
+    // The cluster pull and the separation settle into a balance that can still
+    // leave a couple of pixels of overlap. One last pass with the pull switched
+    // off clears it without moving anything far.
+    for (pass = 0; pass < 120; pass++) {
+      var moved = false;
+      for (i = 0; i < n; i++) {
+        for (j = i + 1; j < n; j++) {
+          var P = items[i], Q = items[j];
+          var ux = Q.x - P.x, uy = Q.y - P.y;
+          var need = P.r + Q.r + 9;
+          var sq = ux * ux + uy * uy;
+          if (sq >= need * need) continue;
+          var len = Math.sqrt(sq);
+          if (len < 0.01) { ux = 0.01; uy = 0; len = 0.01; }
+          var shove = (need - len) / len * 0.5;
+          P.x -= ux * shove; P.y -= uy * shove;
+          Q.x += ux * shove; Q.y += uy * shove;
+          moved = true;
+        }
+      }
+      for (i = 0; i < n; i++) {
+        items[i].x = Math.max(items[i].r + 30, Math.min(VW - items[i].r - 30, items[i].x));
+        items[i].y = Math.max(items[i].r + 30, Math.min(VH - items[i].r - 30, items[i].y));
+      }
+      if (!moved) break;
+    }
+
     // depth follows size, so bigger bubbles genuinely sit nearer the viewer
     var lo = Infinity, hi = -Infinity;
     items.forEach(function (it) { lo = Math.min(lo, it.r); hi = Math.max(hi, it.r); });
