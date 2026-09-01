@@ -1,0 +1,8 @@
+📦 Inventory Management — Raw Materials, Finished Goods & Services
+🧱 Maintain Raw Materials — Track materials, components, supplies and other items you purchase and use to produce your products.
+🏭 Maintain Finished Goods — Keep all products you manufacture or sell with quantity, cost, selling price, stock and availability.
+🛠️ Maintain Services — Create service items with service name, category, rate, tax and pricing, ready to use in quotations, sales orders and invoices.
+🔄 Track Inventory Movement — Know what was purchased → received → consumed → produced → sold → delivered, with stock automatically updated.
+📊 Know Your Inventory Position — See available stock, inventory value, low-stock items and complete movement history for every item.
+
+✨ Raw Material → Production → Finished Goods → Sales → Delivery — while services stay connected to your complete sales flow.
