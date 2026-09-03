@@ -137,61 +137,155 @@
           "key": "1-multiple-businesses",
           "name": "Multiple businesses",
           "desc": "Run several businesses from one app, each with its own books, team and dashboard.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/3-business/1-multiple-businesses/01-Create%20multiple%20busines.mp4?v=b02fce4c",
+              "title": "🏢 My Businesses — Manage Every Business, Big or Small",
+              "caption": "🏪 Create Multiple Businesses — Maintain your company, side business, freelance work, online store, family business or even a kid’s small business separately.\n💰 Teach Kids How Business Works — Let kids create a simple business such as lemonade sales, crafts, tutoring or lawn care and learn by doing.\n📊 Understand Money In & Money Out — Track sales, income, expenses, purchases and profit so they can see how a business actually makes money.\n🏦 Manage the Complete Business — Connect bank accounts, customers, vendors, assets, inventory, payables, receivables, transactions and documents to the right business.\n📈 See How Each Business Is Performing — Understand revenue, expenses, profit, assets and liabilities while keeping every business separate and organized.\n\n✨ Create → Sell → Spend → Earn → Learn → Grow — from a kid’s first small business to your growing company.",
+              "poster": "content/3-business/1-multiple-businesses/01-Create%20multiple%20busines.jpeg?v=652b59b1"
+            },
+            {
+              "type": "video",
+              "src": "content/3-business/1-multiple-businesses/02-Maintain%20detail%20for%20Business.mp4?v=27b0a25d",
+              "title": "🏢 Business Profile — Keep Every Business Detail Organized",
+              "caption": "📋 Maintain Complete Business Information — Keep business name, type, registration details, addresses, contact information, tax details and other important information together.\n👥 Track Owners & Key People — Maintain owners, partners, shareholders, directors, employees and other important contacts associated with the business.\n📄 Keep Business Documents Together — Store incorporation documents, registrations, licenses, agreements, tax documents, certificates and other important records.\n📅 Never Miss Important Dates — Track registration renewals, licenses, insurance, tax deadlines, contracts and other important business dates.\n🔗 Connect the Entire Business — Keep related bank accounts, assets, loans, insurance, customers, vendors, employees, transactions, payables and receivables connected to the correct business.\n\n✨ Business Details → Owners → Documents → Important Dates → Finances — your complete business record in one place."
+            }
+          ]
         },
         {
           "key": "2-business-partners",
           "name": "Business partners",
           "desc": "Manage customers, vendors and clients in one place, with every transaction linked back to them.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/3-business/2-business-partners/01-maintain%20Business%20partner%20details.mp4?v=27b0a25d",
+              "title": "🤝 Business Partners, Customers & Vendors — Keep Every Relationship Organized",
+              "caption": "👥 Maintain Business Partners — Keep partner details, roles, ownership information, contact details, agreements and related documents together.\n🧑‍💼 Manage Your Customers — Maintain customer profiles with contact information, transactions, sales, invoices, receivables and payment history.\n🚚 Manage Your Vendors — Keep supplier details, purchases, bills, payables, payments, contracts and important documents organized.\n💰 See the Complete Financial Relationship — Know how much you sold, purchased, paid, received, owe or are still waiting to receive for each customer or vendor.\n📄 Everything Connected to the Right Person or Business — Keep transactions, invoices, receipts, documents, tasks, notes and communication details connected to the related partner, customer or vendor."
+            }
+          ]
         },
         {
           "key": "3-leads-and-crm",
           "name": "Leads and CRM",
           "desc": "Track leads through your pipeline from first contact to closed deal.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/3-business/3-leads-and-crm/01-maintain%20leads.mp4?v=a75f392f",
+              "title": "🎯 Sales CRM — Turn New Leads Into Customers",
+              "caption": "🧲 Capture Every New Lead — Add potential customers with their name, company, contact details, source, requirement and expected opportunity.\n🔄 Track the Sales Journey — Move leads through your own stages such as New Lead → Contacted → Follow-up → Proposal → Negotiation → Won/Lost.\n✅ Manage Follow-ups & Tasks — Create calls, meetings, reminders, notes and next actions so no sales opportunity gets forgotten.\n💰 Track Opportunities & Potential Revenue — Maintain expected deal value, probability, products/services and expected closing date to understand your sales pipeline.\n🤝 Convert Lead to Customer — Once the deal is won, convert the lead into a Customer and continue with quotes, sales, invoices, receivables, payments, transactions and documents.\n\n✨ Lead → Follow-up → Opportunity → Deal → Customer → Revenue — manage your complete sales journey in one place."
+            },
+            {
+              "type": "video",
+              "src": "content/3-business/3-leads-and-crm/02-Track%20Lead%20Progress.mp4?v=c1b61a5b",
+              "title": "📈 Lead Progress — From First Contact to Customer",
+              "caption": "🎯 Track Every Lead Stage — Follow each opportunity through New Lead → Contacted → Meeting → Proposal → Negotiation → Won/Lost.\n📅 Manage Meetings & Follow-ups — Record calls, meetings, appointments, next actions and reminders so no lead gets forgotten.\n📝 Keep Complete Interaction History — Maintain notes, discussions, requirements, decisions and follow-up history for every lead.\n📄 Keep Documents Connected — Attach proposals, quotations, presentations, agreements, emails and other important documents directly to the lead.\n🤝 Convert Lead to Customer — When the deal is won, simply convert the lead into a Customer and carry important information forward for sales, invoices, receivables, payments and future business.\n\n✨ Lead → Follow-up → Meeting → Documents → Deal → Customer — track the complete journey."
+            }
+          ]
         },
         {
           "key": "4-employee-management",
           "name": "Employee management",
           "desc": "Manage staff, roles, timesheets, leave and payroll — all in one place.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/3-business/4-employee-management/01-maintain%20Employees.mp4?v=dd584321",
+              "title": "👥 Employee Management — Everything About Your Team in One Place",
+              "caption": "👤 Maintain Complete Employee Profiles — Keep personal details, contact information, job title, department, joining date, manager, employment status and emergency contacts organized.\n💰 Manage Salary & Compensation — Maintain salary, bonuses, allowances, deductions, reimbursements, benefits and payment history for every employee.\n📅 Track Work & Activities — Manage attendance, leave, holidays, schedules, timesheets, tasks, projects, meetings and important employee activities.\n📄 Keep Documents & Records Connected — Store contracts, offer letters, IDs, certificates, tax documents, performance records, expenses and other employee documents in one place.\n📈 Manage the Complete Employee Journey — Follow everything from candidate → hiring → onboarding → active employment → performance → promotion → offboarding, while keeping the complete history.\n\n✨ Employee → Job → Salary → Attendance → Leave → Tasks → Documents → Performance → Complete employment journey."
+            },
+            {
+              "type": "video",
+              "src": "content/3-business/4-employee-management/02-Compensations.mp4?v=d2636a6b",
+              "title": "📈 Lead Progress — From First Contact to Customer",
+              "caption": "🎯 Track Every Lead Stage — Follow each opportunity through New Lead → Contacted → Meeting → Proposal → Negotiation → Won/Lost.\n📅 Manage Meetings & Follow-ups — Record calls, meetings, appointments, next actions and reminders so no lead gets forgotten.\n📝 Keep Complete Interaction History — Maintain notes, discussions, requirements, decisions and follow-up history for every lead.\n📄 Keep Documents Connected — Attach proposals, quotations, presentations, agreements, emails and other important documents directly to the lead.\n🤝 Convert Lead to Customer — When the deal is won, simply convert the lead into a Customer and carry important information forward for sales, invoices, receivables, payments and future business.\n\n✨ Lead → Follow-up → Meeting → Documents → Deal → Customer — track the complete journey."
+            },
+            {
+              "type": "video",
+              "src": "content/3-business/4-employee-management/03-Timesheet.mp4?v=b6afa7e5",
+              "title": "⏱️ Employee Timesheet — Track Time, Tasks & Approvals",
+              "caption": "🕐 Maintain Employee Time — Record start time, end time, breaks and total working hours for each day.\n✅ Connect Time to Tasks — Employees can record exactly which task, project, customer or activity they worked on and how much time they spent.\n📅 See the Complete Weekly View — View Monday to Sunday hours, daily totals, task-wise hours, overtime and total weekly working hours.\n👍 Submit & Approve Timesheets — Employees submit their timesheets and managers can review, approve, reject or request corrections.\n📄 Generate & Share PDF — Create a clean timesheet showing employee, dates, tasks, hours, approvals and weekly totals, ready to print or share.\n\n✨ Time → Task → Weekly View → Submit → Approve → PDF — complete timesheet management in one place."
+            },
+            {
+              "type": "video",
+              "src": "content/3-business/4-employee-management/04-Promotion%20or%20termination.mp4?v=6d459593",
+              "title": "📈 Employee Promotion & Termination — Track Every Career Change",
+              "caption": "🚀 Manage Promotions — Record new job title, position, department, manager, grade and promotion effective date.\n💰 Connect Compensation Changes — When promoted, maintain the employee’s new salary, compensation components and effective date while preserving previous salary history.\n🔄 Track Transfers & Role Changes — Maintain department transfers, manager changes, location changes and other employment movements.\n🚪 Manage Resignation & Termination — Record resignation/termination date, last working day, reason, notice period, final settlement and exit status.\n📄 Keep Complete Employment History — Attach promotion letters, salary revision letters, resignation letters, termination documents, exit documents and notes to the employee.\n\n✨ Join → Grow → Promote → Transfer → Compensation Change → Exit — preserve the employee’s complete journey."
+            }
+          ]
         },
         {
           "key": "5-sales-flow",
           "name": "Sales flow",
           "desc": "Quotation to Sales Order to Delivery to Invoice to Payment, with every step posted to your books.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/3-business/5-sales-flow/01-Create%20Sales%20Order.mp4?v=6739f360",
+              "title": "🛒 Sales Order & Quotation — Sell Products and Services Easily",
+              "caption": "📝 Create Professional Quotations — Build quotations for products, services, quantities, prices, discounts, taxes, terms and validity dates.\n📦 Sell Products & Services — Add physical products, service items, packages or custom charges to the same quotation or sales order.\n✅ Convert Quotation to Sales Order — Once the customer approves, convert the quotation directly into a Sales Order without entering everything again.\n💰 Track Order Value & Customer Commitments — Maintain order amount, taxes, discounts, payment terms, delivery/service dates and customer details.\n📄 Keep the Complete Sales Record Connected — Store quotation, sales order, invoices, payments, receivables, documents and customer history together.\n\n✨ Quotation → Customer Approval → Sales Order → Product/Service Delivery → Invoice → Payment — complete sales flow in one place."
+            },
+            {
+              "type": "video",
+              "src": "content/3-business/5-sales-flow/02-Order%20to%20Payment.mp4?v=73ccbe95",
+              "title": "🔄 End-to-End Sales Flow — From Order to Payment",
+              "caption": "🛒 Create Sales Order — Confirm the customer’s products/services, quantities, prices, discounts, taxes, payment terms and delivery details.\n📦 Fulfill & Deliver — Track product delivery or service completion, including partial deliveries, delivery dates and status.\n🧾 Generate Customer Invoice — Create the invoice directly from the order/delivery, so you don’t have to enter the same information again.\n💰 Track Payment & Receivable — Know exactly how much was invoiced, received, partially paid and still outstanding, including the receiving bank account.\n🔗 Keep the Complete Journey Connected — See the entire history with quotation, order, delivery, invoice, payment, transactions, receipts and documents connected together.\n\n✨ Quotation → Sales Order → Delivery/Service → Invoice → Receivable → Payment → Complete."
+            }
+          ]
         },
         {
           "key": "6-inventory",
           "name": "Inventory",
           "desc": "Track raw materials, finished goods and services — stock levels, costs and valuation, always current.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/3-business/6-inventory/01-Maintain%20Invetory.mp4?v=f0f89634",
+              "title": "📦 Inventory Management — Raw Materials, Finished Goods & Services",
+              "caption": "🧱 Maintain Raw Materials — Track materials, components, supplies and other items you purchase and use to produce your products.\n🏭 Maintain Finished Goods — Keep all products you manufacture or sell with quantity, cost, selling price, stock and availability.\n🛠️ Maintain Services — Create service items with service name, category, rate, tax and pricing, ready to use in quotations, sales orders and invoices.\n🔄 Track Inventory Movement — Know what was purchased → received → consumed → produced → sold → delivered, with stock automatically updated.\n📊 Know Your Inventory Position — See available stock, inventory value, low-stock items and complete movement history for every item.\n\n✨ Raw Material → Production → Finished Goods → Sales → Delivery — while services stay connected to your complete sales flow."
+            }
+          ]
         },
         {
-          "key": "7-assets",
-          "name": "Assets",
-          "desc": "Record and track business assets, their value and depreciation over time.",
-          "slides": []
-        },
-        {
-          "key": "8-payables",
-          "name": "Payables",
-          "desc": "Keep on top of what the business owes and when, so cash flow never surprises you.",
-          "slides": []
+          "key": "7-Invoice",
+          "name": "Invoice",
+          "desc": "Track raw materials, finished goods and services — stock levels, costs and valuation, always current.",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/3-business/7-Invoice/01-Finance%20and%20Invoices.mp4?v=64bdd1e9",
+              "title": "🧾 Invoices, Payments & Tax — Complete Billing in One Place",
+              "caption": "📄 Create & Manage Invoices — Generate invoices directly from sales orders, products or services with customer, quantity, price, discounts and payment terms.\n🧮 Calculate Taxes — Apply the appropriate tax rates and tax components, and clearly see subtotal, tax and final invoice amount.\n💰 Track Customer Payments — Record full or partial payments, payment dates, methods and the bank account where the money was received.\n⏳ Know What’s Outstanding — Instantly see Paid, Partially Paid, Overdue and Unpaid invoices, along with the remaining receivable.\n📊 Maintain Tax & Payment History — Keep invoices, taxes, payments, transactions, receipts and supporting documents connected for easier reporting and future reference.\n\n✨ Invoice → Tax → Receivable → Payment → Bank Transaction → Complete financial record."
+            }
+          ]
         },
         {
           "key": "9-chart-of-account",
           "name": "Chart of Account",
           "desc": "A full, real double-entry chart of accounts behind every transaction you make.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/3-business/9-chart-of-account/01-Purchase%20flow.mp4?v=a294633b",
+              "title": "🛒 Purchase Flow — From Requirement to Vendor Payment",
+              "caption": "📝 Create Purchase Requirement / Order — Select the vendor, raw materials, products or services, quantity, price, taxes, delivery date and payment terms.\n📦 Receive Goods or Services — Record full or partial receipts, received quantities and service completion while automatically updating inventory where applicable.\n🧾 Record Vendor Invoice — Connect the vendor invoice directly to the purchase order and goods/service receipt and verify quantity, price and tax.\n💰 Create Payable & Make Payment — Know exactly how much you owe, when it is due and which bank account will pay it. Track full or partial payments.\n🔗 Keep the Complete Purchase History — Maintain vendor → purchase order → receipt → invoice → tax → payable → payment → bank transaction → documents as one connected flow.\n\n✨ Requirement → Purchase Order → Receive → Vendor Invoice → Payable → Payment → Complete."
+            }
+          ]
         },
         {
           "key": "10-purchases",
           "name": "Purchases",
           "desc": "Buy from vendors the same way you sell — Purchase Order to Goods Receipt to Bill to Payment, with books and stock updated automatically.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/3-business/10-purchases/01-Purchase%20flow.mp4?v=a294633b",
+              "title": "🛒 Purchase Flow — From Requirement to Vendor Payment",
+              "caption": "📝 Create Purchase Requirement / Order — Select the vendor, raw materials, products or services, quantity, price, taxes, delivery date and payment terms.\n📦 Receive Goods or Services — Record full or partial receipts, received quantities and service completion while automatically updating inventory where applicable.\n🧾 Record Vendor Invoice — Connect the vendor invoice directly to the purchase order and goods/service receipt and verify quantity, price and tax.\n💰 Create Payable & Make Payment — Know exactly how much you owe, when it is due and which bank account will pay it. Track full or partial payments.\n🔗 Keep the Complete Purchase History — Maintain vendor → purchase order → receipt → invoice → tax → payable → payment → bank transaction → documents as one connected flow.\n\n✨ Requirement → Purchase Order → Receive → Vendor Invoice → Payable → Payment → Complete."
+            }
+          ]
         }
       ]
     },
@@ -592,10 +686,56 @@
           ]
         },
         {
-          "key": "11-Complete Financial Picture",
-          "name": "Complete Financial Picture",
+          "key": "12-expense Split",
+          "name": "Expense Split",
           "desc": "A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/5-finance-and-wealth/12-expense%20Split/01-Create%20Split.mp4?v=3321dc44",
+              "title": "👥 Split — Enjoy Together, Settle Easily",
+              "caption": "🎯 Create Your Split — Set up a split for dinner, trips, parties, shopping, activities or any shared expense.\n👫 Add Your Friends — Select people directly from your friend list and create your group.\n🎉 Enjoy the Activity — Don’t worry about calculating everything while you’re having fun. Just enjoy the moment.\n💳 Enter Who Paid What — Whenever someone pays, simply record who paid, how much and what it was for.\n💰 Know Who Owes Whom — Let the app organize the expenses and show everyone’s share and final settlement.\n\n✨ Create → Add Friends → Enjoy → Enter Who Paid → Split & Settle.",
+              "poster": "content/5-finance-and-wealth/12-expense%20Split/01-Create%20Split.jpeg?v=94ae3ce3"
+            },
+            {
+              "type": "video",
+              "src": "content/5-finance-and-wealth/12-expense%20Split/02-Book%20Every%20activity.mp4?v=6163b196",
+              "title": "💳 Split Every Activity — Pay, Use & Split Correctly",
+              "caption": "🎯 Add Every Shared Activity — Add dinner, hotel, taxi, tickets, shopping, groceries or any other shared expense.\n💰 Enter Who Paid — Simply select who paid and how much they paid for that activity.\n👥 Select Who Used It — Choose exactly who participated in or benefited from that expense.\n🧮 Automatically Distribute the Cost — The expense is split only among the selected people, so everyone gets the correct share.\n⚖️ Get the Final Settlement — After all activities are entered, automatically see who paid more, who owes money, and who should receive money.\n\n✨ Who paid + How much + Who used it = Correct split automatically."
+            },
+            {
+              "type": "video",
+              "src": "content/5-finance-and-wealth/12-expense%20Split/03-Final%20Settlement.mp4?v=c7e2949a",
+              "title": "🧾 Final Settlement — No Calculations, No Stress",
+              "caption": "💰 See Who Paid What — At the end of your trip, dinner, party or activity, see exactly how much each person paid.\n🧮 Automatically Calculate Everyone’s Share — Based on who participated in each expense, the app calculates exactly how much each person should have paid.\n⚖️ Know the Final Balance — Instantly see who paid extra, who paid less, who owes money and who should receive money.\n🤝 Know Who Pays Whom — Get a simple final settlement such as “John pays Sarah $45” — no manual calculations or confusion.\n📤 Share the Final Settlement — Generate a clean summary or PDF and easily share it with the group through messages, WhatsApp or other apps.\n\n✨ Enjoy the moments → Enter expenses → Let the app calculate → See who pays whom → Share & settle."
+            }
+          ]
+        },
+        {
+          "key": "13-Transactions",
+          "name": "Transactions",
+          "desc": "A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/5-finance-and-wealth/13-Transactions/01-just%20click%20of%20picture.mp4?v=a5a93f76",
+              "title": "📸 Smart Expense Capture — Just Scan & Go",
+              "caption": "⚡ No More Manual Entry — For any expense, you don’t have to read the receipt and type the amount manually.\n📸 Capture in One Click — Simply take a photo or upload your bill, invoice or receipt.\n💰 Get the Amount Automatically — The app reads the receipt and captures the total amount for your expense.\n🧾 Keep the Receipt Attached — The original bill or receipt stays connected to the transaction for future reference.\n🔍 Always Have the Proof — Need to check an old purchase, expense, reimbursement or payment? Open the transaction and see its supporting receipt anytime.\n\n✨ Click → Capture → Get Amount → Save Expense + Receipt → Always have the proof.",
+              "poster": "content/5-finance-and-wealth/13-Transactions/01-just%20click%20of%20picture.jpeg?v=94ae3ce3"
+            },
+            {
+              "type": "video",
+              "src": "content/5-finance-and-wealth/13-Transactions/02-Multiple%20Transactions.mp4?v=2dfa31e8",
+              "title": "📸 Smart Transaction Capture — One Click for Every Financial Activity",
+              "caption": "🔄 Not Just Income & Expenses — Capture documents for income, expenses, transfers, loans, taxes, insurance, investments, payables, receivables and more.\n📸 Scan Instead of Typing — Take a photo or upload a receipt, invoice, statement, confirmation or other financial document instead of manually reading and entering everything.\n🧠 Automatically Capture the Details — Extract important information such as amount, date, merchant/payee, transaction type and reference details.\n🔗 Connect It to the Right Financial Record — Link the transaction to its related bank account, loan, investment, insurance, tax, asset, payable or receivable.\n📎 Always Keep the Proof — Keep the original document attached to the transaction, so months or years later you can see what happened and the supporting proof.\n\n✨ Scan → Capture → Categorize → Connect → Keep the proof — for your entire financial life, not just expenses."
+            },
+            {
+              "type": "video",
+              "src": "content/5-finance-and-wealth/13-Transactions/03-Full%20list%20of%20transaction.mp4?v=2cfd25af",
+              "title": "📋 All Transactions — Everything Recorded, Nothing Lost",
+              "caption": "💳 See Every Transaction in One Place — View your complete history of income, expenses, transfers, loans, investments, taxes, insurance, payables, receivables and more.\n🏷️ Organized by Category — Every transaction is categorized, making it easy to understand where your money came from, where it went and what it was for.\n🧾 Receipts Stay With Transactions — Keep receipts, invoices, bills, confirmations and other supporting documents attached directly to the related transaction.\n🔍 Find Anything Later — Search and filter by category, account, transaction type, date, amount or other details instead of searching through emails and folders.\n📂 Build Your Complete Financial History — Months or years later, open a transaction and see the amount, category, account, related financial activity and original proof together.\n\n✨ Transaction → Category → Account → Receipt → Complete History — everything organized, nothing lost."
+            }
+          ]
         }
       ]
     }

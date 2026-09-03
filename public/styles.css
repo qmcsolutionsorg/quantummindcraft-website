@@ -205,7 +205,7 @@ img { max-width: 100%; display: block; }
    by its feature. Bubble size follows the label length so long names still
    fit — it is not a data encoding. Every bubble is also labelled, so nothing
    here depends on colour alone. */
-.topics { padding-top: 116px; padding-bottom: 90px; }
+.topics { padding-top: 92px; padding-bottom: 76px; }
 /* wide enough for the title to hold one line; it sits under the field now,
    so it drops the big section-head gap */
 .topic-head { max-width: 780px; margin: 4px auto 14px; }
@@ -213,6 +213,9 @@ img { max-width: 100%; display: block; }
 
 /* the legend doubles as a filter, so the five colours are always named */
 .topic-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 8px; }
+.topic-tagline { position: relative; z-index: 2; text-align: center; margin: 16px auto -24px;
+  font-family: var(--font); font-weight: 800; letter-spacing: -.01em;
+  font-size: clamp(1.15rem, 2vw, 1.6rem); color: var(--text); }
 .topic-leg { display: inline-flex; align-items: center; gap: 9px; padding: 8px 15px; border-radius: 999px;
   font-family: var(--font); font-size: .84rem; font-weight: 600; color: var(--text-dim); cursor: pointer;
   background: rgba(255,255,255,.04); border: 1px solid var(--border);
@@ -228,9 +231,28 @@ img { max-width: 100%; display: block; }
 
 /* the field keeps its aspect ratio and scrolls sideways rather than shrinking
    the bubbles below the size their labels need */
-.topic-wrap { margin: 22px -24px 0; padding: 32px 24px; overflow-x: auto; overflow-y: hidden; }
+.topic-wrap { margin: 14px -24px 0; padding: 26px 24px; overflow-x: auto; overflow-y: hidden; }
 .topic-sizer { min-width: 1040px; container-type: inline-size; }
 .topic-field { position: relative; aspect-ratio: 1200 / 560; perspective: 1400px; }
+/* The logo watermark. It hangs off the section rather than the field, because
+   the field sits in a horizontally-scrolling wrapper that clips vertically —
+   inside it the mark could never reach above the field's top edge.
+   Its own backdrop is the same navy as the page, so a low opacity leaves only
+   the bright emblem showing, and a radial mask hides the JPEG's square edge.
+   No extra download: the navbar cube already loads this file. */
+.topics::before {
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  left: 50%; top: 78px; height: min(27vw, 400px); aspect-ratio: 1 / 0.63;
+  transform: translateX(-50%);
+  /* auto 159% crops the square to its top 63% - the emblem only. The wordmark
+     under it reads as a glitch when it peeks between bubbles. */
+  background: url("assets/images/logo-dark.jpeg") center top / auto 159% no-repeat;
+  opacity: .15;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 42%, transparent 72%);
+  mask-image: radial-gradient(ellipse at 50% 50%, #000 42%, transparent 72%); }
+/* everything in the section stays in front of it */
+.topics > .container { position: relative; z-index: 1; }
+.topic-3d { z-index: 1; }
 .topic-3d { position: absolute; inset: 0; transform-style: preserve-3d; pointer-events: none;
   transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   transition: transform .6s cubic-bezier(.2,.8,.3,1); }
