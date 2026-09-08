@@ -1,0 +1,2 @@
+name: Transactions
+desc: A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.
