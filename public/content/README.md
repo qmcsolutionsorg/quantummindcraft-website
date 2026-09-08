@@ -31,8 +31,59 @@ content/
    ```
 5. Deploy: `firebase deploy --only hosting`
 
-The button appears automatically. A module folder with **no images** shows as a
-greyed-out "soon" button, which is how the empty ones behave today.
+The button appears automatically, and so does a bubble for the module in the
+"Every topic, in one place" field near the top of the page — that field is
+built from these same folders, one bubble per module.
+
+A module folder with **no images** shows as a greyed-out "soon" button, which
+is how the empty ones behave today. Its bubble still appears; popping it shows
+the `desc:` from `_module.txt` instead of a walkthrough.
+
+## To use a short video instead of a screenshot
+
+A screen can be a clip rather than a still. Same rules, different extension:
+
+```
+content/4-health/2-tracker/
+    03-live.mp4        <- the clip
+    03-live.txt        <- same caption file as a screenshot gets
+```
+
+`.mp4`, `.webm`, `.m4v` and `.mov` all work. **Use `.mp4` (H.264)** unless you
+have a reason not to — it is the only one every browser plays.
+
+It autoplays once - not on a loop - and is always muted (browsers block
+sound without a click, and a landing page should not make noise anyway).
+The walkthrough
+holds on the clip for exactly its own length instead of the usual 5 seconds,
+so a 3-second clip gets 3 seconds and a 20-second one gets 20. Nothing is cut
+off. Past 15 seconds the build says so, because a long clip does hold the
+walkthrough up — viewers can always click on, but they have to notice.
+
+The walkthrough itself plays through once too: after the last screen it
+stays put rather than starting over. The arrows still wrap round if
+someone wants another look.
+
+### Give it a poster
+
+Drop an image with the **same base name** beside it:
+
+```
+    03-live.mp4
+    03-live.jpeg       <- shown while the clip loads
+    03-live.txt
+```
+
+That image does not become a screen of its own — it is the clip's poster, and
+it is what the blurred backdrop behind the phone uses. Worth adding: without
+one there is a black frame while the clip loads.
+
+### Keep them small
+
+Aim for **3–6 seconds and under 6 MB**; the build warns past either. These load
+over mobile data. A phone-shaped clip around 540x1170 is plenty — the frame it
+plays in is never more than a few hundred pixels wide.
+
 
 ## To add a background image to a feature section
 

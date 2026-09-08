@@ -1,2 +1,8 @@
-Treatments
-Ongoing and past treatments in one list
+🏥 Treatment Tracker — Your Complete Treatment Journey
+🩺 Record Treatment Details — Keep diagnosis, doctor, hospital, treatment dates and important medical information together.
+🪜 Track the Treatment Process — Define each treatment step and follow your progress from diagnosis through recovery.
+💊 Manage Medicines & Care — Keep medications, therapy and other treatment-related information connected to the treatment.
+📄 Keep Records Together — Save prescriptions, reports, scans, bills, notes and other important documents under the same treatment.
+💰 Track Treatment Expenses — Record doctor visits, CT scans, tests, medicines and other costs to know exactly how much the treatment has cost.
+
+✨ From diagnosis to recovery — track every step, record every detail, and keep your complete treatment history in one place.

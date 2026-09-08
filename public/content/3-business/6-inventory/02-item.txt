@@ -1,2 +1,0 @@
-Stock detail
-Levels, cost and movement for every item.

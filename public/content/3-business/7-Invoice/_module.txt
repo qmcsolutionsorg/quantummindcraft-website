@@ -1,0 +1,2 @@
+name: Invoice
+desc: Track raw materials, finished goods and services — stock levels, costs and valuation, always current.

@@ -1,2 +1,0 @@
-Review values
-AI reads every result, pick what to track.

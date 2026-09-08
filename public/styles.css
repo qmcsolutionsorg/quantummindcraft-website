@@ -85,26 +85,14 @@ img { max-width: 100%; display: block; }
 .store-badge small { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim); }
 .store-badge strong { font-family: var(--font); font-size: 16px; }
 
-/* ===== Hero ===== */
-.hero { position: relative; padding: 160px 0 90px; text-align: center; overflow: hidden; }
-.hero::before { content: ""; position: absolute; inset: 0; z-index: -1;
-  background-image:
-    linear-gradient(180deg, rgba(6,11,31,.72) 0%, rgba(6,11,31,.55) 35%, rgba(6,11,31,.82) 78%, var(--navy-900) 100%),
-    url("assets/images/header-family.jpg");
-  background-size: cover; background-position: center 30%; background-repeat: no-repeat; }
-.hero-inner { position: relative; display: flex; flex-direction: column; align-items: center; }
-.hero-badge { display: inline-flex; align-items: center; gap: 9px; padding: 7px 16px; border-radius: 999px; background: rgba(255,255,255,.05); border: 1px solid var(--border); font-size: 13px; font-weight: 600; color: var(--text-dim); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 26px; }
-.pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 0 rgba(34,211,238,.6); animation: pulse 2s infinite; }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34,211,238,.55); } 70% { box-shadow: 0 0 0 10px rgba(34,211,238,0); } 100% { box-shadow: 0 0 0 0 rgba(34,211,238,0); } }
-.hero-title { font-size: clamp(2.6rem, 6vw, 4.6rem); margin-bottom: 22px; }
+/* ===== Shared bits the hero used to own ===== */
+/* .gradient-text is used by the family _extra.html, .hero-actions by the CTA block. */
 .gradient-text { background: linear-gradient(120deg, #60A5FA, #22D3EE 40%, #A78BFA); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.hero-sub { max-width: 640px; font-size: clamp(1rem, 1.6vw, 1.2rem); color: var(--text-dim); margin-bottom: 34px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 .hero-actions.center { margin-top: 26px; }
-.hero-note { margin-top: 20px; font-size: 13px; color: var(--text-faint); }
 
 /* ===== Animated 3D logo cube ===== */
-/* Size is driven by --size so the same cube can be reused at any scale (hero, navbar). */
+/* Size is driven by --size so the same cube can be reused at any scale (navbar). */
 .scene { --size: 168px; --persp: 1000px; --spin: 18s;
   display: block; position: relative; margin-top: 64px; width: var(--size); height: var(--size); perspective: var(--persp); }
 .cube { display: block; position: relative; width: var(--size); height: var(--size); transform-style: preserve-3d; animation: cube-spin var(--spin) linear infinite; }
@@ -138,7 +126,6 @@ img { max-width: 100%; display: block; }
 .brand:hover .cube { animation-play-state: paused; }
 
 /* Hero orbit visual */
-.hero-visual { margin-top: 70px; width: 100%; display: flex; justify-content: center; }
 .orbit { position: relative; width: min(680px, 92vw); height: 320px; }
 .orbit-core { position: absolute; top: 50%; left: 50%; width: 150px; transform: translate(-50%, -50%); filter: drop-shadow(0 0 40px rgba(59,130,246,.5)); animation: bob 5s ease-in-out infinite; }
 @keyframes bob { 0%,100% { transform: translate(-50%,-50%); } 50% { transform: translate(-50%,-58%); } }
@@ -162,6 +149,7 @@ img { max-width: 100%; display: block; }
 .section { padding: 100px 0; position: relative; }
 .section-head { max-width: 620px; margin: 0 auto 56px; text-align: center; }
 .eyebrow { display: inline-block; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--blue-glow); margin-bottom: 14px; }
+.section-head h1,
 .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); margin-bottom: 16px; }
 .section-head p { color: var(--text-dim); font-size: 1.05rem; }
 
@@ -212,6 +200,156 @@ img { max-width: 100%; display: block; }
 .feature-chip[disabled]:hover { transform: none; background: rgba(255,255,255,.04); border-color: var(--border); color: var(--text-dim); }
 .feature-chip .soon { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
 
+/* ===== Topic bubbles — every module in the app, as one 3D field ===== */
+/* Generated from content.json by script.js: one bubble per module, coloured
+   by its feature. Bubble size follows the label length so long names still
+   fit — it is not a data encoding. Every bubble is also labelled, so nothing
+   here depends on colour alone. */
+.topics { padding-top: 92px; padding-bottom: 76px; }
+/* wide enough for the title to hold one line; it sits under the field now,
+   so it drops the big section-head gap */
+.topic-head { max-width: 780px; margin: 4px auto 14px; }
+.topic-head h1 { font-size: clamp(2.1rem, 4.6vw, 3.2rem); }
+
+/* the legend doubles as a filter, so the five colours are always named */
+.topic-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 8px; }
+.topic-tagline { position: relative; z-index: 2; text-align: center; margin: 16px auto -24px;
+  font-family: var(--font); font-weight: 800; letter-spacing: -.01em;
+  font-size: clamp(1.15rem, 2vw, 1.6rem); color: var(--text); }
+.topic-leg { display: inline-flex; align-items: center; gap: 9px; padding: 8px 15px; border-radius: 999px;
+  font-family: var(--font); font-size: .84rem; font-weight: 600; color: var(--text-dim); cursor: pointer;
+  background: rgba(255,255,255,.04); border: 1px solid var(--border);
+  transition: color .25s, background .25s, border-color .25s, opacity .25s; }
+.topic-leg:hover { color: #fff; background: color-mix(in srgb, var(--c) 14%, transparent);
+  border-color: color-mix(in srgb, var(--c) 55%, transparent); }
+.topic-leg:focus-visible { outline: 2px solid var(--c); outline-offset: 3px; }
+.topic-leg i { flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%; background: var(--c);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--c) 70%, transparent); }
+.topic-leg b { font-weight: 500; font-size: .78rem; color: var(--text-faint); }
+.topic-leg[aria-pressed=false] { opacity: .32; }
+.topic-leg[aria-pressed=false] i { box-shadow: none; }
+
+/* the field keeps its aspect ratio and scrolls sideways rather than shrinking
+   the bubbles below the size their labels need */
+.topic-wrap { margin: 14px -24px 0; padding: 26px 24px; overflow-x: auto; overflow-y: hidden; }
+.topic-sizer { min-width: 1040px; container-type: inline-size; }
+.topic-field { position: relative; aspect-ratio: 1200 / 560; perspective: 1400px; }
+/* The logo watermark. It hangs off the section rather than the field, because
+   the field sits in a horizontally-scrolling wrapper that clips vertically —
+   inside it the mark could never reach above the field's top edge.
+   Its own backdrop is the same navy as the page, so a low opacity leaves only
+   the bright emblem showing, and a radial mask hides the JPEG's square edge.
+   No extra download: the navbar cube already loads this file. */
+.topics::before {
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  left: 50%; top: 78px; height: min(27vw, 400px); aspect-ratio: 1 / 0.63;
+  transform: translateX(-50%);
+  /* auto 159% crops the square to its top 63% - the emblem only. The wordmark
+     under it reads as a glitch when it peeks between bubbles. */
+  background: url("assets/images/logo-dark.jpeg") center top / auto 159% no-repeat;
+  opacity: .15;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 42%, transparent 72%);
+  mask-image: radial-gradient(ellipse at 50% 50%, #000 42%, transparent 72%); }
+/* everything in the section stays in front of it */
+.topics > .container { position: relative; z-index: 1; }
+.topic-3d { z-index: 1; }
+.topic-3d { position: absolute; inset: 0; transform-style: preserve-3d; pointer-events: none;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform .6s cubic-bezier(.2,.8,.3,1); }
+
+/* --x/--y are the packed centre in % of the field, --d the diameter in % of
+   its width, --z the depth in px and --dn that depth normalised to 0..1 */
+.topic-bub { position: absolute; left: calc(var(--x) * 1%); top: calc(var(--y) * 1%);
+  width: calc(var(--d) * 1%); aspect-ratio: 1; padding: 0; border: 0; background: none;
+  cursor: pointer; opacity: 0; transform-style: preserve-3d; pointer-events: auto;
+  transform: translate(-50%, -50%) translateZ(var(--z));
+  transition: transform .4s cubic-bezier(.2,.8,.3,1); }
+.topic-wrap.visible .topic-bub { opacity: 1;
+  animation: topic-in .6s cubic-bezier(.2,.9,.3,1) backwards; animation-delay: calc(var(--i) * 18ms); }
+@keyframes topic-in {
+  from { opacity: 0; transform: translate(-50%, -50%) translateZ(-320px) scale(.2); }
+  to   { opacity: 1; transform: translate(-50%, -50%) translateZ(var(--z)) scale(1); }
+}
+
+.topic-ball { position: absolute; inset: 0; border-radius: 50%; padding: 13%;
+  display: grid; place-items: center; text-align: center;
+  opacity: calc(.86 + var(--dn) * .14);
+  background:
+    radial-gradient(circle at 33% 25%, rgba(255,255,255,.30), rgba(255,255,255,.05) 40%, transparent 64%),
+    radial-gradient(circle at 50% 64%, color-mix(in srgb, var(--c) 40%, transparent),
+                                       color-mix(in srgb, var(--c) 13%, transparent) 72%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c) 42%, transparent);
+  box-shadow: inset 0 -9px 24px color-mix(in srgb, var(--c) 20%, transparent),
+              inset 0 7px 20px rgba(255,255,255,.10),
+              0 12px 30px rgba(0,0,0,.34),
+              0 0 24px color-mix(in srgb, var(--c) 22%, transparent);
+  animation: topic-float var(--dur) ease-in-out var(--delay) infinite;
+  transition: border-color .35s, box-shadow .35s, background .35s, opacity .35s; }
+/* the label wears a text token, never the series colour */
+.topic-ball span { font-family: var(--font); font-weight: 700; line-height: 1.16; letter-spacing: -.01em;
+  color: var(--text); font-size: max(9px, calc(var(--d) * .115cqw)); transition: color .3s; }
+@keyframes topic-float { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(0, -6%, 0); } }
+
+.topic-bub:hover, .topic-bub:focus-visible { z-index: 6; outline: none;
+  transform: translate(-50%, -50%) translateZ(calc(var(--z) + 90px)) scale(1.15); }
+.topic-bub:hover .topic-ball, .topic-bub:focus-visible .topic-ball {
+  opacity: 1; animation-play-state: paused;
+  border-color: color-mix(in srgb, var(--c) 85%, transparent);
+  background:
+    radial-gradient(circle at 33% 25%, rgba(255,255,255,.38), rgba(255,255,255,.07) 40%, transparent 64%),
+    radial-gradient(circle at 50% 64%, color-mix(in srgb, var(--c) 58%, transparent),
+                                       color-mix(in srgb, var(--c) 20%, transparent) 72%, transparent);
+  box-shadow: inset 0 -9px 24px color-mix(in srgb, var(--c) 26%, transparent),
+              inset 0 7px 20px rgba(255,255,255,.16),
+              0 16px 40px rgba(0,0,0,.4),
+              0 0 52px color-mix(in srgb, var(--c) 55%, transparent); }
+.topic-bub:focus-visible .topic-ball { outline: 2px solid var(--c); outline-offset: 4px; }
+.topic-bub:hover .topic-ball span, .topic-bub:focus-visible .topic-ball span { color: #fff; }
+
+/* pushed to the back by the legend filter */
+.topic-bub.dim { pointer-events: none;
+  transform: translate(-50%, -50%) translateZ(-160px) scale(.7); }
+.topic-bub.dim .topic-ball { opacity: .07; animation-play-state: paused; }
+
+/* the pop */
+.topic-wrap.visible .topic-bub.pop { pointer-events: none; animation: topic-pop .42s ease-out forwards; }
+@keyframes topic-pop {
+  0%   { transform: translate(-50%, -50%) translateZ(calc(var(--z) + 90px)) scale(1.15); opacity: 1; }
+  38%  { transform: translate(-50%, -50%) translateZ(calc(var(--z) + 150px)) scale(1.36); opacity: .95; }
+  100% { transform: translate(-50%, -50%) translateZ(calc(var(--z) + 60px)) scale(.2);   opacity: 0; }
+}
+.topic-wrap.visible .topic-bub.gone { opacity: 0; pointer-events: none; }
+/* popped bubbles blow back up again, so the field never empties out */
+.topic-wrap.visible .topic-bub.reform { animation: topic-reform .6s cubic-bezier(.2,.9,.3,1) backwards; }
+@keyframes topic-reform {
+  from { opacity: 0; transform: translate(-50%, -50%) translateZ(calc(var(--z) + 40px)) scale(.12); }
+  to   { opacity: 1; transform: translate(-50%, -50%) translateZ(var(--z)) scale(1); }
+}
+.topic-shard { position: absolute; left: 50%; top: 50%; width: 8%; aspect-ratio: 1; border-radius: 50%;
+  background: color-mix(in srgb, var(--c) 72%, #fff);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--c) 70%, transparent);
+  animation: topic-shard .55s ease-out forwards; }
+@keyframes topic-shard {
+  0%   { transform: translate(-50%, -50%) rotate(var(--a)) translateX(0) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) rotate(var(--a)) translateX(var(--dist)) scale(0); opacity: 0; }
+}
+
+.topic-swipe { display: none; text-align: center; margin-top: 6px; font-size: .82rem; color: var(--text-faint); }
+
+/* what the popped bubble was about */
+.topic-detail { max-width: 620px; margin: 14px auto 0; text-align: center; min-height: 122px; }
+.topic-detail .topic-empty { max-width: 620px; margin: 0 auto; color: var(--text-dim); font-size: 1.02rem; }
+.topic-detail .topic-from { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font);
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--text-dim); margin-bottom: 10px; }
+.topic-detail .topic-from i { width: 8px; height: 8px; border-radius: 50%; background: var(--c);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--c) 70%, transparent); }
+.topic-detail h3 { font-size: 1.45rem; margin-bottom: 8px; }
+.topic-detail p { color: var(--text-dim); font-size: .98rem; }
+.topic-detail .topic-soon { display: inline-block; margin-top: 12px; font-size: .8rem; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--text-faint); }
+.topic-detail .btn { margin-top: 14px; }
+
 /* ===== Fullscreen feature stage ===== */
 /* z-index sits below the navbar (100) so the menu stays visible and usable */
 .stage { position: fixed; inset: 0; z-index: 90; opacity: 0; transition: opacity .5s ease; }
@@ -231,36 +369,56 @@ body.stage-open { overflow: hidden; }
     linear-gradient(100deg, rgba(5,8,22,.94) 34%, rgba(5,8,22,.6) 62%, rgba(5,8,22,.9)); }
 
 .stage-inner { position: relative; z-index: 2; height: 100%; max-width: var(--maxw); margin: 0 auto;
-  padding: 96px 24px 90px; display: flex; align-items: center; gap: clamp(28px, 5vw, 80px); }
+  padding: 100px 24px 100px; display: flex; align-items: stretch; gap: clamp(28px, 5vw, 80px); }
 
 /* left: the words */
-.stage-copy { flex: 1 1 50%; min-width: 0; }
+/* Never taller than the band between the Back button and the counter, so a
+   long caption cannot push the label up under Back. The text takes whatever
+   is left after the label and title and scrolls inside it. */
+.stage-copy { flex: 1 1 50%; min-width: 0; align-self: center; max-height: calc(100vh - 290px);
+  justify-content: center;
+  display: flex; flex-direction: column; }
 .stage-label { display: inline-flex; align-items: center; gap: 11px; margin-bottom: clamp(16px, 3vh, 30px);
   font-family: var(--font); font-size: .74rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--text-dim); }
 .stage-label i { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; color: #fff;
   background: linear-gradient(135deg, var(--c), color-mix(in srgb, var(--c) 55%, #000)); }
 .stage-label i svg { width: 17px; height: 17px; }
-.stage-text { position: relative; }
+/* A caption can now run to a dozen lines, so the block scrolls on its own
+   rather than pushing the layout off a short window. */
+.stage-text { position: relative; flex: 1 1 auto; min-height: 0; overflow-y: auto;
+  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.22) transparent; }
+.stage-text::-webkit-scrollbar { width: 6px; }
+.stage-text::-webkit-scrollbar-thumb { background: rgba(255,255,255,.22); border-radius: 3px; }
 /* The outgoing text clears quickly and the incoming one is delayed, so two
    large titles never sit on top of each other mid-transition. */
 .stage-el { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; transform: translateY(26px);
   transition: opacity .25s ease, transform .25s ease; pointer-events: none; }
 .stage-el.active { position: relative; opacity: 1; transform: none; pointer-events: auto;
   transition: opacity .5s ease .24s, transform .75s cubic-bezier(.2,.9,.3,1) .24s; }
-.stage-el h2 { font-size: clamp(2.1rem, 5vw, 4.2rem); line-height: 1.02; letter-spacing: -.03em; margin-bottom: 18px;
+.stage-el h2 { font-size: clamp(1.8rem, 3.4vw, 3rem); line-height: 1.06; letter-spacing: -.03em; margin-bottom: 16px;
   background: linear-gradient(115deg, #fff 26%, color-mix(in srgb, var(--c) 75%, #fff));
   -webkit-background-clip: text; background-clip: text; color: transparent; }
-.stage-el p { color: var(--text-dim); font-size: clamp(1rem, 1.25vw, 1.15rem); max-width: 44ch; }
+.stage-el p { color: var(--text-dim); font-size: clamp(.95rem, 1.15vw, 1.08rem);
+  line-height: 1.62; max-width: 46ch; }
+/* a blank line in the caption file starts a new paragraph */
+.stage-el p + p { margin-top: 14px; }
+/* **bold** in the caption file */
+.stage-el strong { color: var(--text); font-weight: 700; }
 
 /* right: the phone */
-.stage-phone { flex: 0 0 auto; position: relative;
-  width: min(calc(64vh / 2.2315), 34vw, 300px); aspect-ratio: 717 / 1600;
+/* Right-hand panel. The frame inside grows to the panel's full height, so the
+   screen is as big as the window allows rather than capped at 300px. */
+.stage-media { flex: 1 1 50%; min-width: 0; display: grid; place-items: center; }
+.stage-phone { position: relative; height: 100%; width: auto; max-width: 100%;
+  aspect-ratio: 717 / 1600;
   border-radius: 26px; overflow: hidden; background: #05070f; border: 1px solid rgba(150,175,235,.18);
   box-shadow: 0 40px 90px rgba(0,0,0,.75), 0 0 90px color-mix(in srgb, var(--c) 26%, transparent); }
 .stage-slide { position: absolute; inset: 0; opacity: 0; transform: scale(1.06);
   transition: opacity .8s ease, transform 1.1s cubic-bezier(.2,.9,.3,1); }
 .stage-slide.active { opacity: 1; transform: none; }
-.stage-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* a screen is a still or a short clip — both fill the phone the same way */
+.stage-slide img,
+.stage-slide video { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }
 
 /* bottom-left counter with the line that fills as autoplay runs */
 .stage-nav { position: absolute; left: max(24px, calc(50vw - var(--maxw) / 2 + 24px)); bottom: 34px; z-index: 3;
@@ -275,6 +433,16 @@ body.stage-open { overflow: hidden; }
   color: var(--text); background: rgba(255,255,255,.07); border: 1px solid var(--border);
   transition: background .2s, border-color .2s, transform .2s; }
 .stage-arrow:hover { background: var(--c); border-color: var(--c); color: #fff; transform: translateY(-2px); }
+
+/* Back sits top-left, clear of the fixed navbar (74px) which paints above the
+   stage. Same pill as Close, which stays at the bottom. */
+.stage-back { position: absolute; top: 96px; left: max(24px, calc(50vw - var(--maxw) / 2 + 24px)); z-index: 4;
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px 10px 15px; border-radius: 999px; cursor: pointer;
+  font-family: var(--font); font-size: .84rem; font-weight: 600; color: var(--text-dim);
+  background: rgba(255,255,255,.07); border: 1px solid var(--border); transition: background .2s, color .2s; }
+.stage-back:hover { background: rgba(255,255,255,.16); color: #fff; }
+.stage-back:focus-visible { outline: 2px solid var(--c); outline-offset: 3px; }
+.stage-back svg { width: 16px; height: 16px; }
 
 .stage-close { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 4;
   display: inline-flex; align-items: center; gap: 9px; padding: 10px 20px 10px 15px; border-radius: 999px; cursor: pointer;
@@ -292,13 +460,26 @@ body.stage-open { overflow: hidden; }
 @keyframes hint-slide { 0% { transform: translateX(-100%); } 60%,100% { transform: translateX(250%); } }
 
 @media (max-width: 860px) {
-  .stage-inner { flex-direction: column-reverse; justify-content: center; gap: 22px; padding: 88px 20px 104px; text-align: center; }
-  .stage-phone { width: min(calc(38vh / 2.2315), 46vw, 190px); }
-  .stage-copy { flex: 0 0 auto; }
+  /* Stacked on a phone the copy is easily taller than the screen. Centring it
+     pushed the overflow out of both ends — the mockup ended up behind the
+     navbar and the caption behind the counter. So it starts at the top and
+     the column scrolls instead, clear of the fixed chrome at either end. */
+  .stage-inner { flex-direction: column; justify-content: flex-start; align-items: center;
+    gap: 20px; padding: 132px 20px 205px; text-align: center; overflow-y: auto;
+    /* the counter and Close sit over this column, so fade the copy out as it
+       scrolls under them rather than letting the two collide */
+    -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 178px), rgba(0,0,0,0) calc(100% - 122px));
+    mask-image: linear-gradient(180deg, #000 calc(100% - 178px), rgba(0,0,0,0) calc(100% - 122px)); }
+  .stage-media { order: 1; flex: 0 0 auto; width: 100%; }
+  .stage-phone { height: auto; width: min(calc(34vh / 2.2315), 46vw, 190px); }
+  .stage-copy { order: 2; flex: 0 0 auto; width: 100%; max-height: none; display: block; align-self: auto; }
   .stage-el p { margin-inline: auto; }
+  /* the whole column scrolls now, so the text block does not need its own */
+  .stage-text { max-height: none; overflow: visible; }
   /* stack them: counter above, close below, both centred */
   .stage-nav { left: 50%; transform: translateX(-50%); bottom: 82px; }
   .stage-hint { display: none; }
+  .stage-back { top: 86px; left: 20px; }
   .stage-close { bottom: 24px; }
 }
 
@@ -367,6 +548,9 @@ body.stage-open { overflow: hidden; }
 .reveal.visible { opacity: 1; transform: none; }
 
 /* ===== Responsive ===== */
+@media (max-width: 1120px) {
+  .topic-swipe { display: block; }
+}
 @media (max-width: 1080px) {
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: flex; }
@@ -379,7 +563,6 @@ body.stage-open { overflow: hidden; }
 }
 @media (max-width: 560px) {
   .expander-inner { padding: 18px 14px; }
-  .hero { padding: 120px 0 40px; }
   .brand-scene { --size: 38px; }
   .brand-scene .face-logo { width: 26px; height: 26px; }
   .feature-grid { grid-template-columns: 1fr; }
@@ -405,9 +588,15 @@ body.stage-open { overflow: hidden; }
   .slider { padding: 8px 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .blob, .pulse-dot, .cube, .cube-glow { animation: none; }
+  .blob, .cube, .cube-glow { animation: none; }
   .cube { transform: rotateX(-22deg) rotateY(-35deg); }
   .reveal { transition: none; opacity: 1; transform: none; }
   .expander, .expander-inner, .slider-track { transition: none; }
+  .topic-ball { animation: none; }
+  .topic-wrap.visible .topic-bub { animation: none; }
+  .topic-3d { transition: none; }
+  .topic-shard { display: none; }
+  .topic-wrap.visible .topic-bub.pop { animation-duration: .12s; }
+  .topic-wrap.visible .topic-bub.reform { animation-duration: .12s; }
   .expander-inner { opacity: 1; transform: none; }
 }
