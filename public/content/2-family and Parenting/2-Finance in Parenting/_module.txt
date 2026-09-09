@@ -1,0 +1,2 @@
+name: Kids finances
+desc: Give kids their own money space — allowance, savings and a first, safe taste of real finance.
