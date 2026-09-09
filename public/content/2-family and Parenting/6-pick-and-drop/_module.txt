@@ -1,2 +1,0 @@
-name: Pick and drop
-desc: Coordinate who is picking up whom, so school runs and errands never get missed.
