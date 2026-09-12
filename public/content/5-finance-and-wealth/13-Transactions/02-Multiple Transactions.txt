@@ -1,8 +1,0 @@
-📸 Smart Transaction Capture — One Click for Every Financial Activity
-🔄 Not Just Income & Expenses — Capture documents for income, expenses, transfers, loans, taxes, insurance, investments, payables, receivables and more.
-📸 Scan Instead of Typing — Take a photo or upload a receipt, invoice, statement, confirmation or other financial document instead of manually reading and entering everything.
-🧠 Automatically Capture the Details — Extract important information such as amount, date, merchant/payee, transaction type and reference details.
-🔗 Connect It to the Right Financial Record — Link the transaction to its related bank account, loan, investment, insurance, tax, asset, payable or receivable.
-📎 Always Keep the Proof — Keep the original document attached to the transaction, so months or years later you can see what happened and the supporting proof.
-
-✨ Scan → Capture → Categorize → Connect → Keep the proof — for your entire financial life, not just expenses.

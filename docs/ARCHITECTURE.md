@@ -45,20 +45,19 @@ The manifest is that missing directory listing, computed at deploy time.
                               │
                     script.js fetches content.json
                               │
-        ┌─────────┬───────────┴───────────┬──────────────────┐
-        ▼         ▼                       ▼                  ▼
-   nav links  topic bubbles              feature sections   fullscreen stage
-              (one per module)           + module buttons   (on bubble pop
-                                                             or button click)
+              ┌───────────────┼────────────────┐
+              ▼               ▼                ▼
+        nav links      feature sections   fullscreen stage
+                       + module buttons   (on button click)
 ```
 
 ## Files
 
 | Path | Role |
 |---|---|
-| `public/index.html` | Page shell: nav, the topic-bubble field the page now opens on, value strip, roadmap, CTA, contact, footer, and the empty `<div id="featureSections">` the features are injected into |
+| `public/index.html` | Page shell: nav, hero, value strip, roadmap, CTA, contact, footer, and the empty `<div id="featureSections">` the features are injected into |
 | `public/styles.css` | All styling. No preprocessor |
-| `public/script.js` | Fetches the manifest, renders nav + topic bubbles + sections + chips, runs the fullscreen stage. **Contains no feature data** |
+| `public/script.js` | Fetches the manifest, renders nav + sections + chips, runs the fullscreen stage. **Contains no feature data** |
 | `public/content.json` | **Generated.** Never edit |
 | `public/content/` | All editable content |
 | `tools/build-content.js` | The generator |
@@ -116,7 +115,7 @@ Two cache-busting mechanisms, for two different problems:
 
 1. **`?v=N` on css/js**, hand-bumped in `index.html`. Bump it whenever you edit
    either file.
-2. **`?v=<md5>` on image and video URLs**, added automatically by the generator. Lets
+2. **`?v=<md5>` on image URLs**, added automatically by the generator. Lets
    images cache for a year while still updating instantly when replaced.
 
 ## Traps that already bit us

@@ -1,8 +1,2 @@
-💊 Medicine Schedule — Never Miss a Dose
-⏰ Schedule Medicines by Time — Organize medications for morning, afternoon, evening, or any specific time.
-💊 Track Medicine & Dosage — Keep the medicine name, dosage, and instructions together for easy reference.
-📅 Manage Multiple Medicines — Maintain the complete medication routine in one organized schedule.
-📄 Keep Supporting Records — Attach prescriptions and documents and maintain important medicine notes.
-🖨️ Print & Share — Quickly print or share the medicine schedule with family members, caregivers, or healthcare providers.
-
-✨ Your complete medicine routine — organized, accessible, and easy to follow.
+Appointments
+Appointments and reminders that never slip

@@ -1,8 +1,2 @@
-💊 Medicine List — Always Ready When You Need It
-👨‍👩‍👧‍👦 Maintain Medicines for Each Family Member — Keep an individual medicine list for everyone in your family.
-💊 Keep Complete Medicine Details — Record medicine name, dosage, frequency, timing, instructions, and other important information.
-🏷️ Organize by Category — Separate everyday medicines from emergency or other important medications for quick access.
-🚨 Be Emergency Ready — Keep an up-to-date medicine list available when visiting a doctor, hospital, or during an emergency.
-🖨️ Print & Share Your List — Quickly print or share medicine information with family members, caregivers, or healthcare providers.
-
-✨ Your medicines. Your instructions. Your essential information — organized and ready when you need it.
+Medicines
+Every medicine, dose and schedule

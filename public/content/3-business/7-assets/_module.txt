@@ -1,0 +1,2 @@
+name: Assets
+desc: Record and track business assets, their value and depreciation over time.

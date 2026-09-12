@@ -1,8 +1,0 @@
-🔄 End-to-End Sales Flow — From Order to Payment
-🛒 Create Sales Order — Confirm the customer’s products/services, quantities, prices, discounts, taxes, payment terms and delivery details.
-📦 Fulfill & Deliver — Track product delivery or service completion, including partial deliveries, delivery dates and status.
-🧾 Generate Customer Invoice — Create the invoice directly from the order/delivery, so you don’t have to enter the same information again.
-💰 Track Payment & Receivable — Know exactly how much was invoiced, received, partially paid and still outstanding, including the receiving bank account.
-🔗 Keep the Complete Journey Connected — See the entire history with quotation, order, delivery, invoice, payment, transactions, receipts and documents connected together.
-
-✨ Quotation → Sales Order → Delivery/Service → Invoice → Receivable → Payment → Complete.

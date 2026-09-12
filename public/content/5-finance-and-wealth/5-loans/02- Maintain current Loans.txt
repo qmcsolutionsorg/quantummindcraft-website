@@ -1,8 +1,0 @@
-🏦 Loan Management — Everything About Your Loan in One Place
-💰 Maintain All Current Loans — Keep your home, vehicle, personal, education, business and other loans organized together.
-📅 Track EMI & Repayments — Know your EMI amount, due dates, payment frequency, principal, interest and remaining balance.
-🏦 Connect Your Bank — Know exactly which bank account your EMI is deducted from and keep related transactions connected.
-🏠 Link Loans to Assets & Plans — Connect a mortgage to your property, vehicle loan to your car, or a loan to the related asset or financial plan.
-🔔 Stay Organized & Prepared — Set alerts for upcoming payments, keep loan statements and agreements, and maintain all important documents in one place.
-
-✨ Loan → EMI → Bank → Asset → Transactions → Alerts → Documents — everything connected.

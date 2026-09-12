@@ -1,14 +1,14 @@
 {
   "features": [
     {
-      "key": "1-personal-growth-Organize",
-      "id": "personal-growth-organize",
+      "key": "1-personal-growth",
+      "id": "personal-growth",
       "name": "Personal Growth",
       "color": "#0EA5E9",
       "icon": "growth",
       "desc": "Projects, goals, dreams and the things you keep meaning to start — with documentation, deadlines, budgets and progress you can actually see.",
       "extra": "",
-      "background": "content/1-personal-growth-Organize/_background.jpg?v=5c2d4792",
+      "background": "content/1-personal-growth/_background.jpg?v=5c2d4792",
       "bgOpacity": "0.20",
       "modules": [
         {
@@ -137,155 +137,61 @@
           "key": "1-multiple-businesses",
           "name": "Multiple businesses",
           "desc": "Run several businesses from one app, each with its own books, team and dashboard.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/3-business/1-multiple-businesses/01-Create%20multiple%20busines.mp4?v=b02fce4c",
-              "title": "🏢 My Businesses — Manage Every Business, Big or Small",
-              "caption": "🏪 Create Multiple Businesses — Maintain your company, side business, freelance work, online store, family business or even a kid’s small business separately.\n💰 Teach Kids How Business Works — Let kids create a simple business such as lemonade sales, crafts, tutoring or lawn care and learn by doing.\n📊 Understand Money In & Money Out — Track sales, income, expenses, purchases and profit so they can see how a business actually makes money.\n🏦 Manage the Complete Business — Connect bank accounts, customers, vendors, assets, inventory, payables, receivables, transactions and documents to the right business.\n📈 See How Each Business Is Performing — Understand revenue, expenses, profit, assets and liabilities while keeping every business separate and organized.\n\n✨ Create → Sell → Spend → Earn → Learn → Grow — from a kid’s first small business to your growing company.",
-              "poster": "content/3-business/1-multiple-businesses/01-Create%20multiple%20busines.jpeg?v=652b59b1"
-            },
-            {
-              "type": "video",
-              "src": "content/3-business/1-multiple-businesses/02-Maintain%20detail%20for%20Business.mp4?v=27b0a25d",
-              "title": "🏢 Business Profile — Keep Every Business Detail Organized",
-              "caption": "📋 Maintain Complete Business Information — Keep business name, type, registration details, addresses, contact information, tax details and other important information together.\n👥 Track Owners & Key People — Maintain owners, partners, shareholders, directors, employees and other important contacts associated with the business.\n📄 Keep Business Documents Together — Store incorporation documents, registrations, licenses, agreements, tax documents, certificates and other important records.\n📅 Never Miss Important Dates — Track registration renewals, licenses, insurance, tax deadlines, contracts and other important business dates.\n🔗 Connect the Entire Business — Keep related bank accounts, assets, loans, insurance, customers, vendors, employees, transactions, payables and receivables connected to the correct business.\n\n✨ Business Details → Owners → Documents → Important Dates → Finances — your complete business record in one place."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "2-business-partners",
           "name": "Business partners",
           "desc": "Manage customers, vendors and clients in one place, with every transaction linked back to them.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/3-business/2-business-partners/01-maintain%20Business%20partner%20details.mp4?v=27b0a25d",
-              "title": "🤝 Business Partners, Customers & Vendors — Keep Every Relationship Organized",
-              "caption": "👥 Maintain Business Partners — Keep partner details, roles, ownership information, contact details, agreements and related documents together.\n🧑‍💼 Manage Your Customers — Maintain customer profiles with contact information, transactions, sales, invoices, receivables and payment history.\n🚚 Manage Your Vendors — Keep supplier details, purchases, bills, payables, payments, contracts and important documents organized.\n💰 See the Complete Financial Relationship — Know how much you sold, purchased, paid, received, owe or are still waiting to receive for each customer or vendor.\n📄 Everything Connected to the Right Person or Business — Keep transactions, invoices, receipts, documents, tasks, notes and communication details connected to the related partner, customer or vendor."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "3-leads-and-crm",
           "name": "Leads and CRM",
           "desc": "Track leads through your pipeline from first contact to closed deal.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/3-business/3-leads-and-crm/01-maintain%20leads.mp4?v=a75f392f",
-              "title": "🎯 Sales CRM — Turn New Leads Into Customers",
-              "caption": "🧲 Capture Every New Lead — Add potential customers with their name, company, contact details, source, requirement and expected opportunity.\n🔄 Track the Sales Journey — Move leads through your own stages such as New Lead → Contacted → Follow-up → Proposal → Negotiation → Won/Lost.\n✅ Manage Follow-ups & Tasks — Create calls, meetings, reminders, notes and next actions so no sales opportunity gets forgotten.\n💰 Track Opportunities & Potential Revenue — Maintain expected deal value, probability, products/services and expected closing date to understand your sales pipeline.\n🤝 Convert Lead to Customer — Once the deal is won, convert the lead into a Customer and continue with quotes, sales, invoices, receivables, payments, transactions and documents.\n\n✨ Lead → Follow-up → Opportunity → Deal → Customer → Revenue — manage your complete sales journey in one place."
-            },
-            {
-              "type": "video",
-              "src": "content/3-business/3-leads-and-crm/02-Track%20Lead%20Progress.mp4?v=c1b61a5b",
-              "title": "📈 Lead Progress — From First Contact to Customer",
-              "caption": "🎯 Track Every Lead Stage — Follow each opportunity through New Lead → Contacted → Meeting → Proposal → Negotiation → Won/Lost.\n📅 Manage Meetings & Follow-ups — Record calls, meetings, appointments, next actions and reminders so no lead gets forgotten.\n📝 Keep Complete Interaction History — Maintain notes, discussions, requirements, decisions and follow-up history for every lead.\n📄 Keep Documents Connected — Attach proposals, quotations, presentations, agreements, emails and other important documents directly to the lead.\n🤝 Convert Lead to Customer — When the deal is won, simply convert the lead into a Customer and carry important information forward for sales, invoices, receivables, payments and future business.\n\n✨ Lead → Follow-up → Meeting → Documents → Deal → Customer — track the complete journey."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "4-employee-management",
           "name": "Employee management",
           "desc": "Manage staff, roles, timesheets, leave and payroll — all in one place.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/3-business/4-employee-management/01-maintain%20Employees.mp4?v=dd584321",
-              "title": "👥 Employee Management — Everything About Your Team in One Place",
-              "caption": "👤 Maintain Complete Employee Profiles — Keep personal details, contact information, job title, department, joining date, manager, employment status and emergency contacts organized.\n💰 Manage Salary & Compensation — Maintain salary, bonuses, allowances, deductions, reimbursements, benefits and payment history for every employee.\n📅 Track Work & Activities — Manage attendance, leave, holidays, schedules, timesheets, tasks, projects, meetings and important employee activities.\n📄 Keep Documents & Records Connected — Store contracts, offer letters, IDs, certificates, tax documents, performance records, expenses and other employee documents in one place.\n📈 Manage the Complete Employee Journey — Follow everything from candidate → hiring → onboarding → active employment → performance → promotion → offboarding, while keeping the complete history.\n\n✨ Employee → Job → Salary → Attendance → Leave → Tasks → Documents → Performance → Complete employment journey."
-            },
-            {
-              "type": "video",
-              "src": "content/3-business/4-employee-management/02-Compensations.mp4?v=d2636a6b",
-              "title": "📈 Lead Progress — From First Contact to Customer",
-              "caption": "🎯 Track Every Lead Stage — Follow each opportunity through New Lead → Contacted → Meeting → Proposal → Negotiation → Won/Lost.\n📅 Manage Meetings & Follow-ups — Record calls, meetings, appointments, next actions and reminders so no lead gets forgotten.\n📝 Keep Complete Interaction History — Maintain notes, discussions, requirements, decisions and follow-up history for every lead.\n📄 Keep Documents Connected — Attach proposals, quotations, presentations, agreements, emails and other important documents directly to the lead.\n🤝 Convert Lead to Customer — When the deal is won, simply convert the lead into a Customer and carry important information forward for sales, invoices, receivables, payments and future business.\n\n✨ Lead → Follow-up → Meeting → Documents → Deal → Customer — track the complete journey."
-            },
-            {
-              "type": "video",
-              "src": "content/3-business/4-employee-management/03-Timesheet.mp4?v=b6afa7e5",
-              "title": "⏱️ Employee Timesheet — Track Time, Tasks & Approvals",
-              "caption": "🕐 Maintain Employee Time — Record start time, end time, breaks and total working hours for each day.\n✅ Connect Time to Tasks — Employees can record exactly which task, project, customer or activity they worked on and how much time they spent.\n📅 See the Complete Weekly View — View Monday to Sunday hours, daily totals, task-wise hours, overtime and total weekly working hours.\n👍 Submit & Approve Timesheets — Employees submit their timesheets and managers can review, approve, reject or request corrections.\n📄 Generate & Share PDF — Create a clean timesheet showing employee, dates, tasks, hours, approvals and weekly totals, ready to print or share.\n\n✨ Time → Task → Weekly View → Submit → Approve → PDF — complete timesheet management in one place."
-            },
-            {
-              "type": "video",
-              "src": "content/3-business/4-employee-management/04-Promotion%20or%20termination.mp4?v=6d459593",
-              "title": "📈 Employee Promotion & Termination — Track Every Career Change",
-              "caption": "🚀 Manage Promotions — Record new job title, position, department, manager, grade and promotion effective date.\n💰 Connect Compensation Changes — When promoted, maintain the employee’s new salary, compensation components and effective date while preserving previous salary history.\n🔄 Track Transfers & Role Changes — Maintain department transfers, manager changes, location changes and other employment movements.\n🚪 Manage Resignation & Termination — Record resignation/termination date, last working day, reason, notice period, final settlement and exit status.\n📄 Keep Complete Employment History — Attach promotion letters, salary revision letters, resignation letters, termination documents, exit documents and notes to the employee.\n\n✨ Join → Grow → Promote → Transfer → Compensation Change → Exit — preserve the employee’s complete journey."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "5-sales-flow",
           "name": "Sales flow",
           "desc": "Quotation to Sales Order to Delivery to Invoice to Payment, with every step posted to your books.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/3-business/5-sales-flow/01-Create%20Sales%20Order.mp4?v=6739f360",
-              "title": "🛒 Sales Order & Quotation — Sell Products and Services Easily",
-              "caption": "📝 Create Professional Quotations — Build quotations for products, services, quantities, prices, discounts, taxes, terms and validity dates.\n📦 Sell Products & Services — Add physical products, service items, packages or custom charges to the same quotation or sales order.\n✅ Convert Quotation to Sales Order — Once the customer approves, convert the quotation directly into a Sales Order without entering everything again.\n💰 Track Order Value & Customer Commitments — Maintain order amount, taxes, discounts, payment terms, delivery/service dates and customer details.\n📄 Keep the Complete Sales Record Connected — Store quotation, sales order, invoices, payments, receivables, documents and customer history together.\n\n✨ Quotation → Customer Approval → Sales Order → Product/Service Delivery → Invoice → Payment — complete sales flow in one place."
-            },
-            {
-              "type": "video",
-              "src": "content/3-business/5-sales-flow/02-Order%20to%20Payment.mp4?v=73ccbe95",
-              "title": "🔄 End-to-End Sales Flow — From Order to Payment",
-              "caption": "🛒 Create Sales Order — Confirm the customer’s products/services, quantities, prices, discounts, taxes, payment terms and delivery details.\n📦 Fulfill & Deliver — Track product delivery or service completion, including partial deliveries, delivery dates and status.\n🧾 Generate Customer Invoice — Create the invoice directly from the order/delivery, so you don’t have to enter the same information again.\n💰 Track Payment & Receivable — Know exactly how much was invoiced, received, partially paid and still outstanding, including the receiving bank account.\n🔗 Keep the Complete Journey Connected — See the entire history with quotation, order, delivery, invoice, payment, transactions, receipts and documents connected together.\n\n✨ Quotation → Sales Order → Delivery/Service → Invoice → Receivable → Payment → Complete."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "6-inventory",
           "name": "Inventory",
           "desc": "Track raw materials, finished goods and services — stock levels, costs and valuation, always current.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/3-business/6-inventory/01-Maintain%20Invetory.mp4?v=f0f89634",
-              "title": "📦 Inventory Management — Raw Materials, Finished Goods & Services",
-              "caption": "🧱 Maintain Raw Materials — Track materials, components, supplies and other items you purchase and use to produce your products.\n🏭 Maintain Finished Goods — Keep all products you manufacture or sell with quantity, cost, selling price, stock and availability.\n🛠️ Maintain Services — Create service items with service name, category, rate, tax and pricing, ready to use in quotations, sales orders and invoices.\n🔄 Track Inventory Movement — Know what was purchased → received → consumed → produced → sold → delivered, with stock automatically updated.\n📊 Know Your Inventory Position — See available stock, inventory value, low-stock items and complete movement history for every item.\n\n✨ Raw Material → Production → Finished Goods → Sales → Delivery — while services stay connected to your complete sales flow."
-            }
-          ]
+          "slides": []
         },
         {
-          "key": "7-Invoice",
-          "name": "Invoice",
-          "desc": "Track raw materials, finished goods and services — stock levels, costs and valuation, always current.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/3-business/7-Invoice/01-Finance%20and%20Invoices.mp4?v=64bdd1e9",
-              "title": "🧾 Invoices, Payments & Tax — Complete Billing in One Place",
-              "caption": "📄 Create & Manage Invoices — Generate invoices directly from sales orders, products or services with customer, quantity, price, discounts and payment terms.\n🧮 Calculate Taxes — Apply the appropriate tax rates and tax components, and clearly see subtotal, tax and final invoice amount.\n💰 Track Customer Payments — Record full or partial payments, payment dates, methods and the bank account where the money was received.\n⏳ Know What’s Outstanding — Instantly see Paid, Partially Paid, Overdue and Unpaid invoices, along with the remaining receivable.\n📊 Maintain Tax & Payment History — Keep invoices, taxes, payments, transactions, receipts and supporting documents connected for easier reporting and future reference.\n\n✨ Invoice → Tax → Receivable → Payment → Bank Transaction → Complete financial record."
-            }
-          ]
+          "key": "7-assets",
+          "name": "Assets",
+          "desc": "Record and track business assets, their value and depreciation over time.",
+          "slides": []
+        },
+        {
+          "key": "8-payables",
+          "name": "Payables",
+          "desc": "Keep on top of what the business owes and when, so cash flow never surprises you.",
+          "slides": []
         },
         {
           "key": "9-chart-of-account",
           "name": "Chart of Account",
           "desc": "A full, real double-entry chart of accounts behind every transaction you make.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/3-business/9-chart-of-account/01-Purchase%20flow.mp4?v=a294633b",
-              "title": "🛒 Purchase Flow — From Requirement to Vendor Payment",
-              "caption": "📝 Create Purchase Requirement / Order — Select the vendor, raw materials, products or services, quantity, price, taxes, delivery date and payment terms.\n📦 Receive Goods or Services — Record full or partial receipts, received quantities and service completion while automatically updating inventory where applicable.\n🧾 Record Vendor Invoice — Connect the vendor invoice directly to the purchase order and goods/service receipt and verify quantity, price and tax.\n💰 Create Payable & Make Payment — Know exactly how much you owe, when it is due and which bank account will pay it. Track full or partial payments.\n🔗 Keep the Complete Purchase History — Maintain vendor → purchase order → receipt → invoice → tax → payable → payment → bank transaction → documents as one connected flow.\n\n✨ Requirement → Purchase Order → Receive → Vendor Invoice → Payable → Payment → Complete."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "10-purchases",
           "name": "Purchases",
           "desc": "Buy from vendors the same way you sell — Purchase Order to Goods Receipt to Bill to Payment, with books and stock updated automatically.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/3-business/10-purchases/01-Purchase%20flow.mp4?v=a294633b",
-              "title": "🛒 Purchase Flow — From Requirement to Vendor Payment",
-              "caption": "📝 Create Purchase Requirement / Order — Select the vendor, raw materials, products or services, quantity, price, taxes, delivery date and payment terms.\n📦 Receive Goods or Services — Record full or partial receipts, received quantities and service completion while automatically updating inventory where applicable.\n🧾 Record Vendor Invoice — Connect the vendor invoice directly to the purchase order and goods/service receipt and verify quantity, price and tax.\n💰 Create Payable & Make Payment — Know exactly how much you owe, when it is due and which bank account will pay it. Track full or partial payments.\n🔗 Keep the Complete Purchase History — Maintain vendor → purchase order → receipt → invoice → tax → payable → payment → bank transaction → documents as one connected flow.\n\n✨ Requirement → Purchase Order → Receive → Vendor Invoice → Payable → Payment → Complete."
-            }
-          ]
+          "slides": []
         }
       ]
     },
@@ -301,32 +207,39 @@
       "bgOpacity": "",
       "modules": [
         {
-          "key": "1-family-health records",
+          "key": "1-family-records",
           "name": "Family records",
           "desc": "One health profile per family member — history, conditions and documents, all in one place.",
           "slides": [
             {
-              "type": "image",
-              "src": "content/4-health/1-family-health%20records/01-overview.jpeg?v=3a031348",
-              "title": "❤️ Family Health — Everything in One Place",
-              "caption": "👨‍👩‍👧‍👦 Manage Your Family’s Health — Create individual health profiles and keep important information organized for every family member.\n📊 Track Health & Wellness — Monitor important health information such as weight, blood pressure, blood sugar, sleep and other health trackers.\n📅 Manage Appointments & Treatments — Keep doctor visits, vaccinations, treatments and ongoing healthcare activities together.\n💊 Organize the Complete Health Journey — Maintain medicines, medical documents, reports, treatment processes and important health records.\n💰 Track Healthcare Expenses — Record doctor fees, tests, scans, medicines and other medical expenses under the related treatment.\n\n✨ One family. One place for your health journey, records, treatments and expenses."
+              "src": "content/4-health/1-family-records/01-overview.jpeg?v=3a031348",
+              "title": "Family overview",
+              "caption": "Your whole family's health at a glance"
+            },
+            {
+              "src": "content/4-health/1-family-records/02-list.jpeg?v=0eef85e4",
+              "title": "Member records",
+              "caption": "A separate medical record for everyone — pets included"
+            },
+            {
+              "src": "content/4-health/1-family-records/03-transactions.jpeg?v=5335786a",
+              "title": "What it costs",
+              "caption": "Every healthcare expense, per member"
             }
           ]
         },
         {
-          "key": "2-health tracker",
+          "key": "2-tracker",
           "name": "Tracker",
           "desc": "Log vitals like blood pressure, glucose and weight, and see the trends over time.",
           "slides": [
             {
-              "type": "image",
-              "src": "content/4-health/2-health%20tracker/01-tracker.jpeg?v=85905b87",
+              "src": "content/4-health/2-tracker/01-tracker.jpeg?v=85905b87",
               "title": "Vitals tracker",
               "caption": "Blood pressure, sugar and the numbers that matter"
             },
             {
-              "type": "image",
-              "src": "content/4-health/2-health%20tracker/02-tracker-details.jpeg?v=6bc0e43e",
+              "src": "content/4-health/2-tracker/02-tracker-details.jpeg?v=6bc0e43e",
               "title": "Trends over time",
               "caption": "See the trend, not just today's reading"
             }
@@ -338,10 +251,9 @@
           "desc": "Medication and care schedules so nothing — and no one — gets missed.",
           "slides": [
             {
-              "type": "image",
               "src": "content/4-health/3-schedules/01-schedules.jpeg?v=29d32aa0",
-              "title": "💊 Medicine Schedule — Never Miss a Dose",
-              "caption": "⏰ Schedule Medicines by Time — Organize medications for morning, afternoon, evening, or any specific time.\n💊 Track Medicine & Dosage — Keep the medicine name, dosage, and instructions together for easy reference.\n📅 Manage Multiple Medicines — Maintain the complete medication routine in one organized schedule.\n📄 Keep Supporting Records — Attach prescriptions and documents and maintain important medicine notes.\n🖨️ Print & Share — Quickly print or share the medicine schedule with family members, caregivers, or healthcare providers.\n\n✨ Your complete medicine routine — organized, accessible, and easy to follow."
+              "title": "Appointments",
+              "caption": "Appointments and reminders that never slip"
             }
           ]
         },
@@ -351,11 +263,14 @@
           "desc": "Track ongoing treatments, linked measurements and the medicines that go with them.",
           "slides": [
             {
-              "type": "video",
-              "src": "content/4-health/4-treatments/01-treatments.mp4?v=7570e590",
-              "title": "🏥 Treatment Tracker — Your Complete Treatment Journey",
-              "caption": "🩺 Record Treatment Details — Keep diagnosis, doctor, hospital, treatment dates and important medical information together.\n🪜 Track the Treatment Process — Define each treatment step and follow your progress from diagnosis through recovery.\n💊 Manage Medicines & Care — Keep medications, therapy and other treatment-related information connected to the treatment.\n📄 Keep Records Together — Save prescriptions, reports, scans, bills, notes and other important documents under the same treatment.\n💰 Track Treatment Expenses — Record doctor visits, CT scans, tests, medicines and other costs to know exactly how much the treatment has cost.\n\n✨ From diagnosis to recovery — track every step, record every detail, and keep your complete treatment history in one place.",
-              "poster": "content/4-health/4-treatments/01-treatments.jpeg?v=652b59b1"
+              "src": "content/4-health/4-treatments/01-treatments.jpeg?v=652b59b1",
+              "title": "Treatments",
+              "caption": "Ongoing and past treatments in one list"
+            },
+            {
+              "src": "content/4-health/4-treatments/02-treatment-details.jpeg?v=6064328c",
+              "title": "Treatment detail",
+              "caption": "Diagnosis, linked trackers, reports and next steps"
             }
           ]
         },
@@ -365,11 +280,14 @@
           "desc": "Keep every family member vaccination record and see what is coming due.",
           "slides": [
             {
-              "type": "video",
-              "src": "content/4-health/5-vaccinations/01-vaccinations.mp4?v=ffbc7cc9",
-              "title": "💉 Vaccination Tracker — Keep Every Vaccine Record Organized",
-              "caption": "👨‍👩‍👧‍👦 Track Vaccinations for Every Family Member — Maintain a separate vaccination history for each person.\n💉 Record Every Dose — Save vaccine name, purpose, dose number, and vaccination date.\n📅 Follow the Complete Vaccination Journey — Keep childhood, adult, booster, and other vaccination records together over the years.\n📄 Keep Supporting Records — Store vaccination documents, certificates, notes, and related information.\n🖨️ Print & Share Anytime — Quickly generate a vaccination record to print or share when needed.\n\n✨ From the first vaccine to future boosters — keep your complete vaccination history in one place.",
-              "poster": "content/4-health/5-vaccinations/01-vaccinations.jpeg?v=784d7a6d"
+              "src": "content/4-health/5-vaccinations/01-vaccinations.jpeg?v=784d7a6d",
+              "title": "Vaccinations",
+              "caption": "Every dose and date, tracked per person"
+            },
+            {
+              "src": "content/4-health/5-vaccinations/02-vaccination-countries.jpeg?v=8c1b9fcf",
+              "title": "Travel requirements",
+              "caption": "Country schedules, ready before you travel"
             }
           ]
         },
@@ -379,17 +297,14 @@
           "desc": "A running record of medicines, doses and refills for the whole family.",
           "slides": [
             {
-              "type": "image",
               "src": "content/4-health/6-medicines/01-medicines.jpeg?v=e6f8a860",
-              "title": "💊 Medicine List — Always Ready When You Need It",
-              "caption": "👨‍👩‍👧‍👦 Maintain Medicines for Each Family Member — Keep an individual medicine list for everyone in your family.\n💊 Keep Complete Medicine Details — Record medicine name, dosage, frequency, timing, instructions, and other important information.\n🏷️ Organize by Category — Separate everyday medicines from emergency or other important medications for quick access.\n🚨 Be Emergency Ready — Keep an up-to-date medicine list available when visiting a doctor, hospital, or during an emergency.\n🖨️ Print & Share Your List — Quickly print or share medicine information with family members, caregivers, or healthcare providers.\n\n✨ Your medicines. Your instructions. Your essential information — organized and ready when you need it."
+              "title": "Medicines",
+              "caption": "Every medicine, dose and schedule"
             },
             {
-              "type": "video",
-              "src": "content/4-health/6-medicines/02-medicines-print.mp4?v=eeffd5fa",
-              "title": "🖨️ Print & Share — Ready Whenever You Need It",
-              "caption": "⚡ Quick Access Anytime — Your medicine schedule stays organized and ready—no need to search through old prescriptions or messages.\n🖨️ Print Instantly — Generate a clean, easy-to-read medicine schedule whenever you need a physical copy.\n📤 Share in Seconds — Quickly send your medicine information to doctors, caregivers, or family members.\n✅ Share Only What You Choose — Select the specific medicines or information you want to share while keeping the rest private.\n🚨 Always Emergency Ready — Have important medication information available quickly when every minute matters.\n\n✨ No searching. No confusion. Select, print, share — whenever you need it.",
-              "poster": "content/4-health/6-medicines/02-medicines-print.jpeg?v=6150a9e3"
+              "src": "content/4-health/6-medicines/02-medicines-print.jpeg?v=6150a9e3",
+              "title": "Printable list",
+              "caption": "Print a clean list to hand the doctor"
             }
           ]
         },
@@ -399,29 +314,24 @@
           "desc": "Track cycles simply and privately, with the insights that matter.",
           "slides": [
             {
-              "type": "video",
-              "src": "content/4-health/7-menstruation/01-menstruation.mp4?v=b80e3f1a",
-              "title": "🌸 Menstruation & Cycle Tracking — Why It Matters",
-              "caption": "🩸 Track Your Period — Record start dates, duration, and flow intensity to understand your cycle better.\n📅 Know What’s Coming — Estimate your next period, fertile window, and ovulation days so you can plan ahead.\n😊 Understand Your Body — Track moods, symptoms, energy, and changes throughout different phases of your cycle.\n📊 Discover Your Patterns — Compare cycle length, period duration, flow, and symptoms across months to spot changes over time.\n💕 Keep Your Cycle History Together — Maintain your complete menstrual history in one place, making it easier to understand and discuss with your healthcare provider when needed.\n\n✨ Track. Understand. Prepare. Stay connected with your body.",
-              "poster": "content/4-health/7-menstruation/01-menstruation.jpeg?v=0d7f679e"
+              "src": "content/4-health/7-menstruation/01-menstruation.jpeg?v=0d7f679e",
+              "title": "Cycle tracking",
+              "caption": "Month by month, without guesswork"
             },
             {
-              "type": "image",
               "src": "content/4-health/7-menstruation/02-menstruation-details.jpeg?v=4a0015aa",
-              "title": "🩸 Cycle Detail — Day by Day",
-              "caption": "🩸 Track Daily Flow — Record light, medium, heavy, or very heavy flow for each period day.\n😊 Log Daily Symptoms — Capture how you feel and any symptoms experienced throughout your cycle.\n📅 See Your Current Cycle — Quickly know your start date, current cycle day, estimated end date, and days remaining.\n🌸 Know Your Ovulation Window — View estimated ovulation start and end dates to understand your current cycle phase.\n📊 Build a Detailed Cycle Record — Save day-by-day information to create a useful history of your menstrual patterns over time.\n\n✨ Know what’s happening today, understand your cycle better tomorrow."
+              "title": "Daily log",
+              "caption": "Symptoms and notes, logged day by day"
             },
             {
-              "type": "image",
               "src": "content/4-health/7-menstruation/03-cycles.jpeg?v=68ddd241",
-              "title": "🔄 All Cycles — Your Complete Cycle History",
-              "caption": "📅 View Every Cycle — Keep all your past and current menstrual cycles organized in one place.\n🩸 Review Period Flow — See the recorded flow level for each cycle and compare changes over time.\n😊 Remember How You Felt — Review moods and feelings recorded during each period.\n📊 Compare Your Cycles — Easily look back at start dates, cycle patterns, and completed cycles.\n🌸 Build Your Personal History — Create a long-term menstrual record that helps you understand how your cycle changes month by month.\n\n✨ Every cycle recorded. Every pattern easier to understand."
+              "title": "Cycle history",
+              "caption": "Every cycle recorded and comparable"
             },
             {
-              "type": "image",
               "src": "content/4-health/7-menstruation/04-cycle-details.jpeg?v=5b225c6a",
-              "title": "🌸 Current Cycle — Know What’s Happening Now",
-              "caption": "📅 See Your Current Cycle Day — Know exactly where you are in your cycle and how many days are left.\n🩸 Track Period Flow Daily — Record your flow for each period day as light, medium, heavy, or very heavy.\n🌼 Know Your Ovulation Window — See estimated ovulation start and end dates at a glance.\n😊 Log Symptoms & Changes — Record symptoms and how you’re feeling during the current cycle.\n💕 Follow Your Cycle Day by Day — Keep your current period, symptoms, flow, and important dates together in one place.\n\n✨ Understand today. Track every change. Know what’s coming next."
+              "title": "Patterns and predictions",
+              "caption": "What's normal for you, and what's next"
             }
           ]
         },
@@ -431,32 +341,14 @@
           "desc": "Follow a pregnancy week by week, with a private diary for the journey.",
           "slides": [
             {
-              "type": "video",
-              "src": "content/4-health/8-pregnancy-and-moms-diary/01-overview.mp4?v=707191bd",
-              "title": "🤰💕 Mom’s Diary",
-              "caption": "Create a beautiful **Baby’s Diary for every pregnancy** 👶📖 and keep each journey special and separate. 💕\n\n🤰 Maintain a diary for each pregnancy\n📅 Capture the journey week by week\n💭 Record thoughts, feelings & dreams\n👣 Remember first kicks & special moments\n❤️ Look back on each baby’s unique journey anytime\n\n✨ **Every pregnancy has its own story. Keep every beautiful memory forever.** 👶💕",
-              "poster": "content/4-health/8-pregnancy-and-moms-diary/01-overview.jpeg?v=bf9d3875"
+              "src": "content/4-health/8-pregnancy-and-moms-diary/01-overview.jpeg?v=bf9d3875",
+              "title": "Mom's Diary",
+              "caption": "A personal companion through every stage"
             },
             {
-              "type": "video",
-              "src": "content/4-health/8-pregnancy-and-moms-diary/02%20-%20Babys%20Diary.mp4?v=9314e68d",
-              "title": "👶💕 Baby’s Diary",
-              "caption": "Capture and cherish every special moment of your pregnancy 🤰✨ — from **daily feelings 😊, symptoms 🌸, dreams 🌙💭, and experiences 💕 to your baby’s first kick 👣❤️**.\n\n📅 Follow your journey week by week\n🌱 Record your baby’s growing milestones\n💭 Capture feelings, dreams & special moments\n👣 Remember precious firsts\n📸 Save beautiful memories\n💖 Build your pregnancy story from **bump 🤰 to baby 👶**\n\n✨ **Every kick. Every feeling. Every memory. One beautiful journey.** 💕",
-              "poster": "content/4-health/8-pregnancy-and-moms-diary/02%20-%20Babys%20Diary.jpeg?v=efcf26fb"
-            },
-            {
-              "type": "video",
-              "src": "content/4-health/8-pregnancy-and-moms-diary/03%20-%20Pregnency%20track%20process.mp4?v=43e366bb",
-              "title": "🤰 Pregnancy – Track Your Process",
-              "caption": "Define everything you want to follow throughout your pregnancy and organize it **step by step**. Track appointments, tests, scans, medications, preparations, and important milestones—all in one place.\n\n**Plan every step. Track your progress. Never miss what’s next. ❤️**",
-              "poster": "content/4-health/8-pregnancy-and-moms-diary/03%20-%20Pregnency%20track%20process.jpeg?v=efcf26fb"
-            },
-            {
-              "type": "video",
-              "src": "content/4-health/8-pregnancy-and-moms-diary/04%20-%20Track%20all%20documents.mp4?v=12a87876",
-              "title": "📂💕 Everything in One Place",
-              "caption": "Keep all your important pregnancy information organized throughout your journey 🤰✨\n\n💰 Track pregnancy expenses\n🧾 Save medical bills & receipts\n🛡️ Manage insurance & benefits\n💊 Track medicines & supplements\n🩻 Keep ultrasound & sonography reports\n🧪 Save lab tests & results\n⏰ Track reminders & upcoming activities\n📝 Keep important notes & instructions\n\n✨ **From appointments to expenses, medicines to medical reports — keep your complete pregnancy journey organized in one place.** 👶💕",
-              "poster": "content/4-health/8-pregnancy-and-moms-diary/04%20-%20Track%20all%20documents.jpeg?v=baf8da2c"
+              "src": "content/4-health/8-pregnancy-and-moms-diary/02-pregnancy-tracker.jpeg?v=efcf26fb",
+              "title": "Pregnancy tracker",
+              "caption": "A separate record for each pregnancy"
             }
           ]
         },
@@ -466,40 +358,17 @@
           "desc": "Store health policies, premiums and claims, and never miss a renewal.",
           "slides": [
             {
-              "type": "video",
-              "src": "content/4-health/9-insurance/01-insurance.mp4?v=cde4170f",
-              "title": "🛡️ Health Insurance — Know Your Coverage",
-              "caption": "📋 Keep All Policy Details Together — Store premiums, coverage limits, policy duration, start dates and renewal dates.\n💰 Track Premiums & Expenses — Know what you pay and keep insurance-related transactions organized.\n🧾 Manage Claims — Record claims, requested amounts, approvals and claim history in one place.\n❤️ Track Your Benefits — Keep dental, vision, massage, prescription and other available benefits easy to find.\n👨‍👩‍👧‍👦 Manage Beneficiaries & Documents — Maintain beneficiaries and important insurance documents for quick access.\n\n✨ Know what you’re covered for, what you’ve used, what you’ve paid, and what’s still available.",
-              "poster": "content/4-health/9-insurance/01-insurance.jpeg?v=0258781c"
-            },
-            {
-              "type": "video",
-              "src": "content/4-health/9-insurance/02-insurance%20-%20Benifits.mp4?v=5a2167e2",
-              "title": "❤️ Health Insurance Benefits — Know What You Can Use",
-              "caption": "🦷 Track Every Benefit — Keep dental, vision, massage, physiotherapy, prescriptions and other health benefits organized.\n💰 Know Your Coverage — See how much your insurance covers for each benefit and understand your available limits.\n🧾 Track What You’ve Used — Record benefit usage and expenses so you know what has already been claimed.\n📊 Know What’s Remaining — Quickly see your used and remaining coverage before booking your next service.\n👨‍👩‍👧‍👦 Manage Family Benefits — Keep insurance benefits organized for you and your covered family members.\n\n✨ Know your benefits. Use your coverage. Never leave valuable benefits unused.",
-              "poster": "content/4-health/9-insurance/02-insurance%20-%20Benifits.jpeg?v=0258781c"
-            },
-            {
-              "type": "video",
-              "src": "content/4-health/9-insurance/03-insurance%20-%20Claims.mp4?v=d496138c",
-              "title": "🧾 Insurance Claims — Track Every Claim",
-              "caption": "📝 Record Every Claim — Keep submitted claims organized with service details, dates, providers and claimed amounts.\n⏳ Follow Claim Status — Track claims from submitted → under review → approved → paid.\n💰 Know What You Claimed & Received — Compare the total expense, amount claimed, insurance payment and your out-of-pocket cost.\n📄 Keep Supporting Documents Together — Store bills, receipts, prescriptions and other documents with the related claim.\n📊 Maintain Complete Claim History — Quickly look back at previous claims without searching through emails, papers or insurance portals.\n\n✨ Submit. Track. Reconcile. Keep your complete insurance claim history organized in one place.",
-              "poster": "content/4-health/9-insurance/03-insurance%20-%20Claims.jpeg?v=0258781c"
+              "src": "content/4-health/9-insurance/01-insurance.jpeg?v=0258781c",
+              "title": "Insurance",
+              "caption": "Policies and cover, findable in an emergency"
             }
           ]
         },
         {
-          "key": "10-Scan Lab report",
+          "key": "10-ai-lab-scan",
           "name": "Lab-Report Scan",
           "desc": "Snap a photo of a lab or blood report and AI reads every value — pick which to track and they save to the right family member.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/4-health/10-Scan%20Lab%20report/01-scan.mp4?v=4f9db96f",
-              "title": "📄✨ Smart Scan Lab Reports",
-              "caption": "📸 Scan & Capture Automatically — Scan your lab report and capture important test results without entering everything manually.\n🎯 Accurate Result Tracking — Store each test with its result, unit, and reference range for easy comparison.\n🚨 Highlight Critical Readings — Quickly identify values that are high, low, or outside the provided laboratory range so important results stand out.\n📊 Build Your Health History — Keep important readings over time and easily compare how your results change across different reports.\n🗄️ Keep What Matters, Archive the Rest — Maintain key health data for quick access while moving older reports and supporting information to your archive.\n\n✨ Scan. Capture. Compare. Spot important changes. Keep your health records organized."
-            }
-          ]
+          "slides": []
         }
       ]
     },
@@ -518,115 +387,37 @@
           "key": "1-my-wallet",
           "name": "My wallet",
           "desc": "All your accounts and balances in one place — a clear picture of where your money actually is.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/1-my-wallet/01-wallet.mp4?v=b764d168",
-              "title": "👛 My Wallet — See Where Your Money Is Going",
-              "caption": "🏦 All Bank Accounts in One Place — Maintain your bank accounts and quickly see the balance available in each account.\n💸 Know Your Payables — See exactly how much is scheduled to go out from each bank account, including recurring bills, EMIs, subscriptions and other payments.\n💳 Track Cards & Liabilities — Keep credit cards and other liabilities together and understand upcoming payment obligations.\n📊 View Complete Transactions — Open any account to review its income, expenses, payments and transaction history.\n📄 Keep Documents Connected — Store statements, bills, receipts and other documents directly with the related account.\n\n✨ Balance + Payables + Transactions + Documents — know what you have, what you owe, and where your money is going."
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/1-my-wallet/02-account.mp4?v=f40d8d99",
-              "title": "📊 My Accounts — Your Personal Chart of Accounts",
-              "caption": "💰 See Your Complete Financial Position — Organize everything into Assets, Liabilities, Equity, Revenue and Expenses in one structured view.\n🏠 Know What You Own — Track bank balances, investments, properties, vehicles and other assets to understand your total wealth.\n💳 Know What You Owe — See loans, interest payable, credit cards, taxes, salaries and other liabilities with their current balances.\n📈 Track Income & Expenses — Understand how much money is coming in, where it is being spent and how it affects your finances.\n⚖️ Understand Your Net Worth — Automatically connect your accounts using Assets − Liabilities = Equity, giving you a clearer picture of your overall financial health.\n\n✨ Not just expense tracking — understand your complete personal finances like a balance sheet."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "2-assets",
           "name": "Assets",
           "desc": "Track what you own — property, vehicles, valuables — and their value over time.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/2-assets/01-assets%20-%20Overview.mp4?v=c4b2ace8",
-              "title": "🏠 Asset Management — Know Everything You Own",
-              "caption": "📋 Maintain All Your Assets — Track properties, vehicles, electronics, investments, valuables and other assets with their current value.\n🎯 Plan Before You Buy — Add assets you’re planning to purchase, compare options and convert them to owned assets once purchased.\n📈 Build Your Net Worth — Choose which owned assets should be included in your net-worth calculation and see their impact on your overall wealth.\n💳 Connect Everything to the Asset — Track associated loans, insurance, expenses, transactions, warranties and other financial commitments.\n📅 Manage the Complete Asset Lifecycle — Keep appointments, events, maintenance, renewals, documents and important records connected to each asset.\n\n✨ Plan it. Buy it. Finance it. Insure it. Maintain it. Track its value — manage the complete life of every asset in one place."
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/2-assets/02-Asset%20Buy%20process.mp4?v=4c1c5cd3",
-              "title": "🛒 Asset Buying Process — Plan Before You Buy",
-              "caption": "🎯 Define What You Want to Buy — Create the planned asset, set your target budget, expected purchase date and requirements.\n🪜 Create Your Buying Process — Define every step you want to complete, such as research → compare → financing → insurance → inspection → negotiation → purchase.\n💰 Plan Your Money — Decide how much you will pay from savings, down payment, trade-in or other available funds.\n🏦 Plan Your Loan — Compare financing options, interest rates, EMI/monthly payments, loan terms and approvals before committing.\n✅ Ready? Convert Plan to Asset — Once everything is ready, complete the purchase and convert the planned item into an Owned Asset, carrying its purchase, loan, insurance, documents and transaction information forward.\n\n✨ Dream it → Plan it → Fund it → Finance it → Buy it → Track it."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "3-payables",
           "name": "Payables",
           "desc": "Know what you owe and when it is due, so nothing catches you off guard.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/3-payables/01%20-%20All%20payables.mp4?v=4b153ab8",
-              "title": "💸 Payables — Never Miss What You Owe",
-              "caption": "📋 See All Your Payables — Keep every upcoming and recurring payment organized in one place.\n🏷️ Organize by Category — Easily manage subscriptions, utilities, loans, insurance, salaries, taxes, credit cards and more.\n📅 Know What’s Due & When — Track due dates, payment frequency and upcoming obligations before they become overdue.\n🏦 Know Where Money Will Go From — Connect each payable to the bank account or payment source you plan to use.\n📊 Understand Your Future Commitments — See how much money is already committed before you plan your remaining spending.\n\n✨ Know what you owe. Know when it’s due. Know where it will be paid from."
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/3-payables/02-%20Payable%20bank%20details.mp4?v=fb0cb55c",
-              "title": "💸 Payables — Know Exactly Where Your Money Is Going",
-              "caption": "🏷️ See Payables by Category — Instantly know how much goes toward subscriptions, utilities, loans, insurance, salaries, taxes, credit cards and more.\n🏦 Know Which Bank Pays What — See exactly which bank account or card each payable will be deducted from.\n📅 Track Every Due Date — Know what is due today, this week, this month, or later and stay prepared.\n💰 See Your Total Commitments — Understand how much money is already committed across all your upcoming and recurring payments.\n🔍 Drill Into Every Payable — Open any category, bank account, or payable to see its amount, frequency, transactions, documents, payment history and details.\n\n✨ What to pay. How much. When it’s due. What category. Which account — everything clearly"
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/3-payables/03-%20Payable%20Details.mp4?v=10c03a5b",
-              "title": "💸 Payable Details — Everything Connected to Every Payment",
-              "caption": "💳 Post & Track Transactions — Record every payment against the payable and always know what has been paid and what remains.\n📊 Complete Transaction History — See all past payments, amounts, dates and payment accounts in one place.\n🏦 Know the Payment Source — Clearly see which bank account or card each payment is coming from.\n✅ Connect Tasks & Follow-ups — Add related tasks, reminders and actions so nothing associated with the payable gets missed.\n📄 Keep Documents Together — Attach invoices, bills, contracts, receipts and other supporting documents directly to the payable.\n\n✨ Payment → Transactions → Bank Account → Tasks → Documents — everything connected to one payable."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "4-receivables",
           "name": "Receivables",
           "desc": "Track money owed to you and when it is expected to land.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/4-receivables/01-%20Recevable%20details.mp4?v=85029bdc",
-              "title": "💰 Receivables — Know What Money Is Coming In",
-              "caption": "🏷️ Organize Receivables by Category — Maintain receivables such as salary, rent, customer payments, reimbursements, interest, loans given, personal dues and more.\n🏦 Know Where Money Is Expected — Connect every receivable to the bank account or wallet where you expect to receive the money.\n💳 Post & Track Transactions — Record partial or full receipts and always know how much was expected, received, and still outstanding.\n📊 Complete Receipt History — See all transactions, payment dates, amounts and receiving accounts connected to each receivable.\n📄 Keep Everything Together — Store invoices, receipts, agreements, documents, notes and related records directly with the receivable.\n\n✨ What you’re expecting → How much → From whom → When → Which account → Complete history — all in one place."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "5-loans",
           "name": "Loans",
           "desc": "Manage loans, EMIs and repayment schedules, with the interest and balance always clear.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/5-loans/01-Plan%20for%20Loans.mp4?v=e06082d0",
-              "title": "🏦 Loan Planning — Compare Before You Borrow",
-              "caption": "🎯 Plan Your Loan Before Applying — Create a planned loan with the amount you need, purpose, expected term and budget.\n📋 Collect Multiple Loan Quotes — Maintain offers from different banks and lenders with interest rates, terms, fees and conditions.\n⚖️ Compare Your Options — Compare monthly payments, interest rates, loan terms, total interest and overall repayment before making a decision.\n✅ Finalize the Best Loan — Once you select an offer, convert the planned loan directly into an Actual Loan and continue tracking it.\n🗑️ Keep Only What Matters — Delete or close loan plans you decide not to proceed with, keeping your financial records clean.\n\n✨ Plan → Get Quotes → Compare → Decide → Convert to Actual Loan → Track."
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/5-loans/02-%20Maintain%20current%20Loans.mp4?v=9e7dd535",
-              "title": "🏦 Loan Management — Everything About Your Loan in One Place",
-              "caption": "💰 Maintain All Current Loans — Keep your home, vehicle, personal, education, business and other loans organized together.\n📅 Track EMI & Repayments — Know your EMI amount, due dates, payment frequency, principal, interest and remaining balance.\n🏦 Connect Your Bank — Know exactly which bank account your EMI is deducted from and keep related transactions connected.\n🏠 Link Loans to Assets & Plans — Connect a mortgage to your property, vehicle loan to your car, or a loan to the related asset or financial plan.\n🔔 Stay Organized & Prepared — Set alerts for upcoming payments, keep loan statements and agreements, and maintain all important documents in one place.\n\n✨ Loan → EMI → Bank → Asset → Transactions → Alerts → Documents — everything connected."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "6-budgets",
           "name": "Budgets",
           "desc": "Set budgets by category and see where your money is really going each month.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/6-budgets/01-budget.mp4?v=16912b58",
-              "title": "Your budget",
-              "caption": "Spending by category against what you planned."
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/6-budgets/02-Track%20Expense.mp4?v=b803a79e",
-              "title": "Stay on budget",
-              "caption": "See where the month is really going."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "7-tax",
@@ -638,104 +429,19 @@
           "key": "8-investments",
           "name": "Investments",
           "desc": "Track stocks, funds and other investments — cost, current value and returns at a glance.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/8-investments/01%20-%20Overview.mp4?v=8b5b9fab",
-              "title": "📈 Investment Management — Your Complete Portfolio in One Place",
-              "caption": "💼 Maintain All Your Investments — Track stocks, mutual funds, ETFs, properties, crypto, digital assets, gold, bonds and other investments together.\n🌎 Bring Investments Together — Organize investments held across different banks, brokers, platforms, accounts and countries in one view.\n💰 Know Your Investment Value — See your invested amount, current value, gains and losses for every investment.\n📊 See Total Profit & Loss — Understand which investments are performing well and view your combined portfolio profit or loss from one place.\n📄 Keep Everything Connected — Maintain related transactions, income, expenses, documents, notes and investment details with each investment.\n\n✨ Stocks → Funds → ETFs → Property → Crypto → Digital Assets — see your complete investment portfolio and performance in one place."
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/8-investments/02%20-%20Enter%20investment.mp4?v=a20a615a",
-              "title": "📊 Add & Track Investments — Multiple Brokers, One Portfolio",
-              "caption": "🔗 Bring Multiple Brokers Together — Add investments from different brokers, banks and investment platforms and view everything in one place.\n✍️ Enter Investments Manually — Prefer not to connect an account? Add your holdings manually with quantity, purchase price, account and investment type.\n🔎 Select the Ticker — Choose the correct stock, ETF, fund or crypto ticker and link it to your holding.\n📈 Get Current Market Value — Use live market prices to automatically calculate the latest value of each investment and your overall portfolio.\n💰 Always Know How Your Portfolio Looks — See invested amount, current value, profit/loss and performance across all brokers from one consolidated view.\n\n✨ Connect or enter manually → Select ticker → Get current value → See your complete portfolio stay up to date."
-            }
-          ]
+          "slides": []
         },
         {
-          "key": "9-Plans Investments",
-          "name": "Plans Investments",
+          "key": "9-plans",
+          "name": "Plans",
           "desc": "Model financial what-ifs, then compare scenarios side by side.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/9-Plans%20Investments/01%20-%20Plan%20your%20investments.mp4?v=b0926e0f",
-              "title": "🎯 Investment Planning — See Where Your Portfolio Is Going",
-              "caption": "💼 Start With Your Existing Investments — Keep your current stocks, ETFs, mutual funds, properties, crypto and other investments as the foundation of your plan.\n➕ Plan New Investments — Add investments you’re considering without affecting your actual portfolio.\n💰 Plan Future Contributions — Define how much you want to invest monthly, yearly or as a one-time investment.\n📈 See Your Projection — Estimate how your portfolio could grow over 1, 5, 10, 20 years or longer using your chosen assumptions.\n🔄 Compare Plan vs Actual — As you invest, move planned investments into your actual portfolio and continue tracking your real performance.\n\n✨ What you have → What you’ll add → How much you’ll invest → Where you could be in the future."
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/9-Plans%20Investments/02%20-%20Financial%20Goal.mp4?v=0f134366",
-              "title": "🎯 Financial Goals — Turn Your Goals Into a Plan",
-              "caption": "💰 Create Your Financial Goal — Define what you want to achieve, how much you need and when you want to reach it.\n📅 Set Your Monthly Savings Target — Know exactly how much you need to save or invest every month to work toward your goal.\n📈 See Year-by-Year Projections — View how your money could grow each year based on your contributions and chosen growth assumptions.\n🔄 Track Goal vs Actual — Compare how much you planned to save with how much you actually saved and see whether you’re ahead or behind.\n🏆 See Your Path to the Goal — Follow your progress from today → monthly savings → yearly growth → target amount.\n\n✨ Set the goal → Plan your monthly savings → Follow your progress → See the projection → Reach your target."
-            }
-          ]
+          "slides": []
         },
         {
           "key": "10-month-ahead",
           "name": "Month Ahead",
           "desc": "A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.",
-          "slides": [
-            {
-              "type": "image",
-              "src": "content/5-finance-and-wealth/10-month-ahead/01-overview.jpeg?v=94ae3ce3",
-              "title": "📅 Next Month — Know Your Finances Before the Month Begins",
-              "caption": "💰 See Expected Income — Know how much money you expect to receive next month and where it will come from.\n💸 See Upcoming Payables — View your loans, EMIs, subscriptions, utilities, insurance, credit cards and other scheduled payments.\n🏦 Know Your Account Position — See which bank accounts money is expected to come into and go out from.\n📈 Include Savings & Investments — See planned savings, investments and financial-goal contributions alongside your regular commitments.\n🔮 See Your Projected Month-End Position — Understand your expected income → payments → savings → investments → remaining balance before the month even starts.\n\n✨ Don’t wait for next month to happen — know what your financial month could look like before it begins."
-            }
-          ]
-        },
-        {
-          "key": "12-expense Split",
-          "name": "Expense Split",
-          "desc": "A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/12-expense%20Split/01-Create%20Split.mp4?v=3321dc44",
-              "title": "👥 Split — Enjoy Together, Settle Easily",
-              "caption": "🎯 Create Your Split — Set up a split for dinner, trips, parties, shopping, activities or any shared expense.\n👫 Add Your Friends — Select people directly from your friend list and create your group.\n🎉 Enjoy the Activity — Don’t worry about calculating everything while you’re having fun. Just enjoy the moment.\n💳 Enter Who Paid What — Whenever someone pays, simply record who paid, how much and what it was for.\n💰 Know Who Owes Whom — Let the app organize the expenses and show everyone’s share and final settlement.\n\n✨ Create → Add Friends → Enjoy → Enter Who Paid → Split & Settle.",
-              "poster": "content/5-finance-and-wealth/12-expense%20Split/01-Create%20Split.jpeg?v=94ae3ce3"
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/12-expense%20Split/02-Book%20Every%20activity.mp4?v=6163b196",
-              "title": "💳 Split Every Activity — Pay, Use & Split Correctly",
-              "caption": "🎯 Add Every Shared Activity — Add dinner, hotel, taxi, tickets, shopping, groceries or any other shared expense.\n💰 Enter Who Paid — Simply select who paid and how much they paid for that activity.\n👥 Select Who Used It — Choose exactly who participated in or benefited from that expense.\n🧮 Automatically Distribute the Cost — The expense is split only among the selected people, so everyone gets the correct share.\n⚖️ Get the Final Settlement — After all activities are entered, automatically see who paid more, who owes money, and who should receive money.\n\n✨ Who paid + How much + Who used it = Correct split automatically."
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/12-expense%20Split/03-Final%20Settlement.mp4?v=c7e2949a",
-              "title": "🧾 Final Settlement — No Calculations, No Stress",
-              "caption": "💰 See Who Paid What — At the end of your trip, dinner, party or activity, see exactly how much each person paid.\n🧮 Automatically Calculate Everyone’s Share — Based on who participated in each expense, the app calculates exactly how much each person should have paid.\n⚖️ Know the Final Balance — Instantly see who paid extra, who paid less, who owes money and who should receive money.\n🤝 Know Who Pays Whom — Get a simple final settlement such as “John pays Sarah $45” — no manual calculations or confusion.\n📤 Share the Final Settlement — Generate a clean summary or PDF and easily share it with the group through messages, WhatsApp or other apps.\n\n✨ Enjoy the moments → Enter expenses → Let the app calculate → See who pays whom → Share & settle."
-            }
-          ]
-        },
-        {
-          "key": "13-Transactions",
-          "name": "Transactions",
-          "desc": "A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/13-Transactions/01-just%20click%20of%20picture.mp4?v=a5a93f76",
-              "title": "📸 Smart Expense Capture — Just Scan & Go",
-              "caption": "⚡ No More Manual Entry — For any expense, you don’t have to read the receipt and type the amount manually.\n📸 Capture in One Click — Simply take a photo or upload your bill, invoice or receipt.\n💰 Get the Amount Automatically — The app reads the receipt and captures the total amount for your expense.\n🧾 Keep the Receipt Attached — The original bill or receipt stays connected to the transaction for future reference.\n🔍 Always Have the Proof — Need to check an old purchase, expense, reimbursement or payment? Open the transaction and see its supporting receipt anytime.\n\n✨ Click → Capture → Get Amount → Save Expense + Receipt → Always have the proof.",
-              "poster": "content/5-finance-and-wealth/13-Transactions/01-just%20click%20of%20picture.jpeg?v=94ae3ce3"
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/13-Transactions/02-Multiple%20Transactions.mp4?v=2dfa31e8",
-              "title": "📸 Smart Transaction Capture — One Click for Every Financial Activity",
-              "caption": "🔄 Not Just Income & Expenses — Capture documents for income, expenses, transfers, loans, taxes, insurance, investments, payables, receivables and more.\n📸 Scan Instead of Typing — Take a photo or upload a receipt, invoice, statement, confirmation or other financial document instead of manually reading and entering everything.\n🧠 Automatically Capture the Details — Extract important information such as amount, date, merchant/payee, transaction type and reference details.\n🔗 Connect It to the Right Financial Record — Link the transaction to its related bank account, loan, investment, insurance, tax, asset, payable or receivable.\n📎 Always Keep the Proof — Keep the original document attached to the transaction, so months or years later you can see what happened and the supporting proof.\n\n✨ Scan → Capture → Categorize → Connect → Keep the proof — for your entire financial life, not just expenses."
-            },
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/13-Transactions/03-Full%20list%20of%20transaction.mp4?v=2cfd25af",
-              "title": "📋 All Transactions — Everything Recorded, Nothing Lost",
-              "caption": "💳 See Every Transaction in One Place — View your complete history of income, expenses, transfers, loans, investments, taxes, insurance, payables, receivables and more.\n🏷️ Organized by Category — Every transaction is categorized, making it easy to understand where your money came from, where it went and what it was for.\n🧾 Receipts Stay With Transactions — Keep receipts, invoices, bills, confirmations and other supporting documents attached directly to the related transaction.\n🔍 Find Anything Later — Search and filter by category, account, transaction type, date, amount or other details instead of searching through emails and folders.\n📂 Build Your Complete Financial History — Months or years later, open a transaction and see the amount, category, account, related financial activity and original proof together.\n\n✨ Transaction → Category → Account → Receipt → Complete History — everything organized, nothing lost."
-            }
-          ]
+          "slides": []
         }
       ]
     }

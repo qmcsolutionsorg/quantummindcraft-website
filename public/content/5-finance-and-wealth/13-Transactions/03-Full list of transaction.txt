@@ -1,8 +1,0 @@
-📋 All Transactions — Everything Recorded, Nothing Lost
-💳 See Every Transaction in One Place — View your complete history of income, expenses, transfers, loans, investments, taxes, insurance, payables, receivables and more.
-🏷️ Organized by Category — Every transaction is categorized, making it easy to understand where your money came from, where it went and what it was for.
-🧾 Receipts Stay With Transactions — Keep receipts, invoices, bills, confirmations and other supporting documents attached directly to the related transaction.
-🔍 Find Anything Later — Search and filter by category, account, transaction type, date, amount or other details instead of searching through emails and folders.
-📂 Build Your Complete Financial History — Months or years later, open a transaction and see the amount, category, account, related financial activity and original proof together.
-
-✨ Transaction → Category → Account → Receipt → Complete History — everything organized, nothing lost.

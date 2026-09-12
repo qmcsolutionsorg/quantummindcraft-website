@@ -1,8 +1,0 @@
-🛒 Purchase Flow — From Requirement to Vendor Payment
-📝 Create Purchase Requirement / Order — Select the vendor, raw materials, products or services, quantity, price, taxes, delivery date and payment terms.
-📦 Receive Goods or Services — Record full or partial receipts, received quantities and service completion while automatically updating inventory where applicable.
-🧾 Record Vendor Invoice — Connect the vendor invoice directly to the purchase order and goods/service receipt and verify quantity, price and tax.
-💰 Create Payable & Make Payment — Know exactly how much you owe, when it is due and which bank account will pay it. Track full or partial payments.
-🔗 Keep the Complete Purchase History — Maintain vendor → purchase order → receipt → invoice → tax → payable → payment → bank transaction → documents as one connected flow.
-
-✨ Requirement → Purchase Order → Receive → Vendor Invoice → Payable → Payment → Complete.

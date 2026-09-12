@@ -1,8 +1,0 @@
-📸 Smart Expense Capture — Just Scan & Go
-⚡ No More Manual Entry — For any expense, you don’t have to read the receipt and type the amount manually.
-📸 Capture in One Click — Simply take a photo or upload your bill, invoice or receipt.
-💰 Get the Amount Automatically — The app reads the receipt and captures the total amount for your expense.
-🧾 Keep the Receipt Attached — The original bill or receipt stays connected to the transaction for future reference.
-🔍 Always Have the Proof — Need to check an old purchase, expense, reimbursement or payment? Open the transaction and see its supporting receipt anytime.
-
-✨ Click → Capture → Get Amount → Save Expense + Receipt → Always have the proof.

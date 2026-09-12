@@ -1,8 +1,0 @@
-⏱️ Employee Timesheet — Track Time, Tasks & Approvals
-🕐 Maintain Employee Time — Record start time, end time, breaks and total working hours for each day.
-✅ Connect Time to Tasks — Employees can record exactly which task, project, customer or activity they worked on and how much time they spent.
-📅 See the Complete Weekly View — View Monday to Sunday hours, daily totals, task-wise hours, overtime and total weekly working hours.
-👍 Submit & Approve Timesheets — Employees submit their timesheets and managers can review, approve, reject or request corrections.
-📄 Generate & Share PDF — Create a clean timesheet showing employee, dates, tasks, hours, approvals and weekly totals, ready to print or share.
-
-✨ Time → Task → Weekly View → Submit → Approve → PDF — complete timesheet management in one place.

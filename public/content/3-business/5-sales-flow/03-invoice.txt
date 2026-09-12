@@ -1,0 +1,2 @@
+Invoice and payment
+Bill the customer and get paid, posted to your books.

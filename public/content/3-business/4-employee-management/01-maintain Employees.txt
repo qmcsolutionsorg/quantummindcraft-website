@@ -1,8 +1,0 @@
-👥 Employee Management — Everything About Your Team in One Place
-👤 Maintain Complete Employee Profiles — Keep personal details, contact information, job title, department, joining date, manager, employment status and emergency contacts organized.
-💰 Manage Salary & Compensation — Maintain salary, bonuses, allowances, deductions, reimbursements, benefits and payment history for every employee.
-📅 Track Work & Activities — Manage attendance, leave, holidays, schedules, timesheets, tasks, projects, meetings and important employee activities.
-📄 Keep Documents & Records Connected — Store contracts, offer letters, IDs, certificates, tax documents, performance records, expenses and other employee documents in one place.
-📈 Manage the Complete Employee Journey — Follow everything from candidate → hiring → onboarding → active employment → performance → promotion → offboarding, while keeping the complete history.
-
-✨ Employee → Job → Salary → Attendance → Leave → Tasks → Documents → Performance → Complete employment journey.

@@ -1,8 +1,0 @@
-🧾 Invoices, Payments & Tax — Complete Billing in One Place
-📄 Create & Manage Invoices — Generate invoices directly from sales orders, products or services with customer, quantity, price, discounts and payment terms.
-🧮 Calculate Taxes — Apply the appropriate tax rates and tax components, and clearly see subtotal, tax and final invoice amount.
-💰 Track Customer Payments — Record full or partial payments, payment dates, methods and the bank account where the money was received.
-⏳ Know What’s Outstanding — Instantly see Paid, Partially Paid, Overdue and Unpaid invoices, along with the remaining receivable.
-📊 Maintain Tax & Payment History — Keep invoices, taxes, payments, transactions, receipts and supporting documents connected for easier reporting and future reference.
-
-✨ Invoice → Tax → Receivable → Payment → Bank Transaction → Complete financial record.

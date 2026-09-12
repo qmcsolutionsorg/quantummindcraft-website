@@ -1,8 +1,0 @@
-📈 Employee Promotion & Termination — Track Every Career Change
-🚀 Manage Promotions — Record new job title, position, department, manager, grade and promotion effective date.
-💰 Connect Compensation Changes — When promoted, maintain the employee’s new salary, compensation components and effective date while preserving previous salary history.
-🔄 Track Transfers & Role Changes — Maintain department transfers, manager changes, location changes and other employment movements.
-🚪 Manage Resignation & Termination — Record resignation/termination date, last working day, reason, notice period, final settlement and exit status.
-📄 Keep Complete Employment History — Attach promotion letters, salary revision letters, resignation letters, termination documents, exit documents and notes to the employee.
-
-✨ Join → Grow → Promote → Transfer → Compensation Change → Exit — preserve the employee’s complete journey.

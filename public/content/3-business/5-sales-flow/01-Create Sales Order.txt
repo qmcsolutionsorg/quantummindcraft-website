@@ -1,8 +1,0 @@
-🛒 Sales Order & Quotation — Sell Products and Services Easily
-📝 Create Professional Quotations — Build quotations for products, services, quantities, prices, discounts, taxes, terms and validity dates.
-📦 Sell Products & Services — Add physical products, service items, packages or custom charges to the same quotation or sales order.
-✅ Convert Quotation to Sales Order — Once the customer approves, convert the quotation directly into a Sales Order without entering everything again.
-💰 Track Order Value & Customer Commitments — Maintain order amount, taxes, discounts, payment terms, delivery/service dates and customer details.
-📄 Keep the Complete Sales Record Connected — Store quotation, sales order, invoices, payments, receivables, documents and customer history together.
-
-✨ Quotation → Customer Approval → Sales Order → Product/Service Delivery → Invoice → Payment — complete sales flow in one place.

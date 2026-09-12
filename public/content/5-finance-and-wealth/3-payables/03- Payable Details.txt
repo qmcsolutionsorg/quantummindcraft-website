@@ -1,8 +1,0 @@
-💸 Payable Details — Everything Connected to Every Payment
-💳 Post & Track Transactions — Record every payment against the payable and always know what has been paid and what remains.
-📊 Complete Transaction History — See all past payments, amounts, dates and payment accounts in one place.
-🏦 Know the Payment Source — Clearly see which bank account or card each payment is coming from.
-✅ Connect Tasks & Follow-ups — Add related tasks, reminders and actions so nothing associated with the payable gets missed.
-📄 Keep Documents Together — Attach invoices, bills, contracts, receipts and other supporting documents directly to the payable.
-
-✨ Payment → Transactions → Bank Account → Tasks → Documents — everything connected to one payable.

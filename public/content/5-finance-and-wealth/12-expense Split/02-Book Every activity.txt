@@ -1,8 +1,0 @@
-💳 Split Every Activity — Pay, Use & Split Correctly
-🎯 Add Every Shared Activity — Add dinner, hotel, taxi, tickets, shopping, groceries or any other shared expense.
-💰 Enter Who Paid — Simply select who paid and how much they paid for that activity.
-👥 Select Who Used It — Choose exactly who participated in or benefited from that expense.
-🧮 Automatically Distribute the Cost — The expense is split only among the selected people, so everyone gets the correct share.
-⚖️ Get the Final Settlement — After all activities are entered, automatically see who paid more, who owes money, and who should receive money.
-
-✨ Who paid + How much + Who used it = Correct split automatically.

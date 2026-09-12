@@ -1,8 +1,2 @@
-👛 My Wallet — See Where Your Money Is Going
-🏦 All Bank Accounts in One Place — Maintain your bank accounts and quickly see the balance available in each account.
-💸 Know Your Payables — See exactly how much is scheduled to go out from each bank account, including recurring bills, EMIs, subscriptions and other payments.
-💳 Track Cards & Liabilities — Keep credit cards and other liabilities together and understand upcoming payment obligations.
-📊 View Complete Transactions — Open any account to review its income, expenses, payments and transaction history.
-📄 Keep Documents Connected — Store statements, bills, receipts and other documents directly with the related account.
-
-✨ Balance + Payables + Transactions + Documents — know what you have, what you owe, and where your money is going.
+Your wallet
+Every account and balance in one clear view.

@@ -1,8 +1,2 @@
-🛡️ Health Insurance — Know Your Coverage
-📋 Keep All Policy Details Together — Store premiums, coverage limits, policy duration, start dates and renewal dates.
-💰 Track Premiums & Expenses — Know what you pay and keep insurance-related transactions organized.
-🧾 Manage Claims — Record claims, requested amounts, approvals and claim history in one place.
-❤️ Track Your Benefits — Keep dental, vision, massage, prescription and other available benefits easy to find.
-👨‍👩‍👧‍👦 Manage Beneficiaries & Documents — Maintain beneficiaries and important insurance documents for quick access.
-
-✨ Know what you’re covered for, what you’ve used, what you’ve paid, and what’s still available.
+Insurance
+Policies and cover, findable in an emergency

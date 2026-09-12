@@ -1,0 +1,2 @@
+Bill and payment
+Record the bill and pay it, straight to accounts payable.

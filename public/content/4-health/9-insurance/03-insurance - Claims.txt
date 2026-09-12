@@ -1,8 +1,0 @@
-🧾 Insurance Claims — Track Every Claim
-📝 Record Every Claim — Keep submitted claims organized with service details, dates, providers and claimed amounts.
-⏳ Follow Claim Status — Track claims from submitted → under review → approved → paid.
-💰 Know What You Claimed & Received — Compare the total expense, amount claimed, insurance payment and your out-of-pocket cost.
-📄 Keep Supporting Documents Together — Store bills, receipts, prescriptions and other documents with the related claim.
-📊 Maintain Complete Claim History — Quickly look back at previous claims without searching through emails, papers or insurance portals.
-
-✨ Submit. Track. Reconcile. Keep your complete insurance claim history organized in one place.
