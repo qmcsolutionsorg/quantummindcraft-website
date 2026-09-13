@@ -54,7 +54,14 @@
           "key": "5-contacts",
           "name": "Contacts",
           "desc": "Keep the people in your life in one place, with the details and shared history that matter.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/1-Organize/5-contacts/01-contacts.mp4?v=381771b0",
+              "title": "Your people",
+              "caption": "Everyone that matters, with the details you actually need."
+            }
+          ]
         },
         {
           "key": "7-Daily Habbits",
@@ -691,7 +698,14 @@
           "key": "7-tax",
           "name": "Tax",
           "desc": "Plan and organise your tax across countries, so filing season is not a scramble.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/5-finance-and-wealth/7-tax/01-tax.mp4?v=2c19a850",
+              "title": "Tax planning",
+              "caption": "Organise your tax so filing is not a scramble."
+            }
+          ]
         },
         {
           "key": "8-investments",
