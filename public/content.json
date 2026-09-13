@@ -1,39 +1,54 @@
 {
   "features": [
     {
-      "key": "1-personal-growth-Organize",
-      "id": "personal-growth-organize",
+      "key": "1-Organize",
+      "id": "organize",
       "name": "Personal Growth",
       "color": "#0EA5E9",
       "icon": "growth",
       "desc": "Projects, goals, dreams and the things you keep meaning to start — with documentation, deadlines, budgets and progress you can actually see.",
       "extra": "",
-      "background": "content/1-personal-growth-Organize/_background.jpg?v=5c2d4792",
+      "background": "content/1-Organize/_background.jpg?v=5c2d4792",
       "bgOpacity": "0.20",
       "modules": [
         {
           "key": "1-projects",
           "name": "Projects",
           "desc": "Plan and track personal projects end to end — tasks, deadlines, budgets, documents and progress you can actually see.",
-          "slides": []
-        },
-        {
-          "key": "2-goals",
-          "name": "Goals",
-          "desc": "Set goals with target dates and milestones, and watch your progress instead of guessing at it.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/1-Organize/1-projects/01-projects.mp4?v=0c6e9bc9",
+              "title": "📁 Projects — Plan, Manage & Complete Every Project",
+              "caption": "🗂️ Create Different Types of Projects — Manage personal, business, home, school, travel, financial, event, renovation, learning or family projects separately.\n🪜 Plan the Complete Project — Define objectives, phases, milestones, tasks, priorities, start dates, deadlines and project status.\n👥 Share & Collaborate — Add family, friends, employees, partners or other people, assign responsibilities and track who is doing what.\n💰 Plan & Track Your Budget — Set the project budget, record expenses and payments, attach receipts and compare budget vs actual cost.\n📄 Keep Everything Connected — Maintain documents, photos, notes, meetings, tasks, expenses, reminders and important project information together.\n\n✨ Create → Plan → Budget → Collaborate → Track → Complete — manage every project from idea to finish."
+            }
+          ]
         },
         {
           "key": "3-vacations",
           "name": "Vacations",
           "desc": "Plan trips with itineraries, budgets and checklists, then track what you actually spend along the way.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/1-Organize/3-vacations/01-Travel%20Plans.mp4?v=8ff26fa9",
+              "title": "✈️ Travel Planning — Plan Your Complete Trip in One Place",
+              "caption": "🗺️ Plan Your Entire Journey — Create your trip with destinations, dates, itinerary, activities, places to visit, transportation and daily plans.\n💰 Create & Track Your Travel Budget — Plan budgets for flights, hotels, food, transportation, shopping and activities, then compare planned vs actual expenses.\n🎫 Manage All Your Bookings — Keep flights, hotels, trains, rental cars, tours, attractions and restaurant bookings organized with dates, times and confirmation details.\n📄 Keep Travel Documents Together — Store passports, visas, tickets, boarding passes, hotel confirmations, insurance, receipts and other important travel documents with your trip.\n📊 Track Everything During & After the Trip — Record expenses, attach receipts, manage shared/split expenses and see total trip cost, budget remaining and complete travel history.\n\n✨ Dream → Plan → Budget → Book → Travel → Track Expenses → Keep Memories & Documents — your complete trip in one place."
+            }
+          ]
         },
         {
           "key": "4-notes",
           "name": "Notes",
           "desc": "Capture ideas, journals and quick notes in rich text — organised and always with you.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/1-Organize/4-notes/01-notes.mp4?v=b17f07cf",
+              "title": "📂 My Organizer — Everything Important in One Place",
+              "caption": "🗂️ Create Your Own Folders — Organize information into folders like Personal, Family, Finance, Health, Business, School, Travel, Home or anything you choose.\n📄 Keep Your Documents — Store important PDFs, bills, receipts, certificates, agreements, manuals, IDs and other documents where you can easily find them.\n📝 Save Notes & Ideas — Maintain notes, lists, ideas, instructions, important information and things you want to remember.\n🍳 Build Your Recipe Collection — Save your favorite recipes, ingredients, cooking instructions, photos and personal notes in your own organized folders.\n📸 Keep Different Content Together — Maintain documents, notes, photos, recipes and attachments under the right folders instead of having information scattered everywhere.\n\n✨ Folders → Documents → Notes → Photos → Recipes → Everything organized and easy to find."
+            }
+          ]
         },
         {
           "key": "5-contacts",
@@ -42,16 +57,75 @@
           "slides": []
         },
         {
-          "key": "6-self-learning",
-          "name": "Self learning",
-          "desc": "Track courses, reading and skills you are building — turn someday learning into steady progress.",
-          "slides": []
+          "key": "7-Daily Habbits",
+          "name": "Daily Habbits",
+          "desc": "",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/1-Organize/7-Daily%20Habbits/01-habits.mp4?v=323ab47d",
+              "title": "🌟 Daily Habits — Build Better Routines for the Whole Family",
+              "caption": "✅ Create & Track Daily Habits — Maintain habits like brushing teeth, drinking water, reading, exercise, homework, sleep, healthy eating and screen-time limits.\n📅 Record Every Day — Simply mark each habit as completed, missed or partially completed and build your daily history.\n📊 See Your Success Rate — Automatically see daily, weekly and monthly completion percentages, streaks and progress for every habit.\n💡 Get Help Choosing Good Habits — Pick from suggested habits for health, fitness, learning, productivity, self-care, finance and everyday routines instead of creating everything yourself.\n🧒 Make It Kids-Friendly — Give kids simple age-appropriate habits, let them check off their own progress, build streaks and celebrate achievements—helping them learn consistency in a fun way.\n\n✨ Choose a habit → Do it daily → Record it → Build your streak → See your success → Create better routines."
+            }
+          ]
+        },
+        {
+          "key": "8-Upcoming Events",
+          "name": "Upcoming Events",
+          "desc": "",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/1-Organize/8-Upcoming%20Events/01-Events.mp4?v=de1a70dc",
+              "title": "🎟️ Events — Discover, Plan & Never Miss What’s Happening",
+              "caption": "🔍 Browse Events Around You — Discover concerts, exhibitions, festivals, sports, shows, workshops, conferences and family/kids events.\n➕ Add Events Manually — Found an event somewhere else? Simply enter the event name, date, time, venue, location, ticket details and other information.\n❤️ Save What Interests You — Keep interesting events in your list even before deciding to attend, so you can come back to them later.\n⏰ Never Miss an Event — Add events to your schedule and receive reminders for ticket sales, booking deadlines, event dates and start times.\n🎫 Keep Everything Together — Once you decide to go, maintain tickets, bookings, expenses, documents, notes, friends/family attending and related plans with the event.\n\n✨ Discover → Save → Plan → Book → Get Reminded → Enjoy — never miss an event you care about."
+            }
+          ]
+        },
+        {
+          "key": "9-My Daily Planner",
+          "name": "My Daily Planner",
+          "desc": "",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/1-Organize/9-My%20Daily%20Planner/01-daily%20planner.mp4?v=41d4385d",
+              "title": "📔 My Daily Planner — Capture Your Day, Your Way",
+              "caption": "📝 Write Anything About Your Day — Keep daily notes about what happened, what you did, thoughts, experiences and things you want to remember.\n💡 Capture Ideas Instantly — Got a new idea, plan, business thought or something you want to try? Record it before you forget.\n😊 Record Feelings & Moments — Capture your mood, feelings, gratitude, achievements, challenges and special moments throughout the day.\n📸 Add Photos & Memories — Take or upload photos of food, places, activities, family moments, purchases, events or anything meaningful.\n🏷️ Organize Your Daily Life — Categorize entries like Food, Idea, Feeling, Memory, Work, Family, Health, Finance or Personal, then look back at your days anytime.\n\n✨ Write → Capture → Feel → Photograph → Remember — your everyday life, all in one personal planner."
+            }
+          ]
+        },
+        {
+          "key": "10-Library",
+          "name": "Library",
+          "desc": "",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/1-Organize/10-Library/01-My%20Books%20Library.mp4?v=e13b2f84",
+              "title": "📚 My Library — Your Complete Reading World in One Place",
+              "caption": "📖 Maintain All Your Books — Keep school books, textbooks, novels, personal books, reference books, eBooks and digital books organized in your own library.\n🎒 Organize School & Personal Reading — Separate books by school year, subject, category, author, genre or your own collections.\n🪪 Keep Your Library Cards — Maintain public, school, university or other library memberships, including card details, expiry dates and related information.\n📊 Track What You Read — Mark books as Want to Read → Reading → Completed, track reading progress and keep ratings, notes and favorite learnings.\n🔔 Manage Borrowed Books — Record books you borrow, lend or reserve, track due dates and set reminders so books are returned on time.\n\n✨ School Books → Personal Books → Digital Books → Library Cards → Reading Progress → Your lifelong library."
+            }
+          ]
+        },
+        {
+          "key": "11- Lend and borrow",
+          "name": "Lend and borrow",
+          "desc": "",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/1-Organize/11-%20Lend%20and%20borrow/01-lend%20and%20Borrow.mp4?v=62831d93",
+              "title": "🔄 Lend & Borrow — Never Lose Track",
+              "caption": "Track anything you lend to or borrow from friends—books, money, games, tools or other items. Select people directly from your friend list, add return dates/reminders, and quickly check who has your stuff and what you need to return.\n\n✨ Lend → Borrow → Track → Remind → Return — nothing gets forgotten or lost."
+            }
+          ]
         }
       ]
     },
     {
-      "key": "2-family",
-      "id": "family",
+      "key": "2-family and Parenting",
+      "id": "family-and-parenting",
       "name": "Family",
       "color": "#8B5CF6",
       "icon": "family",
@@ -61,63 +135,48 @@
       "bgOpacity": "",
       "modules": [
         {
-          "key": "1-school-activity",
-          "name": "School activity",
-          "desc": "Stay on top of your kids school life — subjects, homework, activities and important dates.",
-          "slides": []
-        },
-        {
-          "key": "2-kids-finances",
+          "key": "1-Parenting",
           "name": "Kids finances",
           "desc": "Give kids their own money space — allowance, savings and a first, safe taste of real finance.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/2-family%20and%20Parenting/1-Parenting/01-Manage%20Long%20distance%20Parenting.mp4?v=62e7517e",
+              "title": "👨‍👩‍👧 Long-Distance & Separated Parenting — Stay Connected Around Your Child",
+              "caption": "Manage important child information between parents in one organized place — school, health, activities, schedules, expenses, travel, emergency information and important contacts. 📄 Keep documents and records together, 💬 maintain parenting-related messages and discussions, and use an approval/request process for things like trips, activities, schedule changes or shared expenses. Maintain a clear history of requests, approvals, decisions and shared information so both parents can stay informed and focused on the child.\n\n✨ Share → Discuss → Request → Approve → Coordinate → Stay connected."
+            }
+          ]
         },
         {
-          "key": "3-payables",
-          "name": "Payables",
-          "desc": "Track what the family owes and when it is due, so no bill or commitment slips through.",
-          "slides": []
-        },
-        {
-          "key": "4-tasks-and-projects",
-          "name": "Tasks and projects",
-          "desc": "Shared to-dos and family projects everyone can see and pitch in on.",
-          "slides": []
+          "key": "2-Finance in Parenting",
+          "name": "Kids finances",
+          "desc": "Give kids their own money space — allowance, savings and a first, safe taste of real finance.",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/2-family%20and%20Parenting/2-Finance%20in%20Parenting/01-Finance%20in%20%20Parenting.mp4?v=6798bdb7",
+              "title": "💰 Shared Parenting Finances — Clear & Organized",
+              "caption": "Define a monthly budget for your child and plan how expenses will be shared between parents. Track school, healthcare, activities, childcare, travel, clothing and other monthly expenses, along with upcoming payables. See who paid what, each parent’s share, outstanding amounts and complete payment history.\n\n✨ Budget → Expenses → Parent Share → Payables → Payments → Clear monthly picture."
+            }
+          ]
         },
         {
           "key": "5-parenting-and-approvals",
           "name": "Parenting and approvals",
           "desc": "Approve your kids permissions, purchases and decisions — stay informed without hovering.",
-          "slides": []
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/2-family%20and%20Parenting/5-parenting-and-approvals/01-Parenting%20approval%20Process.mp4?v=9bfa9b5c",
+              "title": "✅ Parenting Approval Process — Request, Decide & Follow Through",
+              "caption": "📤 Send for Approval — Create a request for travel, school activities, medical decisions, expenses, schedule changes, events, documents or other child-related matters.\n📋 See All Approval Activities — Keep Pending, Approved, Rejected and Changes Requested items together with dates, messages, documents and decision history.\n💬 Discuss Before Deciding — Parents can add comments, questions, supporting documents and important information directly to the request.\n👍 Approve & Create the Action Plan — Once approved, automatically maintain the related tasks, appointments, payments, bookings, reminders and responsibilities.\n📚 Keep the Complete History — Preserve Request → Discussion → Documents → Approval → Tasks → Completion for future reference.\n\n✨ Ask → Discuss → Approve → Act → Complete — clear coordination around every important parenting decision."
+            }
+          ]
         },
         {
-          "key": "6-pick-and-drop",
-          "name": "Pick and drop",
-          "desc": "Coordinate who is picking up whom, so school runs and errands never get missed.",
-          "slides": []
-        },
-        {
-          "key": "7-plans",
-          "name": "Plans",
-          "desc": "Family plans and events in one shared calendar the whole household stays in sync with.",
-          "slides": []
-        },
-        {
-          "key": "8-chats",
-          "name": "Chats",
-          "desc": "Structured messaging for real family situations — decisions, approvals and everyday coordination.",
-          "slides": []
-        },
-        {
-          "key": "9-shared-documents",
-          "name": "Shared documents",
-          "desc": "Keep the family important documents together and reachable the moment you need them.",
-          "slides": []
-        },
-        {
-          "key": "10-kids-mode",
-          "name": "Kids Mode",
-          "desc": "A safe, colourful space just for your children — goals, habits, wishlist, reading and their own money. Free for up to two kids on your plan.",
+          "key": "New folder",
+          "name": "New folder",
+          "desc": "",
           "slides": []
         }
       ]
@@ -734,6 +793,111 @@
               "src": "content/5-finance-and-wealth/13-Transactions/03-Full%20list%20of%20transaction.mp4?v=2cfd25af",
               "title": "📋 All Transactions — Everything Recorded, Nothing Lost",
               "caption": "💳 See Every Transaction in One Place — View your complete history of income, expenses, transfers, loans, investments, taxes, insurance, payables, receivables and more.\n🏷️ Organized by Category — Every transaction is categorized, making it easy to understand where your money came from, where it went and what it was for.\n🧾 Receipts Stay With Transactions — Keep receipts, invoices, bills, confirmations and other supporting documents attached directly to the related transaction.\n🔍 Find Anything Later — Search and filter by category, account, transaction type, date, amount or other details instead of searching through emails and folders.\n📂 Build Your Complete Financial History — Months or years later, open a transaction and see the amount, category, account, related financial activity and original proof together.\n\n✨ Transaction → Category → Account → Receipt → Complete History — everything organized, nothing lost."
+            }
+          ]
+        },
+        {
+          "key": "14- instant bill copy",
+          "name": "Transactions",
+          "desc": "A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/5-finance-and-wealth/14-%20instant%20bill%20copy/01-just%20click%20of%20picture.mp4?v=a5a93f76",
+              "title": "📸 Smart Expense Capture — Just Scan & Go",
+              "caption": "⚡ No More Manual Entry — For any expense, you don’t have to read the receipt and type the amount manually.\n📸 Capture in One Click — Simply take a photo or upload your bill, invoice or receipt.\n💰 Get the Amount Automatically — The app reads the receipt and captures the total amount for your expense.\n🧾 Keep the Receipt Attached — The original bill or receipt stays connected to the transaction for future reference.\n🔍 Always Have the Proof — Need to check an old purchase, expense, reimbursement or payment? Open the transaction and see its supporting receipt anytime.\n\n✨ Click → Capture → Get Amount → Save Expense + Receipt → Always have the proof.",
+              "poster": "content/5-finance-and-wealth/14-%20instant%20bill%20copy/01-just%20click%20of%20picture.jpeg?v=94ae3ce3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "6-personal-growth",
+      "id": "personal-growth",
+      "name": "Personal Growth",
+      "color": "#0EA5E9",
+      "icon": "growth",
+      "desc": "Projects, goals, dreams and the things you keep meaning to start — with documentation, deadlines, budgets and progress you can actually see.",
+      "extra": "",
+      "background": "content/6-personal-growth/_background.jpg?v=5c2d4792",
+      "bgOpacity": "0.20",
+      "modules": [
+        {
+          "key": "1-Learning activity",
+          "name": "School activity",
+          "desc": "Stay on top of your kids school life — subjects, homework, activities and important dates.",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/6-personal-growth/1-Learning%20activity/01-Learning.mp4?v=62831d93",
+              "title": "🎓 Manage Learning — Your Complete Learning Journey",
+              "caption": "Manage everything you’re learning — school, college, university, professional training, certifications or personal learning. 📚 Organize subjects, courses, projects, exams, assignments, budgets, documents and schedules in one place. Track your progress, achievements and important dates, while keeping photos and memories in your learning gallery.\n\n✨ Learn → Plan → Practice → Track → Achieve → Remember."
+            }
+          ]
+        },
+        {
+          "key": "2-Todo",
+          "name": "Goals",
+          "desc": "Set goals with target dates and milestones, and watch your progress instead of guessing at it.",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/6-personal-growth/2-Todo/02-todo.mp4?v=bd31b1cb",
+              "title": "✅ To-Do — Organize Everything You Need to Get Done",
+              "caption": "📝 Create Tasks Instantly — Add personal, family, work, business, school, travel or financial tasks whenever something needs your attention.\n📅 Set Dates, Priority & Reminders — Define due dates, priority, status and reminders so important activities don’t get missed.\n🔗 Connect Tasks to Everything — Link a task to a project, goal, employee, customer, asset, loan, payable, trip, health activity or other related record.\n👥 Assign & Share Tasks — Assign tasks to family members, friends, employees or collaborators and follow their progress.\n📊 Track What’s Done & What’s Next — See Today, Upcoming, Overdue and Completed tasks and track your overall completion progress.\n\n✨ Create → Prioritize → Remind → Collaborate → Complete — one To-Do place for your entire life."
+            }
+          ]
+        },
+        {
+          "key": "3-Exams tracking",
+          "name": "School activity",
+          "desc": "Stay on top of your kids school life — subjects, homework, activities and important dates.",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/6-personal-growth/3-Exams%20tracking/01-Track%20all%20Exams.mp4?v=6c9fc83d",
+              "title": "📝 Exam Tracker — Stay Prepared for Every Exam",
+              "caption": "Track all your upcoming and completed exams in one place — exam dates, subjects, syllabus, preparation progress and reminders. 📚 Record marks, grades and results after each exam and see performance over the school year. 📤 Quickly share or print the complete exam list and results with parents or students.\n\n✨ Upcoming Exams → Prepare → Track Progress → Results → Share."
+            }
+          ]
+        },
+        {
+          "key": "4-Job mangement",
+          "name": "School activity",
+          "desc": "Stay on top of your kids school life — subjects, homework, activities and important dates.",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/6-personal-growth/4-Job%20mangement/1-Manage%20Jobs%20application.mp4?v=413796fd",
+              "title": "💼 Job & Internship Tracker — From Search to Offer",
+              "caption": "Track all your jobs, internships, part-time work and volunteer opportunities in one place. 🎯 Maintain company, role, required skills, application date, interview schedule, documents and application status — Interested → Applied → Interview → Offer → Accepted/Rejected. Compare required skills with what you already have and identify what you need to learn next.\n\n✨ Discover → Build Skills → Apply → Interview → Track → Get the Opportunity."
+            }
+          ]
+        },
+        {
+          "key": "5-Goals",
+          "name": "Goals",
+          "desc": "Set goals with target dates and milestones, and watch your progress instead of guessing at it.",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/6-personal-growth/5-Goals/01-goals.mp4?v=25990c8e",
+              "title": "🎯 Goals — Turn Every Dream Into a Trackable Plan",
+              "caption": "🌟 Create Any Type of Goal — Maintain short-term, long-term, financial, career, education, health, fitness, family, travel, business and personal goals.\n📅 Define Your Target — Set the goal, target date, priority, target amount or measurable result you want to achieve.\n🪜 Break Goals Into Action Steps — Divide bigger goals into milestones, tasks and activities so you know exactly what needs to happen next.\n📊 Track Your Progress — Record achievements and see completion percentage, milestones reached, remaining work and whether you’re on track.\n💰 Connect Goals With Your Life — Link financial goals with savings and investments, career goals with learning, health goals with habits, and other goals with related tasks, documents, expenses and reminders.\n\n✨ Dream → Define → Plan → Take Action → Track Progress → Achieve."
+            }
+          ]
+        },
+        {
+          "key": "6-Wish",
+          "name": "Goals",
+          "desc": "Set goals with target dates and milestones, and watch your progress instead of guessing at it.",
+          "slides": [
+            {
+              "type": "video",
+              "src": "content/6-personal-growth/6-Wish/03-Wishes.mp4?v=1f384bdb",
+              "title": "🌟 My Wishes — Record Everything You Want to Do, Have or Experience",
+              "caption": "💭 Capture Every Wish — Save anything you wish to buy, do, learn, experience, visit or achieve before you forget it.\n🛍️ Save Things From Stores — Found something you like? Keep the product, store, price, photo, link and notes in your wish list for later.\n✈️ Not Just Things to Buy — Add wishes like travel somewhere, attend a concert, try an activity, learn a skill, visit a restaurant or do something with family.\n📅 Turn a Wish Into a Plan — When you’re ready, add a budget, target date, savings goal, tasks and reminders and start working toward it.\n❤️ Track Your Wish Journey — Move wishes through Wish → Planning → Doing → Completed, while keeping photos, documents, expenses and memories connected.\n\n✨ See it → Wish it → Save it → Plan it → Do it → Remember it."
             }
           ]
         }
