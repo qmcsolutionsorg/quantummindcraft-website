@@ -1,2 +1,2 @@
-name: Invoice
-desc: Track raw materials, finished goods and services — stock levels, costs and valuation, always current.
+name: Invoices
+desc: Raise invoices from a sales order or a product, track payments and tax, and see what is still outstanding.

@@ -1,2 +1,2 @@
-name: Goals
-desc: Set goals with target dates and milestones, and watch your progress instead of guessing at it.
+name: Wishlist
+desc: Anything you want to buy, do, learn, visit or achieve — written down before you forget it.

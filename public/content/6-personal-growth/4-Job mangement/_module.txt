@@ -1,2 +1,2 @@
-name: School activity
-desc: Stay on top of your kids school life — subjects, homework, activities and important dates.
+name: Job Applications
+desc: Track every application from search to offer — interviews, contacts, documents and where each one stands.

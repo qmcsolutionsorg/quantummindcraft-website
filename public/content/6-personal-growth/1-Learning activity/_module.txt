@@ -1,2 +1,2 @@
-name: School activity
-desc: Stay on top of your kids school life — subjects, homework, activities and important dates.
+name: Learning
+desc: Courses, skills and study plans in one place — what you are learning, how far you have got, and what is next.

@@ -143,8 +143,8 @@
       "modules": [
         {
           "key": "1-Parenting",
-          "name": "Kids finances",
-          "desc": "Give kids their own money space — allowance, savings and a first, safe taste of real finance.",
+          "name": "Parenting",
+          "desc": "Built for long-distance and separated parenting — plans, approvals, handovers and messages, all around the child.",
           "slides": [
             {
               "type": "video",
@@ -156,8 +156,8 @@
         },
         {
           "key": "2-Finance in Parenting",
-          "name": "Kids finances",
-          "desc": "Give kids their own money space — allowance, savings and a first, safe taste of real finance.",
+          "name": "Shared Parenting Finances",
+          "desc": "Who paid for what, what is owed, and what still needs agreeing — kept clear between both households.",
           "slides": [
             {
               "type": "video",
@@ -316,8 +316,8 @@
         },
         {
           "key": "7-Invoice",
-          "name": "Invoice",
-          "desc": "Track raw materials, finished goods and services — stock levels, costs and valuation, always current.",
+          "name": "Invoices",
+          "desc": "Raise invoices from a sales order or a product, track payments and tax, and see what is still outstanding.",
           "slides": [
             {
               "type": "video",
@@ -761,7 +761,7 @@
         {
           "key": "12-expense Split",
           "name": "Expense Split",
-          "desc": "A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.",
+          "desc": "Dinners, trips and shared shopping — split the bill, see who owes what, and settle up without the arithmetic.",
           "slides": [
             {
               "type": "video",
@@ -787,7 +787,7 @@
         {
           "key": "13-Transactions",
           "name": "Transactions",
-          "desc": "A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.",
+          "desc": "Photograph a receipt and the amount, date and payee are read for you — then filed against the right account, loan or policy with the proof attached.",
           "slides": [
             {
               "type": "video",
@@ -809,20 +809,6 @@
               "caption": "💳 See Every Transaction in One Place — View your complete history of income, expenses, transfers, loans, investments, taxes, insurance, payables, receivables and more.\n🏷️ Organized by Category — Every transaction is categorized, making it easy to understand where your money came from, where it went and what it was for.\n🧾 Receipts Stay With Transactions — Keep receipts, invoices, bills, confirmations and other supporting documents attached directly to the related transaction.\n🔍 Find Anything Later — Search and filter by category, account, transaction type, date, amount or other details instead of searching through emails and folders.\n📂 Build Your Complete Financial History — Months or years later, open a transaction and see the amount, category, account, related financial activity and original proof together.\n\n✨ Transaction → Category → Account → Receipt → Complete History — everything organized, nothing lost."
             }
           ]
-        },
-        {
-          "key": "14- instant bill copy",
-          "name": "Transactions",
-          "desc": "A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.",
-          "slides": [
-            {
-              "type": "video",
-              "src": "content/5-finance-and-wealth/14-%20instant%20bill%20copy/01-just%20click%20of%20picture.mp4?v=a5a93f76",
-              "title": "📸 Smart Expense Capture — Just Scan & Go",
-              "caption": "⚡ No More Manual Entry — For any expense, you don’t have to read the receipt and type the amount manually.\n📸 Capture in One Click — Simply take a photo or upload your bill, invoice or receipt.\n💰 Get the Amount Automatically — The app reads the receipt and captures the total amount for your expense.\n🧾 Keep the Receipt Attached — The original bill or receipt stays connected to the transaction for future reference.\n🔍 Always Have the Proof — Need to check an old purchase, expense, reimbursement or payment? Open the transaction and see its supporting receipt anytime.\n\n✨ Click → Capture → Get Amount → Save Expense + Receipt → Always have the proof.",
-              "poster": "content/5-finance-and-wealth/14-%20instant%20bill%20copy/01-just%20click%20of%20picture.jpeg?v=94ae3ce3"
-            }
-          ]
         }
       ]
     },
@@ -839,8 +825,8 @@
       "modules": [
         {
           "key": "1-Learning activity",
-          "name": "School activity",
-          "desc": "Stay on top of your kids school life — subjects, homework, activities and important dates.",
+          "name": "Learning",
+          "desc": "Courses, skills and study plans in one place — what you are learning, how far you have got, and what is next.",
           "slides": [
             {
               "type": "video",
@@ -852,8 +838,8 @@
         },
         {
           "key": "2-Todo",
-          "name": "Goals",
-          "desc": "Set goals with target dates and milestones, and watch your progress instead of guessing at it.",
+          "name": "To-do",
+          "desc": "Personal, family, work, school or travel tasks — captured the moment they occur to you and sorted out later.",
           "slides": [
             {
               "type": "video",
@@ -865,8 +851,8 @@
         },
         {
           "key": "3-Exams tracking",
-          "name": "School activity",
-          "desc": "Stay on top of your kids school life — subjects, homework, activities and important dates.",
+          "name": "Exams",
+          "desc": "Every exam by school year, with topics to revise, preparation you can see, and results once they arrive.",
           "slides": [
             {
               "type": "video",
@@ -878,8 +864,8 @@
         },
         {
           "key": "4-Job mangement",
-          "name": "School activity",
-          "desc": "Stay on top of your kids school life — subjects, homework, activities and important dates.",
+          "name": "Job Applications",
+          "desc": "Track every application from search to offer — interviews, contacts, documents and where each one stands.",
           "slides": [
             {
               "type": "video",
@@ -904,8 +890,8 @@
         },
         {
           "key": "6-Wish",
-          "name": "Goals",
-          "desc": "Set goals with target dates and milestones, and watch your progress instead of guessing at it.",
+          "name": "Wishlist",
+          "desc": "Anything you want to buy, do, learn, visit or achieve — written down before you forget it.",
           "slides": [
             {
               "type": "video",

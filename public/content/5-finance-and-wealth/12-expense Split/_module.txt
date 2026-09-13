@@ -1,2 +1,2 @@
 name: Expense Split
-desc: A start-of-month briefing — what is coming in, what is going out, and exactly how much is safe to spend.
+desc: Dinners, trips and shared shopping — split the bill, see who owes what, and settle up without the arithmetic.

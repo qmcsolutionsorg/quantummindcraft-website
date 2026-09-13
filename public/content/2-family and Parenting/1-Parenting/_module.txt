@@ -1,2 +1,2 @@
-name: Kids finances
-desc: Give kids their own money space — allowance, savings and a first, safe taste of real finance.
+name: Parenting
+desc: Built for long-distance and separated parenting — plans, approvals, handovers and messages, all around the child.
