@@ -162,7 +162,16 @@
         <span class="eyebrow">Contact us</span>
         <h2>Talk to us</h2>
         <p>Questions, feedback, or partnership ideas — we read every message.</p>
-        <a class="btn btn-primary" href="mailto:info@quantummindcraft.com">info@quantummindcraft.com</a>
+        <!-- Copies rather than opening a mail client: a mailto: on a desktop
+             with no mail app configured just prompts the visitor to set one
+             up, which is where most of them gave up. -->
+        <button class="btn btn-primary copy-mail" type="button"
+                data-copy="info@quantummindcraft.com">
+          <span class="copy-mail-label">info@quantummindcraft.com</span>
+        </button>
+        <p class="copy-mail-alt">
+          <a href="mailto:info@quantummindcraft.com">or open your mail app</a>
+        </p>
       </div>
     </section>
   </main>
@@ -185,7 +194,7 @@
         <h5>Get the app</h5>
         <a href="https://apps.apple.com/in/app/quantrolplus/id6759055918" target="_blank" rel="noopener">App Store</a>
         <a href="https://play.google.com/store/apps/details?id=com.mycompany.routinemashup" target="_blank" rel="noopener">Google Play</a>
-        <a href="mailto:info@quantummindcraft.com">Contact us</a>
+        <a href="#contact">Contact us</a>
       </div>
       <div class="footer-col">
         <h5>Follow</h5>
@@ -201,7 +210,10 @@
     </div>
     <div class="container footer-bottom">
       <span>© <span id="year"></span> QuantumMindCraft. All rights reserved.</span>
-      <span>info@quantummindcraft.com</span>
+      <button class="copy-mail copy-mail-plain" type="button"
+              data-copy="info@quantummindcraft.com">
+        <span class="copy-mail-label">info@quantummindcraft.com</span>
+      </button>
     </div>
   </footer>
 

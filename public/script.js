@@ -11,6 +11,67 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ── Copy the contact address ───────────────────────────────────────────────
+  // A mailto: link is a dead end on a desktop with no mail client configured —
+  // the browser can only offer to set one up. Copying keeps the address on
+  // screen and puts it on the clipboard in one tap.
+  (function copyMail() {
+    var buttons = document.querySelectorAll(".copy-mail");
+    if (!buttons.length) return;
+
+    // navigator.clipboard needs a secure context and is missing on older
+    // browsers, so fall back to the old selection trick rather than failing
+    // silently and leaving the visitor with nothing.
+    function copy(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      }
+      return new Promise(function (resolve, reject) {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+        document.body.removeChild(ta);
+        ok ? resolve() : reject();
+      });
+    }
+
+    Array.prototype.forEach.call(buttons, function (btn) {
+      var label = btn.querySelector(".copy-mail-label");
+      var address = btn.getAttribute("data-copy") || "";
+      var original = label ? label.textContent : address;
+      var revert;
+
+      btn.setAttribute("aria-label", "Copy " + address + " to clipboard");
+
+      btn.addEventListener("click", function () {
+        copy(address).then(function () {
+          show("Copied ✓");
+        }, function () {
+          // Copying was refused. Say so and leave the address visible, which
+          // is still selectable by hand.
+          show("Press Ctrl+C to copy");
+        });
+      });
+
+      function show(msg) {
+        if (!label) return;
+        label.textContent = msg;
+        btn.classList.add("copied");
+        window.clearTimeout(revert);
+        revert = window.setTimeout(function () {
+          label.textContent = original;
+          btn.classList.remove("copied");
+        }, 1800);
+      }
+    });
+  })();
+
   // Navbar background on scroll
   var nav = document.getElementById("nav");
   function onScroll() {
