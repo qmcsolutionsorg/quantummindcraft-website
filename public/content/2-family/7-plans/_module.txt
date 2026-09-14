@@ -1,2 +1,0 @@
-name: Plans
-desc: Family plans and events in one shared calendar the whole household stays in sync with.

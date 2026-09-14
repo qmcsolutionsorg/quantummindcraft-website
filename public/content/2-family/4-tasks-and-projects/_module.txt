@@ -1,2 +1,0 @@
-name: Tasks and projects
-desc: Shared to-dos and family projects everyone can see and pitch in on.

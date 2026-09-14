@@ -1,0 +1,2 @@
+name: Wishlist
+desc: Anything you want to buy, do, learn, visit or achieve — written down before you forget it.

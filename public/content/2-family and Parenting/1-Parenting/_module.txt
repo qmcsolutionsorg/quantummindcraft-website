@@ -1,0 +1,2 @@
+name: Parenting
+desc: Built for long-distance and separated parenting — plans, approvals, handovers and messages, all around the child.

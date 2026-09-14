@@ -1,0 +1,2 @@
+name: Transactions
+desc: Photograph a receipt and the amount, date and payee are read for you — then filed against the right account, loan or policy with the proof attached.

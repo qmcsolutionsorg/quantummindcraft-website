@@ -1,0 +1,2 @@
+name: Learning
+desc: Courses, skills and study plans in one place — what you are learning, how far you have got, and what is next.

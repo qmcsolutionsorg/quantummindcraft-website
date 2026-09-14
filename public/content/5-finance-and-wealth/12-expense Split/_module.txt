@@ -1,0 +1,2 @@
+name: Expense Split
+desc: Dinners, trips and shared shopping — split the bill, see who owes what, and settle up without the arithmetic.

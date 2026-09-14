@@ -1,2 +1,0 @@
-name: Payables
-desc: Track what the family owes and when it is due, so no bill or commitment slips through.

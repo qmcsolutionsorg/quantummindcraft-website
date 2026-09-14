@@ -1,2 +1,0 @@
-A holding
-Cost, current value and gain.

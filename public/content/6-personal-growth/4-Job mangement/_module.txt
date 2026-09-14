@@ -1,0 +1,2 @@
+name: Job Applications
+desc: Track every application from search to offer — interviews, contacts, documents and where each one stands.

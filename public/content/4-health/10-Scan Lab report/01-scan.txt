@@ -1,0 +1,8 @@
+📄✨ Smart Scan Lab Reports
+📸 Scan & Capture Automatically — Scan your lab report and capture important test results without entering everything manually.
+🎯 Accurate Result Tracking — Store each test with its result, unit, and reference range for easy comparison.
+🚨 Highlight Critical Readings — Quickly identify values that are high, low, or outside the provided laboratory range so important results stand out.
+📊 Build Your Health History — Keep important readings over time and easily compare how your results change across different reports.
+🗄️ Keep What Matters, Archive the Rest — Maintain key health data for quick access while moving older reports and supporting information to your archive.
+
+✨ Scan. Capture. Compare. Spot important changes. Keep your health records organized.

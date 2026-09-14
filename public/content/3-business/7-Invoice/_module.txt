@@ -1,0 +1,2 @@
+name: Invoices
+desc: Raise invoices from a sales order or a product, track payments and tax, and see what is still outstanding.

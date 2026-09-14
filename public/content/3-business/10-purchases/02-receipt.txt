@@ -1,2 +1,0 @@
-Goods receipt
-Receive stock, inventory updates instantly.

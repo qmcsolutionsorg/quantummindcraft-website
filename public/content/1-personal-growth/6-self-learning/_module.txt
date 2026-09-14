@@ -1,2 +1,0 @@
-name: Self learning
-desc: Track courses, reading and skills you are building — turn someday learning into steady progress.

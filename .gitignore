@@ -3,3 +3,9 @@ firebase-debug.log*
 node_modules/
 .DS_Store
 Thumbs.db
+
+# Office lock files and Windows shortcuts. A ~$ lock file and a public.lnk
+# were committed into public/content/ and would have been published to the
+# live site — everything under public/ is served.
+~$*
+*.lnk
