@@ -313,7 +313,17 @@ img { max-width: 100%; display: block; }
    the bubbles below the size their labels need */
 .topic-wrap { margin: 14px -24px 0; padding: 26px 24px; overflow-x: auto; overflow-y: hidden; }
 .topic-sizer { min-width: 1040px; container-type: inline-size; }
-.topic-field { position: relative; aspect-ratio: 1200 / 560; perspective: 1400px; }
+/* --vw/--vh are set by script.js to whichever canvas it packed into, so the
+   field always holds the right shape — landscape on a desktop, portrait on a
+   phone. The literals are the fallback if the script has not run yet. */
+.topic-field { position: relative; aspect-ratio: var(--vw, 1200) / var(--vh, 560); perspective: 1400px; }
+
+/* On a phone the field is packed portrait, so it fits the width and scrolls
+   DOWN with the page. Forcing 1040px here is what used to push it sideways. */
+@media (max-width: 1039px) {
+  .topic-wrap { overflow-x: visible; margin-inline: 0; padding-inline: 0; }
+  .topic-sizer { min-width: 0; }
+}
 /* The logo watermark. It hangs off the section rather than the field, because
    the field sits in a horizontally-scrolling wrapper that clips vertically —
    inside it the mark could never reach above the field's top edge.

@@ -272,7 +272,17 @@
      written out as percentages, so it never needs re-measuring or re-packing
      when the window changes size — .topic-field just keeps that aspect ratio. */
 
+  /* The virtual canvas the field is packed into. Landscape on a desktop; on a
+     phone it flips to portrait so the bubbles stack DOWN the page instead of
+     running off the side. Packing into a tall canvas beats scaling the wide one
+     down — shrinking a 1200px field into 380px makes every label unreadable. */
   var VW = 1200, VH = 560;
+  function topicCanvas() {
+    var w = window.innerWidth || 1200;
+    if (w < 700)  return { w: 620,  h: 1500 };  // phone — one or two per row
+    if (w < 1040) return { w: 900,  h: 900  };  // tablet — squarish
+    return { w: 1200, h: 560 };
+  }
   var topicItems = [];          // { f, mod, g, r, x, y, z, dn, el }
   var topic3d = null, topicDetail = null;
 
@@ -301,10 +311,16 @@
 
     var groups = items.reduce(function (m, it) { return Math.max(m, it.g); }, 0) + 1;
     var cent = [];
+    // Features spread along the LONG axis: across on a wide canvas, down a tall
+    // one. Spreading across a portrait canvas would stack every feature on top
+    // of the next and defeat the clustering entirely.
+    var tall = VH > VW;
     for (i = 0; i < groups; i++) {
+      var along = groups > 1 ? 0.10 + (i / (groups - 1)) * 0.80 : 0.5;
+      var across = i % 2 ? 0.62 : 0.38;
       cent.push({
-        x: VW * (groups > 1 ? 0.13 + (i / (groups - 1)) * 0.74 : 0.5),
-        y: VH * (i % 2 ? 0.63 : 0.37)
+        x: VW * (tall ? across : along),
+        y: VH * (tall ? along  : across)
       });
     }
 
@@ -395,6 +411,13 @@
     });
     if (!topicItems.length) return;
 
+    // Pack into whichever canvas suits this screen, and tell CSS its shape so
+    // .topic-field holds the right aspect ratio.
+    var canvas = topicCanvas();
+    VW = canvas.w; VH = canvas.h;
+    field.style.setProperty("--vw", VW);
+    field.style.setProperty("--vh", VH);
+
     packTopics(topicItems);
 
     var rnd = rng(0x9e37);
@@ -428,6 +451,39 @@
 
     renderTopicLegend(features, legend);
     clearTopicDetail();
+
+    /* Re-pack when the screen crosses a breakpoint — a phone turned sideways
+       should get the landscape field, not a portrait one squeezed into it.
+       Guarded on the canvas actually changing, because mobile browsers fire
+       resize on every address-bar show/hide and re-packing 50 bubbles on each
+       of those would be visible. */
+    var lastCanvas = VW + "x" + VH;
+    var repackTimer;
+    window.addEventListener("resize", function () {
+      var next = topicCanvas();
+      if (next.w + "x" + next.h === lastCanvas) return;
+      window.clearTimeout(repackTimer);
+      repackTimer = window.setTimeout(function () {
+        var c = topicCanvas();
+        if (c.w + "x" + c.h === lastCanvas) return;
+        lastCanvas = c.w + "x" + c.h;
+        VW = c.w; VH = c.h;
+        field.style.setProperty("--vw", VW);
+        field.style.setProperty("--vh", VH);
+        // radii were scaled to the old canvas, so start from the name again
+        topicItems.forEach(function (it) { it.r = topicRadius(it.mod.name); });
+        packTopics(topicItems);
+        topicItems.forEach(function (it, i) {
+          if (!it.el) return;
+          it.el.style.setProperty("--x", (it.x / VW * 100).toFixed(3));
+          it.el.style.setProperty("--y", (it.y / VH * 100).toFixed(3));
+          it.el.style.setProperty("--d", (it.r * 2 / VW * 100).toFixed(3));
+          it.el.style.setProperty("--z", it.z.toFixed(1) + "px");
+          it.el.style.setProperty("--dn", it.dn.toFixed(3));
+          it.el.style.setProperty("--i", String(i));
+        });
+      }, 200);
+    });
 
     // gentle parallax — the bubbles sit at different depths, so tilting the
     // whole field is what makes it read as 3D rather than as flat circles
