@@ -96,6 +96,44 @@ img { max-width: 100%; display: block; }
 .copy-mail-alt a { color: var(--text-faint); text-decoration: underline; }
 .copy-mail-alt a:hover { color: var(--text); }
 
+/* ===== Contact routing ===== */
+/* Four addresses, each with the one thing it is for. auto-fit means four
+   across on a desktop and one per row on a phone, with no breakpoints. */
+.contact-grid {
+  display: grid; gap: 16px; margin-top: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.contact-card {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 20px 18px; border-radius: 16px;
+  background: rgba(255,255,255,.04); border: 1px solid var(--border);
+  text-align: left; transition: border-color .2s, background .2s, transform .2s;
+}
+.contact-card:hover {
+  border-color: rgba(96,165,250,.45); background: rgba(255,255,255,.06);
+  transform: translateY(-2px);
+}
+.contact-role {
+  font-weight: 800; font-size: .78rem; letter-spacing: .08em;
+  text-transform: uppercase; color: #60A5FA;
+}
+.contact-when {
+  margin: 0; font-size: .9rem; line-height: 1.5; color: var(--text-faint);
+  flex: 1;   /* pushes every address to the same baseline across the row */
+}
+/* The address is a button so it can copy, but it must read as a link. */
+.contact-mail {
+  background: none; border: 0; padding: 0; margin-top: 4px;
+  font: inherit; font-weight: 700; font-size: .92rem;
+  color: var(--text); cursor: pointer; text-align: left;
+  word-break: break-all;   /* long addresses must not widen the card */
+}
+.contact-mail:hover { color: #60A5FA; }
+.contact-mail.copied { color: #12b886; }
+.contact-mail .copy-mail-label { min-width: 0; text-align: left; }
+
+.contact-alt { text-align: center; margin-top: 22px; }
+
 /* ===== Store badges ===== */
 .store-badge { display: inline-flex; align-items: center; gap: 12px; padding: 11px 20px; border-radius: 14px; background: rgba(255,255,255,.06); border: 1px solid var(--border); color: var(--text); transition: transform .2s, background .2s, border-color .2s; }
 .store-badge:hover { transform: translateY(-2px); background: rgba(255,255,255,.1); border-color: rgba(120,150,220,.35); }

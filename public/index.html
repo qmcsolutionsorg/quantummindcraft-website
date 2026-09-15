@@ -161,18 +161,60 @@
       <div class="container section-head reveal">
         <span class="eyebrow">Contact us</span>
         <h2>Talk to us</h2>
-        <p>Questions, feedback, or partnership ideas — we read every message.</p>
-        <!-- Copies rather than opening a mail client: a mailto: on a desktop
-             with no mail app configured just prompts the visitor to set one
-             up, which is where most of them gave up. -->
-        <button class="btn btn-primary copy-mail" type="button"
-                data-copy="info@quantummindcraft.com">
-          <span class="copy-mail-label">info@quantummindcraft.com</span>
-        </button>
-        <p class="copy-mail-alt">
-          <a href="mailto:info@quantummindcraft.com">or open your mail app</a>
-        </p>
+        <p>Pick the address that fits — it reaches the right person faster than a
+          general enquiry does.</p>
       </div>
+
+      <!-- Four addresses, each with the one thing it is for. Every address
+           copies to the clipboard rather than firing a mailto:, because on a
+           desktop with no mail client configured mailto: only offers to set one
+           up, which is where most visitors gave up. -->
+      <div class="container contact-grid reveal">
+        <div class="contact-card">
+          <span class="contact-role">Support</span>
+          <p class="contact-when">Something not working, a question about how a
+            feature behaves, or you are stuck.</p>
+          <button class="copy-mail contact-mail" type="button"
+                  data-copy="support@quantummindcraft.com">
+            <span class="copy-mail-label">support@quantummindcraft.com</span>
+          </button>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-role">Billing</span>
+          <p class="contact-when">Subscriptions, invoices, refunds, or anything
+            about a payment.</p>
+          <button class="copy-mail contact-mail" type="button"
+                  data-copy="billing@quantummindcraft.com">
+            <span class="copy-mail-label">billing@quantummindcraft.com</span>
+          </button>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-role">General</span>
+          <p class="contact-when">Anything else — questions, feedback, or if you
+            are not sure who to ask.</p>
+          <button class="copy-mail contact-mail" type="button"
+                  data-copy="info@quantummindcraft.com">
+            <span class="copy-mail-label">info@quantummindcraft.com</span>
+          </button>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-role">Partnerships</span>
+          <p class="contact-when">Press, partnership ideas, or anything that
+            should reach the founder directly.</p>
+          <button class="copy-mail contact-mail" type="button"
+                  data-copy="founder@quantummindcraft.com">
+            <span class="copy-mail-label">founder@quantummindcraft.com</span>
+          </button>
+        </div>
+      </div>
+
+      <p class="container copy-mail-alt contact-alt">
+        Clicking an address copies it. Prefer your mail app?
+        <a href="mailto:info@quantummindcraft.com">Open a message instead</a>.
+      </p>
     </section>
   </main>
 
