@@ -96,6 +96,44 @@ img { max-width: 100%; display: block; }
 .copy-mail-alt a { color: var(--text-faint); text-decoration: underline; }
 .copy-mail-alt a:hover { color: var(--text); }
 
+/* ===== Contact routing ===== */
+/* Four addresses, each with the one thing it is for. auto-fit means four
+   across on a desktop and one per row on a phone, with no breakpoints. */
+.contact-grid {
+  display: grid; gap: 16px; margin-top: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.contact-card {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 20px 18px; border-radius: 16px;
+  background: rgba(255,255,255,.04); border: 1px solid var(--border);
+  text-align: left; transition: border-color .2s, background .2s, transform .2s;
+}
+.contact-card:hover {
+  border-color: rgba(96,165,250,.45); background: rgba(255,255,255,.06);
+  transform: translateY(-2px);
+}
+.contact-role {
+  font-weight: 800; font-size: .78rem; letter-spacing: .08em;
+  text-transform: uppercase; color: #60A5FA;
+}
+.contact-when {
+  margin: 0; font-size: .9rem; line-height: 1.5; color: var(--text-faint);
+  flex: 1;   /* pushes every address to the same baseline across the row */
+}
+/* The address is a button so it can copy, but it must read as a link. */
+.contact-mail {
+  background: none; border: 0; padding: 0; margin-top: 4px;
+  font: inherit; font-weight: 700; font-size: .92rem;
+  color: var(--text); cursor: pointer; text-align: left;
+  word-break: break-all;   /* long addresses must not widen the card */
+}
+.contact-mail:hover { color: #60A5FA; }
+.contact-mail.copied { color: #12b886; }
+.contact-mail .copy-mail-label { min-width: 0; text-align: left; }
+
+.contact-alt { text-align: center; margin-top: 22px; }
+
 /* ===== Store badges ===== */
 .store-badge { display: inline-flex; align-items: center; gap: 12px; padding: 11px 20px; border-radius: 14px; background: rgba(255,255,255,.06); border: 1px solid var(--border); color: var(--text); transition: transform .2s, background .2s, border-color .2s; }
 .store-badge:hover { transform: translateY(-2px); background: rgba(255,255,255,.1); border-color: rgba(120,150,220,.35); }
@@ -234,6 +272,30 @@ img { max-width: 100%; display: block; }
 .topic-tagline { position: relative; z-index: 2; text-align: center; margin: 16px auto -24px;
   font-family: var(--font); font-weight: 800; letter-spacing: -.01em;
   font-size: clamp(1.15rem, 2vw, 1.6rem); color: var(--text); }
+
+/* The product name in the app icon's own petal colours — magenta, red, orange,
+   amber, green, teal, blue — left to right, in the order they sit around the
+   icon. `color` is set first as the fallback: if background-clip:text is not
+   supported the name still reads, rather than disappearing into transparent. */
+.brand-rainbow {
+  /* A step larger than the line it sits in, so the product name leads and the
+     tagline follows. em, not px — it tracks the clamp() on .topic-tagline
+     instead of fighting it at small widths. */
+  font-size: 1.25em;
+  color: #F59E0B;
+  background: linear-gradient(100deg,
+    #AB47BC 0%,    /* graduation cap  */
+    #E53935 18%,   /* heart           */
+    #F57C00 34%,   /* plane           */
+    #FBBF24 50%,   /* wallet          */
+    #43A047 66%,   /* briefcase       */
+    #00897B 82%,   /* document        */
+    #2563EB 100%   /* target + cross  */
+  );
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
 .topic-leg { display: inline-flex; align-items: center; gap: 9px; padding: 8px 15px; border-radius: 999px;
   font-family: var(--font); font-size: .84rem; font-weight: 600; color: var(--text-dim); cursor: pointer;
   background: rgba(255,255,255,.04); border: 1px solid var(--border);
@@ -251,7 +313,17 @@ img { max-width: 100%; display: block; }
    the bubbles below the size their labels need */
 .topic-wrap { margin: 14px -24px 0; padding: 26px 24px; overflow-x: auto; overflow-y: hidden; }
 .topic-sizer { min-width: 1040px; container-type: inline-size; }
-.topic-field { position: relative; aspect-ratio: 1200 / 560; perspective: 1400px; }
+/* --vw/--vh are set by script.js to whichever canvas it packed into, so the
+   field always holds the right shape — landscape on a desktop, portrait on a
+   phone. The literals are the fallback if the script has not run yet. */
+.topic-field { position: relative; aspect-ratio: var(--vw, 1200) / var(--vh, 560); perspective: 1400px; }
+
+/* On a phone the field is packed portrait, so it fits the width and scrolls
+   DOWN with the page. Forcing 1040px here is what used to push it sideways. */
+@media (max-width: 1039px) {
+  .topic-wrap { overflow-x: visible; margin-inline: 0; padding-inline: 0; }
+  .topic-sizer { min-width: 0; }
+}
 /* The logo watermark. It hangs off the section rather than the field, because
    the field sits in a horizontally-scrolling wrapper that clips vertically —
    inside it the mark could never reach above the field's top edge.

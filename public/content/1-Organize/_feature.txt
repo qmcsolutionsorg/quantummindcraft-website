@@ -1,5 +1,5 @@
-name: Personal Growth
+name: Organize
 color: #0EA5E9
 icon: growth
-desc: Projects, goals, dreams and the things you keep meaning to start — with documentation, deadlines, budgets and progress you can actually see.
+desc: Notes, contacts, your daily planner, what you have lent out and what is coming up — the everyday admin that otherwise lives on scraps of paper.
 bgopacity: 0.20
