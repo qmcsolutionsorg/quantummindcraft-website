@@ -226,6 +226,77 @@ var features = dirs(CONTENT).map(function (fdir) {
 
 fs.writeFileSync(OUT, JSON.stringify({ features: features }, null, 2));
 
+/* ── Crawlable copy, a sitemap and robots.txt ────────────────────────────────
+ *
+ * Google reported the homepage as "Crawled — currently not indexed", so the
+ * site appeared nowhere in search. The cause is that the page a crawler
+ * receives is a shell: every feature and module name lives in content.json and
+ * is injected by script.js. Google can render JavaScript, but it is a deferred
+ * second pass and thin first-pass HTML is exactly what gets skipped.
+ *
+ * So the same data that becomes content.json is also written into index.html
+ * as real markup, between two markers. It is not hidden — hiding text from
+ * users while showing it to crawlers is cloaking, and is punished. It sits in
+ * the footer as a plain index of everything the app covers, which is honestly
+ * useful to a visitor too.
+ */
+function esc(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+var indexHtml = path.join(ROOT, "public", "index.html");
+var START = "<!-- BUILD:INDEX -->";
+var END = "<!-- /BUILD:INDEX -->";
+
+var block = [START,
+  '<section class="site-index" aria-label="Everything QuantrolPlus covers">',
+  '<div class="container">',
+  '<h2>Everything QuantrolPlus covers</h2>'];
+
+features.forEach(function (f) {
+  block.push('<div class="site-index-group">');
+  block.push("<h3>" + esc(f.name) + "</h3>");
+  if (f.desc) block.push("<p>" + esc(f.desc) + "</p>");
+  block.push("<ul>");
+  f.modules.forEach(function (m) {
+    block.push("<li><strong>" + esc(m.name) + "</strong>"
+      + (m.desc ? " — " + esc(m.desc) : "") + "</li>");
+  });
+  block.push("</ul></div>");
+});
+block.push("</div></section>", END);
+
+var html = fs.readFileSync(indexHtml, "utf8");
+var a = html.indexOf(START), b = html.indexOf(END);
+if (a >= 0 && b > a) {
+  html = html.slice(0, a) + block.join("\n") + html.slice(b + END.length);
+  fs.writeFileSync(indexHtml, html);
+  console.log("index.html: crawlable index rewritten");
+} else {
+  console.log("index.html: WARNING - BUILD:INDEX markers not found, skipped");
+}
+
+// One page, so the sitemap is short — but "No referring sitemaps detected" is
+// what Search Console says today, and an explicit sitemap is how Google is
+// told the page is meant to be indexed.
+fs.writeFileSync(path.join(ROOT, "public", "sitemap.xml"),
+  '<?xml version="1.0" encoding="UTF-8"?>\n' +
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+  "  <url>\n" +
+  "    <loc>https://quantummindcraft.com/</loc>\n" +
+  "    <lastmod>" + new Date().toISOString().slice(0, 10) + "</lastmod>\n" +
+  "    <changefreq>weekly</changefreq>\n" +
+  "  </url>\n" +
+  "</urlset>\n");
+
+fs.writeFileSync(path.join(ROOT, "public", "robots.txt"),
+  "User-agent: *\n" +
+  "Allow: /\n\n" +
+  "Sitemap: https://quantummindcraft.com/sitemap.xml\n");
+
+console.log("sitemap.xml and robots.txt written");
+
 var mods = features.reduce(function (n, f) { return n + f.modules.length; }, 0);
 var pics = features.reduce(function (n, f) {
   return n + f.modules.reduce(function (m, mod) { return m + mod.slides.length; }, 0);

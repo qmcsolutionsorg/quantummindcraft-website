@@ -701,3 +701,20 @@ body.stage-open { overflow: hidden; }
   font-size: .8rem; color: var(--text-faint);
 }
 .footer-legal .sep { opacity: .5; }
+
+/* ===== Crawlable index ===== */
+/* Generated into index.html by build-content.js. Visible and readable — it is
+   a plain index of every module, useful to a person and legible to a crawler.
+   Deliberately not hidden: showing text to search engines that users cannot
+   see is cloaking. */
+.site-index { padding: 56px 0 24px; border-top: 1px solid var(--border); }
+.site-index h2 { font-size: 1.5rem; margin-bottom: 8px; }
+.site-index-group { margin-top: 26px; }
+.site-index-group h3 { font-size: 1.05rem; color: var(--blue-glow); margin-bottom: 4px; }
+.site-index-group > p { color: var(--text-dim); font-size: .92rem; margin-bottom: 10px; }
+.site-index ul {
+  list-style: none; display: grid; gap: 7px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.site-index li { color: var(--text-faint); font-size: .88rem; line-height: 1.5; }
+.site-index li strong { color: var(--text-dim); }
