@@ -690,3 +690,14 @@ body.stage-open { overflow: hidden; }
   .topic-wrap.visible .topic-bub.reform { animation-duration: .12s; }
   .expander-inner { opacity: 1; transform: none; }
 }
+
+/* Legal entity line — quiet, but present. D&B rejected the D-U-N-S request
+   because no external source tied the registered name to the address; this is
+   the public record that check looks for. */
+.footer-legal {
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  padding-top: 20px; margin-bottom: 4px;
+  border-top: 1px solid var(--border);
+  font-size: .8rem; color: var(--text-faint);
+}
+.footer-legal .sep { opacity: .5; }
