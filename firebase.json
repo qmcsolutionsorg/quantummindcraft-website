@@ -11,6 +11,11 @@
     "cleanUrls": true,
     "rewrites": [
       {
+        "source": "/get",
+        "function": "smartLink",
+        "region": "us-central1"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
