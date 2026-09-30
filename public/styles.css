@@ -62,6 +62,9 @@ img { max-width: 100%; display: block; }
 .nav-links a { color: var(--text-dim); font-size: 14px; white-space: nowrap; font-weight: 500; transition: color .2s; }
 .nav-links a:hover { color: var(--text); }
 .nav-cta { margin-left: 8px; }
+/* Desktop shows the full label; the short one only appears on a phone. */
+.cta-short { display: none; }
+.cta-long  { display: inline; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
 .nav-toggle span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: .3s; }
 .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -642,7 +645,15 @@ body.stage-open { overflow: hidden; }
   .topic-swipe { display: block; }
 }
 @media (max-width: 1080px) {
-  .nav-links, .nav-cta { display: none; }
+  /* The nav LINKS collapse into the menu; the install button does not.
+     It used to be hidden with them, which left a phone visitor — the one most
+     able to install right now — with no way to do it without opening a menu
+     first. It is the only thing in the header worth a tap, so it stays. */
+  .nav-links { display: none; }
+  .nav-cta { margin-left: auto; margin-right: 4px; }
+  .nav-install { padding: 9px 16px; font-size: 13px; }
+  .cta-long  { display: none; }
+  .cta-short { display: inline; }
   .nav-toggle { display: flex; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .split { grid-template-columns: 1fr; gap: 40px; }

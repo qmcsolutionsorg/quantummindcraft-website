@@ -59,8 +59,19 @@
         <a href="#top">Home</a>
         <a href="#contact" data-nav-tail>Contact us</a>
       </nav>
+      <!-- Points at /get rather than the #download section: the smart link
+           sends a phone straight to its own store, which is one tap instead of
+           three, and counts the click under "site-header" so this button's
+           worth is measurable rather than assumed.
+
+           Two labels, one button. "Get the App" needs the room a desktop has;
+           on a phone the same button has to share a 74px bar with the logo and
+           the menu, so it becomes "Install". Same link, same counter. -->
       <div class="nav-cta">
-        <a href="#download" class="btn btn-primary btn-sm">Get the App</a>
+        <a href="/get?c=site-header" class="btn btn-primary btn-sm nav-install">
+          <span class="cta-long">Get the App</span>
+          <span class="cta-short">Install</span>
+        </a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -69,7 +80,10 @@
     <div class="mobile-menu" id="mobileMenu">
       <a href="#top">Home</a>
       <a href="#contact" data-nav-tail>Contact us</a>
-      <a href="#download" class="btn btn-primary">Get the App</a>
+      <!-- Its own campaign, so the menu and the always-visible header button
+           can be told apart. If nobody ever opens the menu to install, that is
+           worth knowing. -->
+      <a href="/get?c=site-menu" class="btn btn-primary">Get the App</a>
     </div>
   </header>
 
@@ -334,13 +348,21 @@
       </div>
       <div class="footer-col">
         <h5>Follow</h5>
+        <!-- Real accounts only. These were all href="#" — six icons that
+             looked like links and went nowhere, on the page that ranks first
+             for the company name. Someone who read the site, liked it and
+             tapped one got nothing, which is worse than not offering the icon.
+             YouTube and LinkedIn are omitted rather than left dead; add them
+             back when there is something to point at. -->
         <div class="socials">
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="X">X</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="YouTube">YT</a>
-          <a href="#" aria-label="TikTok">TT</a>
-          <a href="#" aria-label="Facebook">FB</a>
+          <a href="https://www.instagram.com/quantrolplusofficial/"
+             target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="https://x.com/qmcsolutions"
+             target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+          <a href="https://www.tiktok.com/@quantrolplus"
+             target="_blank" rel="noopener noreferrer" aria-label="TikTok">TT</a>
+          <a href="https://www.facebook.com/profile.php?id=61594300986540"
+             target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
         </div>
       </div>
     </div>
